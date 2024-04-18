@@ -8,3 +8,6 @@ spec:
   chart:
     spec:
       version: ">=0.18.0 <1.0.0"
+  values:
+    prometheus-node-exporter:
+      enabled: false
