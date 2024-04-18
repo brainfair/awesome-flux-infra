@@ -53,16 +53,16 @@ spec:
       #   requests:
       #     cpu: 10m
       #     memory: 350Mi
-      affinity:
-        podAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-                matchExpressions:
-                  - key: app.kubernetes.io/name
-                    operator: In
-                    values:
-                      - vmsingle
-              topologyKey: failure-domain.beta.kubernetes.io/zone
+      # affinity:
+      #   podAffinity:
+      #     requiredDuringSchedulingIgnoredDuringExecution:
+      #       - labelSelector:
+      #           matchExpressions:
+      #             - key: app.kubernetes.io/name
+      #               operator: In
+      #               values:
+      #                 - vmsingle
+      #         topologyKey: failure-domain.beta.kubernetes.io/zone
       vmServiceScrape:
         spec:
           endpoints:
@@ -176,16 +176,16 @@ spec:
         #       storage: 10Gi
     vmagent:
       spec:
-        affinity:
-          podAffinity:
-            requiredDuringSchedulingIgnoredDuringExecution:
-              - labelSelector:
-                  matchExpressions:
-                    - key: app.kubernetes.io/name
-                      operator: In
-                      values:
-                        - vmsingle
-                topologyKey: failure-domain.beta.kubernetes.io/zone
+        # affinity:
+        #   podAffinity:
+        #     requiredDuringSchedulingIgnoredDuringExecution:
+        #       - labelSelector:
+        #           matchExpressions:
+        #             - key: app.kubernetes.io/name
+        #               operator: In
+        #               values:
+        #                 - vmsingle
+        #         topologyKey: failure-domain.beta.kubernetes.io/zone
         externalLabels:
           cluster: ${cluster_name}
         extraArgs:
@@ -217,16 +217,16 @@ spec:
             name: istio-certs
     vmalert:
       spec:
-        affinity:
-          podAffinity:
-            requiredDuringSchedulingIgnoredDuringExecution:
-              - labelSelector:
-                  matchExpressions:
-                    - key: app.kubernetes.io/name
-                      operator: In
-                      values:
-                        - vmsingle
-                topologyKey: failure-domain.beta.kubernetes.io/zone
+        # affinity:
+        #   podAffinity:
+        #     requiredDuringSchedulingIgnoredDuringExecution:
+        #       - labelSelector:
+        #           matchExpressions:
+        #             - key: app.kubernetes.io/name
+        #               operator: In
+        #               values:
+        #                 - vmsingle
+        #         topologyKey: failure-domain.beta.kubernetes.io/zone
         extraArgs:
           external.url: "https://${cluster_name}-vmalert.${cluster_subdomain}"
         # resources:
