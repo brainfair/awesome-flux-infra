@@ -1,0 +1,17 @@
+apiVersion: operator.victoriametrics.com/v1beta1
+kind: VMRule
+metadata:
+  name: victoria-metrics-k8s-stack-vm-health-extra
+  namespace: monitoring
+spec:
+  groups:
+    - name: vm-health-extra
+      rules:
+        - alert: TooHighMemoryUsage90
+          annotations:
+            description: Too high memory usage may result into multiple issues such as OOMs or degraded performance. Consider to either increase available memory or decrease the load on the process.
+            summary: It is more than 90% of memory used by "{{ $labels.job }}"("{{ $labels.instance }}")
+          expr: (min_over_time(process_resident_memory_anon_bytes[10m]) / vm_available_memory_bytes) > 0.9
+          for: 5m
+          labels:
+            severity: critical
