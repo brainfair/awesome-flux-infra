@@ -4,7 +4,7 @@ resources:
   ## Base
   - namespace.yaml
   - helm-repo.yaml
-  - helm-release.yaml
+  #- helm-release.yaml
   ## Extra rules
   #- vm-rule.yaml
   ## Mixin Dashboards
