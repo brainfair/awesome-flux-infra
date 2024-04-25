@@ -4,5 +4,6 @@ resources:
   - ../../base/victoria-metrics-k8s-stack
   - ../../base/kubelinks
   - ../../base/k8s-event-logger
+  - ../../base/metrics-server
 patchesStrategicMerge:
   - docker-flex.yaml
