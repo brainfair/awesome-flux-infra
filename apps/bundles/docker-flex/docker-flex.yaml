@@ -41,6 +41,9 @@ spec:
   chart:
     spec:
       version: ">=3.8.0 <4.0.0"
+  values:
+    args:
+      - --kubelet-insecure-tls
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
