@@ -1,0 +1,72 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: keda
+  namespace: keda
+spec:
+  interval: 15m
+  timeout: 15m
+  chart:
+    spec:
+      chart: keda
+      sourceRef:
+        kind: HelmRepository
+        name: kedacore
+      interval: 5m
+  releaseName: keda
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  # Default values: https://github.com/kedacore/charts/blob/main/keda/values.yaml
+  values:
+    clusterName: ${cluster_name}
+    # resources:
+    #   # -- Manage [resource request & limits] of KEDA operator pod
+    #   operator:
+    #     limits:
+    #       cpu: null
+    #       memory: 200Mi
+    #     requests:
+    #       cpu: 10m
+    #       memory: 200Mi
+    #   # -- Manage [resource request & limits] of KEDA metrics apiserver pod
+    #   metricServer:
+    #     limits:
+    #       cpu: null
+    #       memory: 100Mi
+    #     requests:
+    #       cpu: 10m
+    #       memory: 100Mi
+    #   # -- Manage [resource request & limits] of KEDA admission webhooks pod
+    #   webhooks:
+    #     limits:
+    #       cpu: null
+    #       memory: 100Mi
+    #     requests:
+    #       cpu: 10m
+    #       memory: 100Mi
+    prometheus:
+      metricServer:
+        enabled: true
+        serviceMonitor:
+          enabled: true
+      operator:
+        enabled: true
+        serviceMonitor:
+          enabled: true
+        prometheusRules:
+          enabled: true
+          alerts:
+            - alert: KedaScalerErrors
+              annotations:
+                description: Keda scaledObject {{ $labels.scaledObject }} is experiencing errors with {{ $labels.scaler }} scaler
+                summary: Keda Scaler {{ $labels.scaler }} Errors
+              expr: sum by ( scaledObject , scaler) (rate(keda_metrics_adapter_scaler_errors[2m]))  > 0
+              for: 2m
+      webhooks:
+        enabled: true
+        serviceMonitor:
+          enabled: true

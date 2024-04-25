@@ -7,5 +7,6 @@ resources:
   - ../../base/k8s-event-logger
   - ../../base/metrics-server
   - ../../base/blackbox-exporter
+  - ../../base/keda
 patchesStrategicMerge:
   - docker-flex.yaml

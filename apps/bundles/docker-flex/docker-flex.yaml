@@ -54,3 +54,13 @@ spec:
   chart:
     spec:
       version: ">=8.0.0 <9.0.0"
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: keda
+  namespace: keda
+spec:
+  chart:
+    spec:
+      version: ">=2.0.0 <3.0.0"
