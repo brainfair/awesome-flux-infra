@@ -1,0 +1,24 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: kubelinks
+  namespace: kubelinks
+spec:
+  releaseName: kubelinks
+  chart:
+    spec:
+      chart: kubelinks
+      sourceRef:
+        kind: HelmRepository
+        name: kkirara
+        namespace: kubelinks
+  interval: 15m
+  timeout: 15m
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  # Default values: https://github.com/kkirara/KubeLinks/blob/master/charts/kubelinks/values.yaml
+  #values:

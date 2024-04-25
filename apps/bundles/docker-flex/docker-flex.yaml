@@ -11,3 +11,13 @@ spec:
   values:
     prometheus-node-exporter:
       enabled: false
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: kubelinks
+  namespace: kubelinks
+spec:
+  chart:
+    spec:
+      version: ">=0.0.1 <1.0.0"
