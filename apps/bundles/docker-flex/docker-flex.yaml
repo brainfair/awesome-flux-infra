@@ -21,3 +21,13 @@ spec:
   chart:
     spec:
       version: ">=0.0.1 <1.0.0"
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: k8s-event-logger
+  namespace: k8s-event-logger
+spec:
+  chart:
+    spec:
+      version: ">=1.0.0 <2.0.0"

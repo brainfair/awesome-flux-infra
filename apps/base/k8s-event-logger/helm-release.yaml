@@ -1,0 +1,25 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: k8s-event-logger
+  namespace: k8s-event-logger
+spec:
+  interval: 15m
+  timeout: 15m
+  chart:
+    spec:
+      chart: k8s-event-logger
+      sourceRef:
+        kind: HelmRepository
+        name: deliveryhero
+        namespace: flux-system
+      interval: 5m
+  releaseName: k8s-event-logger
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  # Default values: https://github.com/deliveryhero/helm-charts/blob/master/stable/k8s-event-logger/values.yaml
+  #values:

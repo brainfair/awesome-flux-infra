@@ -3,5 +3,6 @@ kind: Kustomization
 resources:
   - ../../base/victoria-metrics-k8s-stack
   - ../../base/kubelinks
+  - ../../base/k8s-event-logger
 patchesStrategicMerge:
   - docker-flex.yaml
