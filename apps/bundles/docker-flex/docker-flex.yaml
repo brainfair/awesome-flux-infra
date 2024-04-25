@@ -41,3 +41,13 @@ spec:
   chart:
     spec:
       version: ">=3.8.0 <4.0.0"
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: blackbox-exporter
+  namespace: blackbox-exporter
+spec:
+  chart:
+    spec:
+      version: ">=8.0.0 <9.0.0"

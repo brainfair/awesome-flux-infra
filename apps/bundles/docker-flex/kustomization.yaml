@@ -5,5 +5,6 @@ resources:
   - ../../base/kubelinks
   - ../../base/k8s-event-logger
   - ../../base/metrics-server
+  - ../../base/blackbox-exporter
 patchesStrategicMerge:
   - docker-flex.yaml
