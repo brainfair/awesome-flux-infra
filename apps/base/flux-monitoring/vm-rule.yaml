@@ -1,0 +1,16 @@
+apiVersion: operator.victoriametrics.com/v1beta1
+kind: VMRule
+metadata:
+  name: vmrule-fluxcd
+  namespace: monitoring
+spec:
+  groups:
+    - name: Flux
+      rules:
+        - alert: FluxReconciliationFailure
+          expr: max(gotk_reconcile_condition{status="False",type="Ready"}) by (exported_namespace, namespace, name, kind) + on(exported_namespace, namespace, name, kind) (max(gotk_reconcile_condition{status="Deleted"}) by (exported_namespace, namespace, name, kind)) * 2 == 1
+          for: 10m
+          labels:
+            severity: critical
+          annotations:
+            summary: "{{ $labels.kind }} {{ $labels.exported_namespace }}/{{ $labels.name }} reconciliation has been failing for more than 10 minutes."

@@ -2,6 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ../../base/victoria-metrics-k8s-stack
+  - ../../base/flux-monitoring
   - ../../base/kubelinks
   - ../../base/k8s-event-logger
   - ../../base/metrics-server
