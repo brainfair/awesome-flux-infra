@@ -8,5 +8,6 @@ resources:
   - ../../base/metrics-server
   - ../../base/blackbox-exporter
   - ../../base/keda
+  - ../../base/istio
 patchesStrategicMerge:
   - docker-flex.yaml
