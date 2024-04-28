@@ -65,7 +65,7 @@ spec:
     spec:
       version: ">=2.0.0 <3.0.0"
 ---
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
   name: istio-base
@@ -75,7 +75,7 @@ spec:
     spec:
       version: ">=1.14.0 <2.0.0"
 ---
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
   name: istiod
