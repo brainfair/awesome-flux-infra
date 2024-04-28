@@ -94,3 +94,13 @@ spec:
   chart:
     spec:
       version: ">=1.14.0 <2.0.0"
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: helm-exporter
+  namespace: helm-exporter
+spec:
+  chart:
+    spec:
+      version: ">=1.2.0 <2.0.0"

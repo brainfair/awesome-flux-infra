@@ -9,5 +9,6 @@ resources:
   - ../../base/blackbox-exporter
   - ../../base/keda
   - ../../base/istio
+  - ../../base/helm-exporter
 patchesStrategicMerge:
   - docker-flex.yaml

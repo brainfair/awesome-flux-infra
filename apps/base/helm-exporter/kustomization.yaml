@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - namespace.yaml
+  - helm-repo.yaml
+  - helm-release.yaml
+configMapGenerator:
+  - name: grafana-helm-exporter
+    namespace: helm-exporter
+    files:
+      - dashboards/grafana-helm-exporter.json
+    options:
+      labels:
+        grafana_dashboard: "1"
+        app.kubernetes.io/part-of: helm-exporter
+        app.kubernetes.io/component: monitoring
