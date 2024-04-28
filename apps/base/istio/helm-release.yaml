@@ -47,7 +47,7 @@ spec:
   # Default values
   values:
     pilot:
-      autoscaleMin: 2
+      autoscaleMin: 1
     meshConfig:
       ingressClass: istio
       ingressService: istio-ingress-public
