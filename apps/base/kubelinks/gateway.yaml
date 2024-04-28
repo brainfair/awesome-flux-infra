@@ -5,7 +5,7 @@ metadata:
   namespace: kubelinks
 spec:
   selector:
-    istio: ingress-internal
+    istio: ingress-private
   servers:
     - hosts:
         - links.${cluster_subdomain}
@@ -13,8 +13,8 @@ spec:
         name: http
         number: 80
         protocol: HTTP
-      # tls:
-      #   httpsRedirect: true
+      tls:
+        httpsRedirect: true
     - hosts:
         - links.${cluster_subdomain}
       port:
