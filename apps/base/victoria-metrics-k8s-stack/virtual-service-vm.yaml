@@ -1,0 +1,68 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: vmagent-virtualservice
+  namespace: monitoring
+spec:
+  gateways:
+    - vm-gateway
+  hosts:
+    - vmagent.${cluster_subdomain}
+  http:
+    - route:
+        - destination:
+            host: vmagent-victoria-metrics-k8s-stack.monitoring.svc.cluster.local
+            port:
+              number: 8429
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: vmalert-virtualservice
+  namespace: monitoring
+spec:
+  gateways:
+    - vm-gateway
+  hosts:
+    - vmalert.${cluster_subdomain}
+  http:
+    - route:
+        - destination:
+            host: vmalert-victoria-metrics-k8s-stack.monitoring.svc.cluster.local
+            port:
+              number: 8080
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: vmalertmanager-virtualservice
+  namespace: monitoring
+spec:
+  gateways:
+    - vm-gateway
+  hosts:
+    - vmalertmanager.${cluster_subdomain}
+  http:
+    - route:
+        - destination:
+            host: vmalertmanager-victoria-metrics-k8s-stack.monitoring.svc.cluster.local
+            port:
+              number: 9093
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: vmsingle-virtualservice
+  namespace: monitoring
+spec:
+  gateways:
+    - vm-gateway
+  hosts:
+    - vmsingle.${cluster_subdomain}
+  http:
+    - route:
+        - destination:
+            host: vmsingle-victoria-metrics-k8s-stack.monitoring.svc.cluster.local
+            port:
+              number: 8429

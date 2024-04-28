@@ -1,0 +1,32 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: vm-gateway
+  namespace: monitoring
+spec:
+  selector:
+    istio: ingress-private
+  servers:
+    - hosts:
+        - vmagent.${cluster_subdomain}
+        - vmalert.${cluster_subdomain}
+        - vmalertmanager.${cluster_subdomain}
+        - vmsingle.${cluster_subdomain}
+      port:
+        name: http
+        number: 80
+        protocol: HTTP
+      tls:
+        httpsRedirect: true
+    - hosts:
+        - vmagent.${cluster_subdomain}
+        - vmalert.${cluster_subdomain}
+        - vmalertmanager.${cluster_subdomain}
+        - vmsingle.${cluster_subdomain}
+      port:
+        name: https
+        number: 443
+        protocol: HTTPS
+      tls:
+        credentialName: localhost-direct
+        mode: SIMPLE

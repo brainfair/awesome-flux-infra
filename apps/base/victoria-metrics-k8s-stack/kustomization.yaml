@@ -7,6 +7,11 @@ resources:
   - helm-release.yaml
   ## Extra rules
   #- vm-rule.yaml
+  ## Istio Objects
+  - gateway-vm.yaml
+  - gateway-grafana.yaml
+  - virtual-service-vm.yaml
+  - virtual-service-grafana.yaml
   ## Mixin Dashboards
   ## synced from https://github.com/prometheus-operator/kube-prometheus/blob/main/manifests/grafana-dashboardDefinitions.yaml
   ## grafana_dashboard: "1" labels added to the usefull dashboards

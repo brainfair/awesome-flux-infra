@@ -1,0 +1,17 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: grafana-virtualservice
+  namespace: monitoring
+spec:
+  gateways:
+    - grafana-gateway
+  hosts:
+    - grafana.${cluster_subdomain}
+  http:
+    - route:
+        - destination:
+            host: victoria-metrics-k8s-stack-grafana.monitoring.svc.cluster.local
+            port:
+              number: 80
