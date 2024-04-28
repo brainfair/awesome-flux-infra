@@ -1,0 +1,26 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: kubelinks-gateway
+  namespace: kubelinks
+spec:
+  selector:
+    istio: ingress-internal
+  servers:
+    - hosts:
+        - links.${cluster_subdomain}
+      port:
+        name: http
+        number: 80
+        protocol: HTTP
+      tls:
+        httpsRedirect: true
+    - hosts:
+        - links.${cluster_subdomain}
+      port:
+        name: https
+        number: 443
+        protocol: HTTPS
+      tls:
+        credentialName: localhost-direct
+        mode: SIMPLE

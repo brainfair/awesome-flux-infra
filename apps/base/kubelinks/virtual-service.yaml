@@ -1,0 +1,17 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: kubelinks-virtualservice
+  namespace: kubelinks
+spec:
+  gateways:
+    - kubelinks-gateway
+  hosts:
+    - links.${cluster_subdomain}
+  http:
+    - route:
+        - destination:
+            host: kubelinks.kubelinks.svc.cluster.local
+            port:
+              number: 80
