@@ -4,7 +4,7 @@ resources:
   - namespace.yaml
   - helm-repo.yaml
   - helm-release.yaml
-  #- helm-istio-gw-private.yaml
+  - helm-istio-gw-private.yaml
   #- helm-istio-gw-public.yaml
   #- telemetry.yaml
   #- monitors.yaml

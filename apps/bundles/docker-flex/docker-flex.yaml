@@ -84,3 +84,13 @@ spec:
   chart:
     spec:
       version: ">=1.14.0 <2.0.0"
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: istio-ingress-private
+  namespace: istio-ingress
+spec:
+  chart:
+    spec:
+      version: ">=1.14.0 <2.0.0"

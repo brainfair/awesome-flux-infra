@@ -1,0 +1,27 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: istio-ingress-private
+  namespace: istio-ingress
+spec:
+  releaseName: istio-ingress-private
+  chart:
+    spec:
+      chart: gateway
+      sourceRef:
+        kind: HelmRepository
+        name: istio
+        namespace: istio-system
+  interval: 5m
+  install:
+    crds: Skip
+    remediation:
+      retries: 3
+  upgrade:
+    crds: Skip
+  # Default values: https://github.com/istio/istio/blob/master/manifests/charts/gateway/values.yaml
+  values:
+    autoscaling:
+      minReplicas: 1
+      maxReplicas: 4
