@@ -32,5 +32,6 @@ spec:
         number: 443
         protocol: HTTPS
       tls:
+        # certificate provided by https://get.localhost.direct/
         credentialName: localhost-direct
         mode: SIMPLE
