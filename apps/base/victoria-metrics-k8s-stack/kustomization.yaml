@@ -8,8 +8,8 @@ resources:
   ## Extra rules
   #- vm-rule.yaml
   ## Istio Objects
-  - gateway-vm.yaml
-  - gateway-grafana.yaml
+  #- gateway-vm.yaml
+  #- gateway-grafana.yaml
   - virtual-service-vm.yaml
   - virtual-service-grafana.yaml
   ## Mixin Dashboards

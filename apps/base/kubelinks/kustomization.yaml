@@ -4,5 +4,5 @@ resources:
   - helm-repo.yaml
   - helm-release.yaml
   - namespace.yaml
-  - gateway.yaml
+  #- gateway.yaml
   - virtual-service.yaml

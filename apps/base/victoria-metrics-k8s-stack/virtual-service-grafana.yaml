@@ -6,7 +6,7 @@ metadata:
   namespace: monitoring
 spec:
   gateways:
-    - grafana-gateway
+    - istio-ingress/wildcard-gateway
   hosts:
     - grafana.${cluster_subdomain}
   http:

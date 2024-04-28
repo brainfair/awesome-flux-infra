@@ -6,7 +6,7 @@ metadata:
   namespace: monitoring
 spec:
   gateways:
-    - vm-gateway
+    - istio-ingress/wildcard-gateway
   hosts:
     - vmagent.${cluster_subdomain}
   http:
@@ -23,7 +23,7 @@ metadata:
   namespace: monitoring
 spec:
   gateways:
-    - vm-gateway
+    - istio-ingress/wildcard-gateway
   hosts:
     - vmalert.${cluster_subdomain}
   http:
@@ -40,7 +40,7 @@ metadata:
   namespace: monitoring
 spec:
   gateways:
-    - vm-gateway
+    - istio-ingress/wildcard-gateway
   hosts:
     - vmalertmanager.${cluster_subdomain}
   http:
@@ -57,7 +57,7 @@ metadata:
   namespace: monitoring
 spec:
   gateways:
-    - vm-gateway
+    - istio-ingress/wildcard-gateway
   hosts:
     - vmsingle.${cluster_subdomain}
   http:
