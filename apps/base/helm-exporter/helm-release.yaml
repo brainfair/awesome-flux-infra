@@ -114,3 +114,7 @@ spec:
               url: https://app.getambassador.io
             charts:
               - telepresence
+          - registry:
+              url: https://cloudnative-pg.github.io/charts
+            charts:
+              - cloudnative-pg
