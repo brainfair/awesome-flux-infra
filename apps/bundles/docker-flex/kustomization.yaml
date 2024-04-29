@@ -10,5 +10,6 @@ resources:
   - ../../base/keda
   - ../../base/istio
   - ../../base/helm-exporter
+  - ../../base/cloudnative-pg
 patchesStrategicMerge:
   - docker-flex.yaml
