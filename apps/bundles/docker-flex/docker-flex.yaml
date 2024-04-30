@@ -10,7 +10,8 @@ spec:
       version: ">=0.18.0 <1.0.0"
   values:
     prometheus-node-exporter:
-      enabled: false
+      hostRootFsMount:
+        enabled: false
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
