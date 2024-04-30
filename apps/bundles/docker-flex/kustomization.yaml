@@ -12,5 +12,6 @@ resources:
   - ../../base/helm-exporter
   - ../../base/cloudnative-pg
   - ../../base/cert-manager
+  - ../../base/reflector
 patchesStrategicMerge:
   - docker-flex.yaml

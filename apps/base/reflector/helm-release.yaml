@@ -1,0 +1,20 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: reflector
+  namespace: reflector
+spec:
+  releaseName: reflector
+  chart:
+    spec:
+      chart: reflector
+      sourceRef:
+        kind: HelmRepository
+        name: emberstack
+        namespace: reflector
+  interval: 5m
+  install:
+    remediation:
+      retries: 3
+  # Defaults: https://github.com/emberstack/kubernetes-reflector/blob/main/src/helm/reflector/values.yaml
+  # values:
