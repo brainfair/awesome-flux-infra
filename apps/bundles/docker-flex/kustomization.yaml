@@ -11,5 +11,6 @@ resources:
   - ../../base/istio
   - ../../base/helm-exporter
   - ../../base/cloudnative-pg
+  - ../../base/cert-manager
 patchesStrategicMerge:
   - docker-flex.yaml

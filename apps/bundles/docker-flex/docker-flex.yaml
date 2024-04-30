@@ -114,3 +114,13 @@ spec:
   chart:
     spec:
       version: ">=0.17.0 <1.0.0"
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: cert-manager
+  namespace: cert-manager
+spec:
+  chart:
+    spec:
+      version: ">=v1.0.0 <v2.0.0"

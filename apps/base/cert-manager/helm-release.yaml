@@ -1,0 +1,33 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: cert-manager
+  namespace: cert-manager
+spec:
+  releaseName: cert-manager
+  chart:
+    spec:
+      chart: cert-manager
+      sourceRef:
+        kind: HelmRepository
+        name: jetstack
+        namespace: cert-manager
+  interval: 15m
+  timeout: 5m
+  install:
+    crds: Skip
+    remediation:
+      retries: 3
+  upgrade:
+    crds: Skip
+    remediation:
+      retries: 3
+  # Default values: https://github.com/cert-manager/cert-manager/blob/master/deploy/charts/cert-manager/values.yaml
+  values:
+    installCRDs: false
+    prometheus:
+      servicemonitor:
+        enabled: true
+    # serviceAccount:
+    #   annotations:
+    #     eks.amazonaws.com/role-arn: arn:aws:iam::${aws_account_id}:role/${cluster_name}-irsa-cert-manager
