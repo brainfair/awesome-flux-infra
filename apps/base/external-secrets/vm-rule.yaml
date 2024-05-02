@@ -1,0 +1,19 @@
+apiVersion: operator.victoriametrics.com/v1beta1
+kind: VMRule
+metadata:
+  name: vmrule-external-secrets
+  namespace: external-secrets
+spec:
+  groups:
+    - name: external-secrets
+      rules:
+        - alert: SecretSyncError
+          annotations:
+            summary: SecretSyncError {{ $labels.name }}
+            description: |
+              Synchronization of the Secret `{{ $labels.name }}` in namespace `{{ $labels.exported_namespace }}` is failing.
+              Check for errors in the Status field of the associated ExternalSecret object.
+          expr: sum(increase(controller_runtime_reconcile_total{service=~"external-secrets.*",result="error"}[1m])) by (result) > 0
+          for: 10m
+          labels:
+            severity: warning

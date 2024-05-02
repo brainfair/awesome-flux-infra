@@ -13,5 +13,6 @@ resources:
   - ../../base/cloudnative-pg
   - ../../base/cert-manager
   - ../../base/reflector
+  - ../../base/external-secrets
 patchesStrategicMerge:
   - docker-flex.yaml

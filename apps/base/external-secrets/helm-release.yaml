@@ -1,0 +1,29 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: external-secrets
+  namespace: external-secrets
+spec:
+  releaseName: external-secrets
+  chart:
+    spec:
+      chart: external-secrets
+      sourceRef:
+        kind: HelmRepository
+        name: external-secrets
+        namespace: external-secrets
+  interval: 15m
+  timeout: 5m
+  install:
+    crds: Skip
+    remediation:
+      retries: 3
+  upgrade:
+    crds: Skip
+    remediation:
+      retries: 3
+  # Defaults: https://github.com/external-secrets/external-secrets/blob/main/deploy/charts/external-secrets/values.yaml
+  values:
+    installCRDs: false
+    serviceMonitor:
+      enabled: true

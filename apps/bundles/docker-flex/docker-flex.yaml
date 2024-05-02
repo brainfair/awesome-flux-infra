@@ -135,3 +135,13 @@ spec:
   chart:
     spec:
       version: ">=7.0.0 <8.0.0"
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: external-secrets
+  namespace: external-secrets
+spec:
+  chart:
+    spec:
+      version: ">=0.0.1 <1.0.0"
