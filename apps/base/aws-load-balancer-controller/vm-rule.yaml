@@ -1,0 +1,41 @@
+apiVersion: operator.victoriametrics.com/v1beta1
+kind: VMRule
+metadata:
+  name: vmrule-aws-lb-controller
+  namespace: kube-system
+spec:
+  groups:
+  - name: aws-lb-controller.rules
+    rules:
+    - alert: AWSLBIngressControllerReconcileErrors
+      expr: increase(controller_runtime_reconcile_errors_total{controller="ingress"}[5m]) > 0
+      for: 5m
+      labels:
+        severity: critical
+        component: platform
+        service: aws-load-balancer-controller
+      annotations:
+        summary: "AWS LB Ingress controller reconciliation errors"
+        description: "AWS LB ingress controller has encountered errors while reconciling its state."
+    
+    - alert: AWSLBServiceControllerReconcileErrors
+      expr: increase(controller_runtime_reconcile_errors_total{controller="service"}[5m]) > 0
+      for: 5m
+      labels:
+        severity: critical
+        component: platform
+        service: aws-load-balancer-controller
+      annotations:
+        summary: "AWS LB Service controller reconciliation errors"
+        description: "AWS LB Service controller has encountered errors while reconciling its state."
+    
+    - alert: AWSLBTargetGroupBindingControllerReconcileErrors
+      expr: increase(controller_runtime_reconcile_errors_total{controller="targetGroupBinding"}[5m]) > 0
+      for: 5m
+      labels:
+        severity: critical
+        component: platform
+        service: aws-load-balancer-controller
+      annotations:
+        summary: "AWS LB TargetGroupBinding controller reconciliation errors"
+        description: "AWS LB TargetGroupBinding controller has encountered errors while reconciling its state."
