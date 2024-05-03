@@ -1,0 +1,35 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: cluster-autoscaler
+  namespace: kube-system
+spec:
+  releaseName: cluster-autoscaler
+  chart:
+    spec:
+      chart: cluster-autoscaler
+      sourceRef:
+        kind: HelmRepository
+        name: autoscaler
+        namespace: kube-system
+  interval: 15m
+  timeout: 15m
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  # Default values: https://github.com/kubernetes/autoscaler/blob/master/charts/cluster-autoscaler/values.yaml
+  values:
+    replicaCount: 2
+    awsRegion: ${aws_default_region}
+    rbac:
+      serviceAccount:
+        name: "cluster-autoscaler-aws"
+        annotations:
+          eks.amazonaws.com/role-arn: arn:aws:iam::${aws_account_id}:role/${cluster_name}-irsa-cluster-autoscaler
+    autoDiscovery:
+      clusterName: ${cluster_name}
+    serviceMonitor:
+      enabled: true

@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - helm-repo.yaml
+  - helm-release.yaml
+  - vm-rule.yaml
+namespace: kube-system
+configMapGenerator:
+  - name: cluster-autoscaler-grafana-dashboards
+    files:
+      - dashboards/cluster-autoscaler.json
+    options:
+      disableNameSuffixHash: true
+      labels:
+        grafana_dashboard: "1"
+        app.kubernetes.io/part-of: cluster-autoscaler
+        app.kubernetes.io/component: monitoring
+        kustomize.toolkit.fluxcd.io/substitute: disabled
