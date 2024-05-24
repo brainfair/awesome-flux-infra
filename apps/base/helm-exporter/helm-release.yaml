@@ -118,3 +118,7 @@ spec:
               url: https://cloudnative-pg.github.io/charts
             charts:
               - cloudnative-pg
+          - registry:
+              url: https://charts.jenkins.io
+            charts:
+              - jenkins
