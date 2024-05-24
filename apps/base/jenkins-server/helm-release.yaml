@@ -29,7 +29,6 @@ spec:
         - timestamper
         - ws-cleanup
         - aws-credentials
-        - pipeline-aws
         - jobConfigHistory
         - envinject
     agent:
