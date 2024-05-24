@@ -1,0 +1,28 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: istio-gateway-jenkins
+  namespace: jenkins
+  annotations:
+    istio: ingress-private
+spec:
+  selector:
+    istio: ingress-private
+  servers:
+    - hosts:
+        - jenkins${cluster_subdomain}
+      port:
+        name: http
+        number: 80
+        protocol: HTTP2
+      tls:
+        httpsRedirect: true
+    - hosts:
+        - jenkins${cluster_subdomain}
+      port:
+        name: https-tls
+        number: 443
+        protocol: HTTPS
+      tls:
+        mode: SIMPLE
+        credentialName: localhost-direct

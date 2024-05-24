@@ -14,5 +14,6 @@ resources:
   - ../../base/cert-manager
   - ../../base/reflector
   - ../../base/external-secrets
+  - ../../base/jenkins-server
 patchesStrategicMerge:
   - docker-flex.yaml

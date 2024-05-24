@@ -1,0 +1,18 @@
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: jenkins
+  namespace: jenkins
+spec:
+  hosts:
+    - "jenkins.${cluster_subdomain}"
+  gateways:
+    - jenkins/istio-gateway-jenkins
+  http:
+    - match: []
+      route:
+        - destination:
+            host: jenkins
+            port:
+              number: 8080
