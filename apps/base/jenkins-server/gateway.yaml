@@ -10,7 +10,7 @@ spec:
     istio: ingress-private
   servers:
     - hosts:
-        - jenkins${cluster_subdomain}
+        - jenkins.${cluster_subdomain}
       port:
         name: http
         number: 80
@@ -18,7 +18,7 @@ spec:
       tls:
         httpsRedirect: true
     - hosts:
-        - jenkins${cluster_subdomain}
+        - jenkins.${cluster_subdomain}
       port:
         name: https-tls
         number: 443
