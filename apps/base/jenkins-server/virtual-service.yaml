@@ -8,7 +8,7 @@ spec:
   hosts:
     - "jenkins.${cluster_subdomain}"
   gateways:
-    - jenkins/istio-gateway-jenkins
+    - istio-ingress/wildcard-gateway
   http:
     - match: []
       route:
