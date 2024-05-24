@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - ../../apps/bundles/docker-flex
   - istio
+  - ../../apps/base/external-dns

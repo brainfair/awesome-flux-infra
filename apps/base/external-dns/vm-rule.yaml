@@ -1,0 +1,19 @@
+apiVersion: operator.victoriametrics.com/v1beta1
+kind: VMRule
+metadata:
+  name: vmrule-external-dns
+  namespace: external-dns
+spec:
+  groups:
+    - name: external-dns
+      rules:
+        - alert: ExternalDNSSyncError
+          annotations:
+            summary: ExternalDNSSyncError {{ $labels.name }}
+            description: |
+              Synchronization of the DNS records `{{ $labels.name }}` in namespace `{{ $labels.exported_namespace }}` is failing.
+              Check for errors in the Status field of the associated external-dns object.
+          expr: sum(increase(external_dns_registry_errors_total[5m])) by (service) > 0
+          for: 10m
+          labels:
+            severity: warning
