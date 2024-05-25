@@ -7,4 +7,4 @@ spec:
   type: githubdispatch
   address: https://github.com/brainfair/awesome-flux-infra
   secretRef:
-    name: flux-system
+    name: github-token
