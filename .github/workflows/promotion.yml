@@ -1,0 +1,70 @@
+name: Promotion HR
+on:
+  repository_dispatch:
+    types:
+      - HelmRelease/**
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  promote:
+    name: promotion
+    runs-on: ubuntu-latest
+    if: |
+      github.event.client_payload.metadata.env == 'staging' &&
+      github.event.client_payload.severity == 'info'
+    steps:
+      # Checkout main branch.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      # Parse the event metadata to determine the chart version deployed on staging.
+      - name: Get chart version from staging
+        id: staging
+        run: |
+          HELMRELEASE=$(echo ${{ github.event.client_payload.involvedObject.name }})
+          NAMESPACE=$(echo ${{ github.event.client_payload.involvedObject.namespace }})
+          VERSION=$(echo ${{ github.event.client_payload.metadata.revision }} | cut -d '@' -f1)
+          TYPE=$(echo ${{ github.event.client_payload.metadata.type }})
+          echo VERSION=${VERSION} >> $GITHUB_OUTPUT
+          echo HELMRELEASE=${HELMRELEASE} >> $GITHUB_OUTPUT
+          echo NAMESPACE=${NAMESPACE} >> $GITHUB_OUTPUT
+          echo TYPE=${TYPE} >> $GITHUB_OUTPUT
+
+      # Patch the chart version in the production Helm release manifest.
+      - name: Set chart version in production
+        id: production
+        env:
+          HELM_RELEASE: ${{ steps.staging.outputs.helmrelease }}
+          NAMESPACE: ${{ steps.staging.outputs.namespace }}
+          CHART_VERSION: ${{ steps.staging.outputs.version }}
+          TYPE: ${{ steps.staging.outputs.type }}
+        run: |
+          echo "Set ${NAMESPACE}/${HELM_RELEASE} chart version to ${CHART_VERSION} in ${TYPE}-stable"
+          curv=$(yq '. | select(.metadata.name==env(HELM_RELEASE) and .metadata.namespace==env(NAMESPACE)) | .spec.chart.spec.version' apps/bundles/$TYPE-stable/$TYPE-stable.yaml)
+          echo "Current Version: $curv"
+          echo "    New Version: $CHART_VERSION"
+          if [ -n "$curv" ] && [ "$CHART_VERSION" != "$curv" ]; then
+            yq -i '(. | select(.metadata.name == env(HELM_RELEASE) and .metadata.namespace==env(NAMESPACE)) | .spec.chart.spec.version ) = env(CHART_VERSION) ' apps/bundles/$TYPE-stable/$TYPE-stable.yaml
+            echo CHANGES=true >> $GITHUB_OUTPUT
+          else
+            echo "No candidates found"
+          fi
+
+      # Open a Pull Request if an upgraded is needed in production.
+      - name: Open promotion PR
+        uses: peter-evans/create-pull-request@v4
+        if: ${{ steps.production.outputs.changes }}
+        with:
+          branch: staging-promotion-${{ github.run_number }}
+          delete-branch: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Update ${{ steps.staging.outputs.helmrelease }} to v${{ steps.staging.outputs.version }}
+          title: "feat: Promote ${{ steps.staging.outputs.namespace }}/${{ steps.staging.outputs.helmrelease }} release to ${{ steps.staging.outputs.version }} in ${{ steps.staging.outputs.type }}-stable"
+          body: |
+            **Automated PR**
+            HelmRelease ${{ steps.staging.outputs.namespace }}/${{ steps.staging.outputs.helmrelease }} was upgraded to version ${{ steps.staging.outputs.version }} in ${{ steps.staging.outputs.type }}-flex.
+            Promote to stable.
