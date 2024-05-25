@@ -1,0 +1,59 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Alert
+metadata:
+  name: github-dispatch
+  namespace: flux-system
+spec:
+  providerRef:
+    name: github
+  summary: "Trigger promotion"
+  eventMetadata:
+    env: ${env}
+    type: docker
+    cluster: ${cluster_name}
+  eventSeverity: info
+  eventSources:
+    - kind: HelmRelease
+      name: "*"
+      namespace: blackbox-exporter
+    - kind: HelmRelease
+      name: "*"
+      namespace: flux-system
+    - kind: HelmRelease
+      name: "*"
+      namespace: kube-system
+    - kind: HelmRelease
+      name: "*"
+      namespace: keda
+    - kind: HelmRelease
+      name: "*"
+      namespace: monitoring
+    - kind: HelmRelease
+      name: "*"
+      namespace: k8s-event-logger
+    - kind: HelmRelease
+      name: "*"
+      namespace: kubelinks
+    - kind: HelmRelease
+      name: "*"
+      namespace: metrics-server
+    - kind: HelmRelease
+      name: "*"
+      namespace: helm-exporter
+    - kind: HelmRelease
+      name: "*"
+      namespace: kubecost
+    - kind: HelmRelease
+      name: "*"
+      namespace: external-secrets
+    - kind: HelmRelease
+      name: "*"
+      namespace: external-dns
+    - kind: HelmRelease
+      name: "*"
+      namespace: cert-manager
+    - kind: HelmRelease
+      name: "*"
+      namespace: fluent-bit
+  inclusionList:
+    - ".*.upgrade.*succeeded.*"
