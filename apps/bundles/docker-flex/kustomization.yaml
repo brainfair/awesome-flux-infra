@@ -15,5 +15,6 @@ resources:
   - ../../base/reflector
   - ../../base/external-secrets
   - ../../base/jenkins-server
+  - ../../base/argocd
 patchesStrategicMerge:
   - docker-flex.yaml
