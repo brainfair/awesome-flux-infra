@@ -155,3 +155,13 @@ spec:
   chart:
     spec:
       version: ">=5.0.0 <6.0.0"
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: argocd
+  namespace: argocd
+spec:
+  chart:
+    spec:
+      version: ">=6.0.0 <7.0.0"

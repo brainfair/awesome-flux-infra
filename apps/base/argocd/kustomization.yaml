@@ -4,3 +4,4 @@ resources:
   - helm-repo.yaml
   - helm-release.yaml
   - namespace.yaml
+  - virtual-service.yaml

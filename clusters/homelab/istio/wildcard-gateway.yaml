@@ -15,6 +15,7 @@ spec:
         - vmalertmanager.${cluster_subdomain}
         - vmsingle.${cluster_subdomain}
         - jenkins.${cluster_subdomain}
+        - argocd.${cluster_subdomain}
       port:
         name: http
         number: 80
@@ -29,6 +30,7 @@ spec:
         - vmalertmanager.${cluster_subdomain}
         - vmsingle.${cluster_subdomain}
         - jenkins.${cluster_subdomain}
+        - argocd.${cluster_subdomain}
       port:
         name: https
         number: 443
