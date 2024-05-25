@@ -5,7 +5,7 @@ resources:
   - namespace.yaml
   - helm-repo.yaml
   - helm-release.yaml
-  - https://raw.githubusercontent.com/strimzi/strimzi-kafka-operator/main/examples/metrics/prometheus-install/strimzi-pod-monitor.yaml
+  - strimzi-pod-monitor.yaml
 configMapGenerator:
   - name: strimzi-dashboards
     namespace: strimzi
