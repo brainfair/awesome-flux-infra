@@ -8,7 +8,7 @@ spec:
     name: github
   summary: "Trigger promotion"
   eventMetadata:
-    env: ${env}
+    env: staging
     type: docker
     cluster: ${cluster_name}
   eventSeverity: info
