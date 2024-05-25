@@ -15,6 +15,9 @@ spec:
   eventSources:
     - kind: HelmRelease
       name: "*"
+      namespace: argocd
+    - kind: HelmRelease
+      name: "*"
       namespace: blackbox-exporter
     - kind: HelmRelease
       name: "*"
@@ -42,7 +45,7 @@ spec:
       namespace: helm-exporter
     - kind: HelmRelease
       name: "*"
-      namespace: kubecost
+      namespace: strimzi
     - kind: HelmRelease
       name: "*"
       namespace: external-secrets
@@ -54,6 +57,21 @@ spec:
       namespace: cert-manager
     - kind: HelmRelease
       name: "*"
-      namespace: fluent-bit
+      namespace: cnpg-system
+    - kind: HelmRelease
+      name: "*"
+      namespace: istio-ingress
+    - kind: HelmRelease
+      name: "*"
+      namespace: istio-system
+    - kind: HelmRelease
+      name: "*"
+      namespace: jenkins
+    - kind: HelmRelease
+      name: "*"
+      namespace: reflector
+    - kind: HelmRelease
+      name: "*"
+      namespace: strimzi
   inclusionList:
     - ".*.upgrade.*succeeded.*"
