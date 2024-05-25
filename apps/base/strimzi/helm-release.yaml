@@ -1,0 +1,25 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: strimzi-kafka-operator
+  namespace: strimzi
+spec:
+  releaseName: strimzi-kafka-operator
+  chart:
+    spec:
+      chart: strimzi-kafka-operator
+      sourceRef:
+        kind: HelmRepository
+        name: strimzi
+        namespace: strimzi
+  interval: 15m
+  timeout: 15m0s
+  install:
+    crds: Skip
+    remediation:
+      retries: 3
+  upgrade:
+    crds: Skip
+  # Defaults: https://github.com/strimzi/strimzi-kafka-operator/blob/main/helm-charts/helm3/strimzi-kafka-operator/values.yaml
+  values:
+    watchAnyNamespace: true

@@ -16,5 +16,6 @@ resources:
   - ../../base/external-secrets
   - ../../base/jenkins-server
   - ../../base/argocd
+  - ../../base/strimzi
 patchesStrategicMerge:
   - docker-flex.yaml
