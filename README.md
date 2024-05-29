@@ -15,8 +15,9 @@ This repository contains Infrastructure applications and addons installed inside
 
 ## Prerequisites
 
-You will need a Kubernetes cluster version 1.24 or newer with installed Flux version 2.3.0 or newer.
-[CRD GitOps repository](https://github.com/brainfair/awesome-flux-crds) must be included before this repo.
+- Kubernetes cluster version 1.24 or newer
+- Flux version 2.3.0 or newer bootstrapped to the [Head repository (example)](https://github.com/brainfair/awesome-flux-head)
+- [CRD GitOps repository](https://github.com/brainfair/awesome-flux-crds) must be included before this as a dependency.
 
 ## List of applications
 - argocd
