@@ -7,7 +7,7 @@ This repository contains Infrastructure applications and addons installed inside
 - [Prerequisites](#prerequisites)
 - [List of applications](#list-of-applications)
 - [Import current repository](#import-current-repository)
-    - [Substitute variables](#substitute-variables)
+  - [Substitute variables](#substitute-variables)
 - [Repository structure](#repository-structure)
 - [Structure idea](#structure-idea)
 - [Flex/Stable Bundles and promotion](#flexstable-bundles-and-promotion)
