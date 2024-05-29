@@ -4,3 +4,5 @@ resources:
   - ../../apps/bundles/docker-flex
   - flux-promotion
   - istio
+patchesStrategicMerge:
+  - victoria-metrics-k8s-stack/helm-release.yaml
