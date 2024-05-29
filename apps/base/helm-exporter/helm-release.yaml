@@ -122,3 +122,7 @@ spec:
               url: https://charts.jenkins.io
             charts:
               - jenkins
+          - registry:
+              url: https://strimzi.io/charts
+            charts:
+              - strimzi-kafka-operator
