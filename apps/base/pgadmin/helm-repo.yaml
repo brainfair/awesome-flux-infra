@@ -1,0 +1,8 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: runix
+  namespace: pgadmin
+spec:
+  interval: 120m
+  url: https://helm.runix.net

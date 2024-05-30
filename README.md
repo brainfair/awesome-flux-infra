@@ -25,6 +25,7 @@ This repository contains Infrastructure applications and addons installed inside
 - blackbox-exporter
 - cert-manager
 - cloudnative-pg
+- pgadmin
 - cluster-autoscaler
 - external-dns
 - external-secrets

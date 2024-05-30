@@ -17,5 +17,6 @@ resources:
   - ../../base/jenkins-server
   - ../../base/argocd
   - ../../base/strimzi
+  - ../../base/pgadmin
 patches:
   - path: docker-stable.yaml
