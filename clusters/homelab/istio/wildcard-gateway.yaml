@@ -16,6 +16,7 @@ spec:
         - vmsingle.${cluster_subdomain}
         - jenkins.${cluster_subdomain}
         - argocd.${cluster_subdomain}
+        - pgadmin.${cluster_subdomain}
       port:
         name: http
         number: 80
@@ -31,6 +32,7 @@ spec:
         - vmsingle.${cluster_subdomain}
         - jenkins.${cluster_subdomain}
         - argocd.${cluster_subdomain}
+        - pgadmin.${cluster_subdomain}
       port:
         name: https
         number: 443
