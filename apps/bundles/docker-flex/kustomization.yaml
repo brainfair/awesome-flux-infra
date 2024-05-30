@@ -17,5 +17,5 @@ resources:
   - ../../base/jenkins-server
   - ../../base/argocd
   - ../../base/strimzi
-patchesStrategicMerge:
-  - docker-flex.yaml
+patches:
+  - path: docker-flex.yaml

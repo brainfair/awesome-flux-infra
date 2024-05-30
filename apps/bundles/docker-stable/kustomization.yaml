@@ -17,5 +17,5 @@ resources:
   - ../../base/jenkins-server
   - ../../base/argocd
   - ../../base/strimzi
-patchesStrategicMerge:
-  - docker-stable.yaml
+patches:
+  - path: docker-stable.yaml
