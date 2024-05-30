@@ -4,5 +4,6 @@ resources:
   - ../../apps/bundles/docker-flex
   - flux-promotion
   - istio
+  - pg-airflow
 patches:
   - path: victoria-metrics-k8s-stack/helm-release.yaml

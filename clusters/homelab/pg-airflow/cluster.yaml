@@ -1,0 +1,17 @@
+---
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: pg-airflow
+  namespace: pg-airflow
+spec:
+  instances: 1
+  imageName: ghcr.io/cloudnative-pg/postgis:14
+  bootstrap:
+    initdb:
+      database: airflow
+      owner: airflow
+  storage:
+    size: 10Gi
+  monitoring:
+    enablePodMonitor: true
