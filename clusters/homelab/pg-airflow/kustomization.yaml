@@ -4,4 +4,4 @@ namespace: pg-airflow
 resources:
   - namespace.yaml
   - pg-airflow-user-secret.yaml
-  #- cluster.yaml
+  - cluster.yaml
