@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - oci-repo.yaml
   - release.yaml
-  #- virtual-service.yaml
+  - virtual-service.yaml

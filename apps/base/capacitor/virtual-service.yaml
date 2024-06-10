@@ -1,0 +1,17 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: capacitor-virtualservice
+  namespace: flux-system
+spec:
+  gateways:
+    - istio-ingress/wildcard-gateway
+  hosts:
+    - capacitor.${cluster_subdomain}
+  http:
+    - route:
+        - destination:
+            host: capacitor
+            port:
+              number: 9000
