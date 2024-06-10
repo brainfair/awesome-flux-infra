@@ -3,4 +3,4 @@ kind: Kustomization
 namespace: pg-airflow
 resources:
   - namespace.yaml
-  - cluster.yaml
+  #- cluster.yaml
