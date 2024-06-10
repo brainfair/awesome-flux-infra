@@ -5,3 +5,4 @@ resources:
   - webserver-secret-key.yaml
   - helm-repo.yaml
   - helm-release.yaml
+  - virtual-service.yaml
