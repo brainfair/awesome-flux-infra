@@ -18,5 +18,6 @@ resources:
   - ../../base/argocd
   - ../../base/strimzi
   - ../../base/pgadmin
+  - ../../base/airflow
 patches:
   - path: docker-flex.yaml
