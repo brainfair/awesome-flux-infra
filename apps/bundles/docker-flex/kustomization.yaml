@@ -19,5 +19,6 @@ resources:
   - ../../base/strimzi
   - ../../base/pgadmin
   - ../../base/airflow
+  - ../../base/capacitor
 patches:
   - path: docker-flex.yaml
