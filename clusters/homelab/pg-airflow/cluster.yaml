@@ -11,6 +11,8 @@ spec:
     initdb:
       database: airflow
       owner: airflow
+      secret:
+        name: pg-airflow-user-secret
   storage:
     size: 10Gi
   monitoring:
