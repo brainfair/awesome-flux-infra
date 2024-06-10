@@ -73,5 +73,11 @@ spec:
     - kind: HelmRelease
       name: "*"
       namespace: strimzi
+    - kind: HelmRelease
+      name: "*"
+      namespace: pgadmin
+    - kind: HelmRelease
+      name: "*"
+      namespace: airflow
   inclusionList:
     - ".*.upgrade.*succeeded.*"

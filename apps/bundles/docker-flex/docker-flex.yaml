@@ -185,3 +185,13 @@ spec:
   chart:
     spec:
       version: ">=1.0.0 <2.0.0"
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: airflow
+  namespace: airflow
+spec:
+  chart:
+    spec:
+      version: ">=1.0.0 <2.0.0"
