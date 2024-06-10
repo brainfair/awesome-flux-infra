@@ -17,6 +17,7 @@ spec:
         - jenkins.${cluster_subdomain}
         - argocd.${cluster_subdomain}
         - pgadmin.${cluster_subdomain}
+        - airflow.${cluster_subdomain}
       port:
         name: http
         number: 80
@@ -33,6 +34,7 @@ spec:
         - jenkins.${cluster_subdomain}
         - argocd.${cluster_subdomain}
         - pgadmin.${cluster_subdomain}
+        - airflow.${cluster_subdomain}
       port:
         name: https
         number: 443
