@@ -4,4 +4,4 @@ resources:
   - namespace.yaml
   - webserver-secret-key.yaml
   - helm-repo.yaml
-  #- helm-release.yaml
+  - helm-release.yaml
