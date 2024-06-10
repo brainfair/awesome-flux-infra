@@ -41,6 +41,7 @@ This repository contains Infrastructure applications and addons installed inside
 - strimzi
 - victoria-metrics-k8s-stack
 - airflow
+- capacitor (Flux UI)
 
 ## Import current repository
 
