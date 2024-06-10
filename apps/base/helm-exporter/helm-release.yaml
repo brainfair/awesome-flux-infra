@@ -130,3 +130,7 @@ spec:
               url: https://helm.runix.net
             charts:
               - pgadmin4
+          - registry:
+              url: https://airflow.apache.org
+            charts:
+              - airflow
