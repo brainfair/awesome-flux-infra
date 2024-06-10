@@ -40,6 +40,7 @@ This repository contains Infrastructure applications and addons installed inside
 - reflector
 - strimzi
 - victoria-metrics-k8s-stack
+- airflow
 
 ## Import current repository
 
