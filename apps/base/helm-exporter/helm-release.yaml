@@ -126,3 +126,7 @@ spec:
               url: https://strimzi.io/charts
             charts:
               - strimzi-kafka-operator
+          - registry:
+              url: https://helm.runix.net
+            charts:
+              - pgadmin4
