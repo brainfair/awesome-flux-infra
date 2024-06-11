@@ -20,5 +20,6 @@ resources:
   - ../../base/pgadmin
   - ../../base/airflow
   - ../../base/capacitor
+  - ../../base/minio-operator
 patches:
   - path: docker-flex.yaml

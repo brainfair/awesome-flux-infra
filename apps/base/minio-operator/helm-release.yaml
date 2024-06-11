@@ -1,0 +1,24 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: operator
+  namespace: minio-operator
+spec:
+  releaseName: operator
+  chart:
+    spec:
+      chart: operator
+      sourceRef:
+        kind: HelmRepository
+        name: minio-operator
+        namespace: minio-operator
+  interval: 15m
+  timeout: 15m
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  # Default values: https://github.com/minio/operator/blob/master/helm/operator/values.yaml
+  #values:
