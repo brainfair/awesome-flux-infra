@@ -134,3 +134,7 @@ spec:
               url: https://airflow.apache.org
             charts:
               - airflow
+          - registry:
+              url: https://operator.min.io
+            charts:
+              - operator

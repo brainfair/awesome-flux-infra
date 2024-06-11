@@ -79,5 +79,8 @@ spec:
     - kind: HelmRelease
       name: "*"
       namespace: airflow
+    - kind: HelmRelease
+      name: "*"
+      namespace: minio-operator
   inclusionList:
     - ".*.upgrade.*succeeded.*"

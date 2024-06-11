@@ -19,5 +19,6 @@ resources:
   - ../../base/strimzi
   - ../../base/pgadmin
   - ../../base/airflow
+  - ../../base/minio-operator
 patches:
   - path: docker-stable.yaml
