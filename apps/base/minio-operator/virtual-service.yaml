@@ -1,0 +1,17 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: minio-operator-virtualservice
+  namespace: minio-operator
+spec:
+  gateways:
+    - istio-ingress/wildcard-gateway
+  hosts:
+    - minio-operator.${cluster_subdomain}
+  http:
+    - route:
+        - destination:
+            host: console.minio-operator.svc.cluster.local
+            port:
+              number: 9090

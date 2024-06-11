@@ -19,6 +19,7 @@ spec:
         - pgadmin.${cluster_subdomain}
         - airflow.${cluster_subdomain}
         - capacitor.${cluster_subdomain}
+        - minio-operator.${cluster_subdomain}
       port:
         name: http
         number: 80
@@ -37,6 +38,7 @@ spec:
         - pgadmin.${cluster_subdomain}
         - airflow.${cluster_subdomain}
         - capacitor.${cluster_subdomain}
+        - minio-operator.${cluster_subdomain}
       port:
         name: https
         number: 443

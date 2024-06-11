@@ -195,3 +195,13 @@ spec:
   chart:
     spec:
       version: ">=1.0.0 <2.0.0"
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: operator
+  namespace: minio-operator
+spec:
+  chart:
+    spec:
+      version: ">=5.0.0 <6.0.0"
