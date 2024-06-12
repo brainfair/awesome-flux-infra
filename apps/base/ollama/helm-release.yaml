@@ -24,11 +24,12 @@ spec:
   # ollama sub-values: https://github.com/otwld/ollama-helm/blob/main/values.yaml
   values:
     ollama:
-      gpu:
-        enabled: true
-        type: "nvidia"
-        number: 1
-      models:
-        - llama3
-      persistentVolume:
-        enabled: true
+      ollama:
+        gpu:
+          enabled: true
+          type: "nvidia"
+          number: 1
+        models:
+          - llama3
+        persistentVolume:
+          enabled: true
