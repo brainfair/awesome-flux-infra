@@ -21,5 +21,6 @@ resources:
   - ../../base/airflow
   - ../../base/capacitor
   - ../../base/minio-operator
+  - ../../base/ollama
 patches:
   - path: docker-flex.yaml
