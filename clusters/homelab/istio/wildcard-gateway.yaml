@@ -20,6 +20,7 @@ spec:
         - airflow.${cluster_subdomain}
         - capacitor.${cluster_subdomain}
         - minio-operator.${cluster_subdomain}
+        - ollama-web.${cluster_subdomain}
       port:
         name: http
         number: 80
@@ -39,6 +40,7 @@ spec:
         - airflow.${cluster_subdomain}
         - capacitor.${cluster_subdomain}
         - minio-operator.${cluster_subdomain}
+        - ollama-web.${cluster_subdomain}
       port:
         name: https
         number: 443
