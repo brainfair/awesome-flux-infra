@@ -12,6 +12,6 @@ spec:
   http:
     - route:
         - destination:
-            host: open-webui-ollama.ollama.svc.cluster.local
+            host: open-webui.ollama.svc.cluster.local
             port:
               number: 80
