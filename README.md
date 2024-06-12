@@ -42,6 +42,7 @@ This repository contains Infrastructure applications and addons installed inside
 - victoria-metrics-k8s-stack
 - airflow
 - capacitor (Flux UI)
+- ollama & open-webui
 
 ## Import current repository
 
