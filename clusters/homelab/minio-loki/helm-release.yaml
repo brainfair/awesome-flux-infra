@@ -24,6 +24,7 @@ spec:
     secrets: ~
     tenant:
       name: minio-loki
+      configuration: minio-loki-env-configuration
       configSecret:
         name: minio-loki-env-configuration
         accessKey: minio123
