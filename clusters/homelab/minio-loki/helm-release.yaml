@@ -26,10 +26,6 @@ spec:
       name: minio-loki
       configuration:
         name: minio-loki-env-configuration
-      configSecret:
-        name: minio-loki-env-configuration
-        accessKey: minio123
-        secretKey: minio123
       pools:
         - servers: 1
           name: pool-0

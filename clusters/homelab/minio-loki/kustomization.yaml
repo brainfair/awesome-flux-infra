@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - minio-loki-user-secret.yaml
-  #- helm-release.yaml
+  - helm-release.yaml
