@@ -21,7 +21,7 @@ spec:
       retries: 3
   # Default values: https://github.com/minio/operator/blob/master/helm/tenant/values.yaml
   values:
-    secrets: {}
+    secrets: ~
     tenant:
       name: minio-loki
       configSecret:
