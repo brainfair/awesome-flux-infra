@@ -1,0 +1,54 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: minio-loki
+  namespace: minio-loki
+spec:
+  releaseName: minio-loki
+  chart:
+    spec:
+      chart: tenant
+      sourceRef:
+        kind: HelmRepository
+        name: minio-operator
+        namespace: minio-operator
+  interval: 15m
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  # Default values: https://github.com/minio/operator/blob/master/helm/tenant/values.yaml
+  values:
+    tenant:
+      name: minio-loki
+      configSecret:
+        name: minio-loki-env-configuration
+        accessKey: minio123
+        secretKey: minio123
+      pools:
+        - servers: 1
+          name: pool-0
+          volumesPerServer: 1
+          size: 10Gi
+          securityContext:
+            runAsUser: 1000
+            runAsGroup: 1000
+            fsGroup: 1000
+            fsGroupChangePolicy: "OnRootMismatch"
+            runAsNonRoot: true
+          containerSecurityContext:
+            runAsUser: 1000
+            runAsGroup: 1000
+            runAsNonRoot: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+            seccompProfile:
+              type: RuntimeDefault
+      buckets:
+        - name: chunks
+        - name: ruler
+        - name: admin

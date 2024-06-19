@@ -5,5 +5,6 @@ resources:
   - flux-promotion
   - istio
   - pg-airflow
+  - minio-loki
 patches:
   - path: victoria-metrics-k8s-stack/helm-release.yaml
