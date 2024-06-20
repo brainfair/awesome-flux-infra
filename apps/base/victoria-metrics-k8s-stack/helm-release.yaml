@@ -98,7 +98,7 @@ spec:
         #     memory: 150Mi
       grafana.ini:
         server:
-          root_url: https://${cluster_name}-grafana.${cluster_subdomain}
+          root_url: https://grafana.${cluster_subdomain}
         users:
           auto_assign_org_role: "Editor"
         auth.anonymous:
@@ -108,7 +108,7 @@ spec:
           hide_version: true
       ingress:
         hosts:
-          - ${cluster_name}-grafana.${cluster_subdomain}
+          - grafana.${cluster_subdomain}
       dashboards:
         default:
           istio-mesh-dashboard:
@@ -230,7 +230,7 @@ spec:
         #                 - vmsingle
         #         topologyKey: failure-domain.beta.kubernetes.io/zone
         extraArgs:
-          external.url: "https://${cluster_name}-vmalert.${cluster_subdomain}"
+          external.url: "https://vmalert.${cluster_subdomain}"
         # resources:
         #   limits:
         #     memory: "250Mi"
@@ -240,7 +240,7 @@ spec:
     alertmanager:
       spec:
         disableNamespaceMatcher: true
-        externalURL: "https://${cluster_name}-vmalertmanager.${cluster_subdomain}"
+        externalURL: "https://vmalertmanager.${cluster_subdomain}"
         # resources:
         #   limits:
         #     memory: "200Mi"
