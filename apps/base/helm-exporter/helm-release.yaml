@@ -138,6 +138,7 @@ spec:
               url: https://operator.min.io
             charts:
               - operator
+              - tenant
           - registry:
               url: https://grafana.github.io/helm-charts
             charts:
