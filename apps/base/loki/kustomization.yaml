@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - helm-repo.yaml
-  #- helm-release-loki.yaml
+  - helm-release-loki.yaml
   #- helm-release-promtail.yaml
   - datasource.yaml
