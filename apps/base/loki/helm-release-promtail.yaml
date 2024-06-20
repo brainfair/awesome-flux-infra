@@ -1,0 +1,27 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: promtail
+  namespace: loki
+spec:
+  releaseName: promtail
+  chart:
+    spec:
+      chart: promtail
+      sourceRef:
+        kind: HelmRepository
+        name: grafana
+        namespace: loki
+  interval: 15m
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  # Default values: https://github.com/grafana/helm-charts/blob/main/charts/promtail/values.yaml
+  values:
+    config:
+      snippets:
+        pipelineStages:
+          - cri: {}

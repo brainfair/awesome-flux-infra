@@ -1,0 +1,162 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: loki
+  namespace: loki
+spec:
+  releaseName: loki
+  chart:
+    spec:
+      chart: loki
+      sourceRef:
+        kind: HelmRepository
+        name: grafana
+        namespace: loki
+  interval: 15m
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  # Default values: https://github.com/grafana/loki/blob/main/production/helm/loki/values.yaml
+  values:
+    lokiCanary:
+      enabled: false
+    test:
+      enabled: false
+    loki:
+      auth_enabled: false
+      commonConfig:
+        replication_factor: 1
+      schemaConfig:
+        configs:
+          - from: "2024-04-15"
+            object_store: s3
+            store: tsdb
+            schema: v13
+            index:
+              prefix: index_
+              period: 24h
+      storage:
+        bucketNames:
+          admin: admin
+          chunks: chunks
+          ruler: ruler
+        s3:
+          endpoint: https://minio-loki.minio
+          secretAccessKey: null
+          accessKeyId: null
+          s3forcepathstyle: true
+          insecure: true
+        type: s3
+      ingester:
+        chunk_encoding: snappy
+      server:
+        http_server_write_timeout: 5m
+        http_server_read_timeout: 5m
+        grpc_server_max_recv_msg_size: 104857600
+        grpc_server_max_send_msg_size: 104857600
+      limits_config:
+        max_global_streams_per_user: 10000
+        max_line_size_truncate: true
+      querier:
+        max_concurrent: 4
+      frontend:
+        compress_responses: true
+        log_queries_longer_than: 30s
+        query_stats_enabled: true
+      rulerConfig:
+        external_url: https://grafana.${cluster_subdomain}
+        storage:
+          type: local
+          local:
+            directory: /rules
+        rule_path: /rules/fake
+        alertmanager_url: http://vmalertmanager-victoria-metrics-k8s-stack.monitoring.svc:9093
+        enable_api: true
+        ring:
+          kvstore:
+            store: inmemory
+        enable_alertmanager_v2: true
+    memcachedExporter:
+      resources:
+        requests:
+          cpu: 10m
+          memory: 100Mi
+        limits:
+          memory: 100Mi
+    sidecar:
+      rules:
+        searchNamespace: ALL
+        folder: /rules/fake
+      resources:
+        requests:
+          cpu: 10m
+          memory: 100Mi
+        limits:
+          memory: 100Mi
+    backend:
+      replicas: 1
+      resources:
+        requests:
+          cpu: 100m
+          memory: 256Mi
+        limits:
+          memory: 256Mi
+    read:
+      replicas: 1
+      resources:
+        requests:
+          cpu: 100m
+          memory: 256Mi
+        limits:
+          memory: 256Mi
+    write:
+      replicas: 1
+      resources:
+        requests:
+          cpu: 100m
+          memory: 256Mi
+        limits:
+          memory: 256Mi
+    gateway:
+      service:
+        labels:
+          prometheus.io/service-monitor: "false"
+      resources:
+        requests:
+          cpu: 100m
+          memory: 256Mi
+        limits:
+          memory: 256Mi
+    chunksCache:
+      allocatedMemory: 1024
+    monitoring:
+      dashboards:
+        enabled: true
+      serviceMonitor:
+        enabled: true
+    deploymentMode: SimpleScalable
+
+    # Zero out replica counts of other deployment modes
+    singleBinary:
+      replicas: 0
+    ingester:
+      replicas: 0
+    querier:
+      replicas: 0
+    queryFrontend:
+      replicas: 0
+    queryScheduler:
+      replicas: 0
+    distributor:
+      replicas: 0
+    compactor:
+      replicas: 0
+    indexGateway:
+      replicas: 0
+    bloomCompactor:
+      replicas: 0
+    bloomGateway:
+      replicas: 0

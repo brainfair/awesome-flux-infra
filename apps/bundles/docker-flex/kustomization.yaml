@@ -21,5 +21,6 @@ resources:
   - ../../base/airflow
   - ../../base/capacitor
   - ../../base/minio-operator
+  - ../../base/loki
 patches:
   - path: docker-flex.yaml
