@@ -205,3 +205,23 @@ spec:
   chart:
     spec:
       version: "5.0.15"
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: loki
+  namespace: loki
+spec:
+  chart:
+    spec:
+      version: "6.6.3"
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: promtail
+  namespace: loki
+spec:
+  chart:
+    spec:
+      version: "6.16.0"

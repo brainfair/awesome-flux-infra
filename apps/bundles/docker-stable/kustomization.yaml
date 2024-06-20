@@ -20,5 +20,6 @@ resources:
   - ../../base/pgadmin
   - ../../base/airflow
   - ../../base/minio-operator
+  - ../../base/loki
 patches:
   - path: docker-stable.yaml

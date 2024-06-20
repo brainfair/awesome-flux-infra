@@ -138,3 +138,8 @@ spec:
               url: https://operator.min.io
             charts:
               - operator
+          - registry:
+              url: https://grafana.github.io/helm-charts
+            charts:
+              - loki
+              - promtail

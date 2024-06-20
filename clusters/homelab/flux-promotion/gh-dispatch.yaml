@@ -82,5 +82,8 @@ spec:
     - kind: HelmRelease
       name: "*"
       namespace: minio-operator
+    - kind: HelmRelease
+      name: "*"
+      namespace: loki
   inclusionList:
     - ".*.upgrade.*succeeded.*"
