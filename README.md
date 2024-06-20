@@ -20,29 +20,33 @@ This repository contains Infrastructure applications and addons installed inside
 - [CRD GitOps repository](https://github.com/brainfair/awesome-flux-crds) must be included before this as a dependency.
 
 ## List of applications
-- argocd
-- aws-load-balancer-controller
-- blackbox-exporter
-- cert-manager
-- cloudnative-pg
-- pgadmin
-- cluster-autoscaler
-- external-dns
-- external-secrets
-- flux-monitoring
-- helm-exporter
-- istio
-- jenkins
-- k8s-event-logger
-- keda
-- kubelinks
-- metrics-server
-- reflector
-- strimzi
-- victoria-metrics-k8s-stack
-- airflow
-- capacitor (Flux UI)
-- ollama & open-webui
+- [Apache Airflow](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/airflow)
+- [ArgoCD](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/argocd)
+- [aws-load-balancer-controller](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/aws-load-balancer-controller)
+- [blackbox-exporter](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/blackbox-exporter)
+- [cert-manager](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/cert-manager)
+- [cloudnative-pg (PostgreSQL operator)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/cloudnative-pg)
+- [cnpg tenant example](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/pg-airflow)
+- [pgadmin](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/pgadmin)
+- [cluster-autoscaler](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/cluster-autoscaler)
+- [external-dns](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/external-dns)
+- [external-secrets](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/external-secrets)
+- [flux-monitoring (alerts and dashboards for FluxCD)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/flux-monitoring)
+- [helm-exporter](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/helm-exporter)
+- [Istio ServiceMesh](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/istio)
+- [Jenkins](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/jenkins-server)
+- [k8s-event-logger](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/k8s-event-logger)
+- [KEDA](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/keda)
+- [kubelinks](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/kubelinks)
+- [metrics-server](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/metrics-server)
+- [reflector](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/reflector)
+- [Strimzi Kafka Operator](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/strimzi)
+- [Victoria Metrics (victoria-metrics-k8s-stack)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/victoria-metrics-k8s-stack)
+- [Loki](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/loki)
+- [capacitor (Flux UI)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/capacitor)
+- [ollama & open-webui](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/ollama)
+- [minio-operator](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/minio-operator)
+- [minio-tenant example](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/minio-loki)
 
 ## Import current repository
 
