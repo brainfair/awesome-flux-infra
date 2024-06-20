@@ -19,6 +19,10 @@ spec:
   upgrade:
     remediation:
       retries: 3
+  valuesFrom:
+    - kind: Secret
+      name: minio-loki-env-configuration
+      valuesKey: helm-release-loki-values
   # Default values: https://github.com/grafana/loki/blob/main/production/helm/loki/values.yaml
   values:
     lokiCanary:
@@ -43,12 +47,6 @@ spec:
           admin: admin
           chunks: chunks
           ruler: ruler
-        s3:
-          endpoint: https://minio-loki.minio
-          secretAccessKey: null
-          accessKeyId: null
-          s3forcepathstyle: true
-          insecure: true
         type: s3
       ingester:
         chunk_encoding: snappy
