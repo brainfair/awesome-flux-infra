@@ -86,6 +86,8 @@ spec:
       #     cpu: 19m
       #     memory: 200Mi
       sidecar:
+        datasources:
+          searchNamespace: ALL
         dashboards:
           searchNamespace: ALL
         # resources:
