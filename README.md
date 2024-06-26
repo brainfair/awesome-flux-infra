@@ -47,6 +47,7 @@ This repository contains Infrastructure applications and addons installed inside
 - [ollama & open-webui](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/ollama)
 - [minio-operator](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/minio-operator)
 - [minio-tenant example](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/minio-loki)
+- [elastic operator (ECK)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/eck-operator)
 
 ## Import current repository
 

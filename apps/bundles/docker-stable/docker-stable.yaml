@@ -225,3 +225,13 @@ spec:
   chart:
     spec:
       version: "6.16.2"
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: elastic-operator
+  namespace: elastic-system
+spec:
+  chart:
+    spec:
+      version: "2.13.0"

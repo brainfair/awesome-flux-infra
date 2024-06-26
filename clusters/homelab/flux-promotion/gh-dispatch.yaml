@@ -85,5 +85,8 @@ spec:
     - kind: HelmRelease
       name: "*"
       namespace: loki
+    - kind: HelmRelease
+      name: "*"
+      namespace: elastic-system
   inclusionList:
     - ".*.upgrade.*succeeded.*"

@@ -21,5 +21,6 @@ resources:
   - ../../base/airflow
   - ../../base/minio-operator
   - ../../base/loki
+  - ../../base/eck-operator
 patches:
   - path: docker-stable.yaml

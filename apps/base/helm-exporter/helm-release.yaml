@@ -144,3 +144,8 @@ spec:
             charts:
               - loki
               - promtail
+          - registry:
+              url: https://helm.elastic.co
+            charts:
+              - eck-operator-crds
+              - eck-operator
