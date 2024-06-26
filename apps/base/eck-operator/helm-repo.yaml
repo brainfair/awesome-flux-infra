@@ -1,0 +1,8 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: elastic
+  namespace: elastic-system
+spec:
+  interval: 120m
+  url: https://helm.elastic.co

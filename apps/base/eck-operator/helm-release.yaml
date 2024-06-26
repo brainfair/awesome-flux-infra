@@ -1,0 +1,25 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: elastic-operator
+  namespace: elastic-system
+spec:
+  releaseName: elastic-operator
+  chart:
+    spec:
+      chart: eck-operator
+      sourceRef:
+        kind: HelmRepository
+        name: elastic
+        namespace: elastic-system
+  interval: 15m
+  install:
+    remediation:
+      retries: 3
+  # Default values: https://github.com/elastic/cloud-on-k8s/blob/main/deploy/eck-operator/values.yaml
+  values:
+    installCRDs: false
+    webhook:
+      enabled: false
+    config:
+      validateStorageClass: false

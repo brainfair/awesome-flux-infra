@@ -22,5 +22,6 @@ resources:
   - ../../base/capacitor
   - ../../base/minio-operator
   - ../../base/loki
+  - ../../base/eck-operator
 patches:
   - path: docker-flex.yaml
