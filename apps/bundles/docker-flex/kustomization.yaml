@@ -23,5 +23,6 @@ resources:
   - ../../base/minio-operator
   - ../../base/loki
   - ../../base/eck-operator
+  - ../../base/oomkill-exporter
 patches:
   - path: docker-flex.yaml

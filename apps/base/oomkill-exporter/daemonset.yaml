@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: oomkill-exporter
+  namespace: oomkill-exporter
+  labels:
+    app: oomkill-exporter
+spec:
+  selector:
+    matchLabels:
+      app: oomkill-exporter
+  template:
+    metadata:
+      labels:
+        app: oomkill-exporter
+    spec:
+      containers:
+        - name: oomkill-exporter
+          image: sapcc/kubernetes-oomkill-exporter:0.5.1
+          imagePullPolicy: IfNotPresent
+          securityContext:
+            privileged: true
+          resources:
+            limits:
+              memory: 100Mi
+            requests:
+              cpu: 20m
+              memory: 100Mi
+          volumeMounts:
+            - name: kmsg
+              mountPath: /dev/kmsg
+              readOnly: true
+            - name: containerd
+              mountPath: /run/containerd/containerd.sock
+          ports:
+            - name: metrics
+              containerPort: 9102
+      tolerations:
+        - operator: Exists
+      volumes:
+        - name: kmsg
+          hostPath:
+            path: /dev/kmsg
+        - name: containerd
+          hostPath:
+            path: /run/containerd/containerd.sock

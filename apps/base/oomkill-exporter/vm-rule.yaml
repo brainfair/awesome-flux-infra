@@ -1,0 +1,16 @@
+apiVersion: operator.victoriametrics.com/v1beta1
+kind: VMRule
+metadata:
+  name: oomkill-exporter
+  namespace: oomkill-exporter
+spec:
+  groups:
+    - name: OOMKILL
+      rules:
+        - alert: OOMKillDetected
+          expr: sum by(namespace, pod_name) (changes(klog_pod_oomkill[5m])) >= 1
+          for: 0m
+          labels:
+            severity: warning
+          annotations:
+            summary: "OOM Kill is detected for {{ $labels.pod_name }} in {{ $labels.namespace }}"
