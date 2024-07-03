@@ -20,7 +20,7 @@ spec:
           imagePullPolicy: IfNotPresent
           args:
             - -logtostderr
-            - -v=4
+            - -v=5
           securityContext:
             privileged: true
           resources:
