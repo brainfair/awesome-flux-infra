@@ -18,6 +18,9 @@ spec:
         - name: oomkill-exporter
           image: sapcc/kubernetes-oomkill-exporter:0.5.1
           imagePullPolicy: IfNotPresent
+          args:
+            - -logtostderr
+            - -v=5
           securityContext:
             privileged: true
           resources:
