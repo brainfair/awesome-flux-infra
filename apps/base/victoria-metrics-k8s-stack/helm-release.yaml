@@ -152,14 +152,20 @@ spec:
     kubeControllerManager:
       enabled: false
     defaultRules:
-      disabled:
-        TooManyScrapeErrors: true
-        TooHighChurnRate24h: true
-        KubeHpaMaxedOut: true
-        KubeMemoryOvercommit: true
       rules:
-        etcd: false
-        vmcluster: false
+        TooManyScrapeErrors:
+          create: false
+        TooHighChurnRate24h:
+          create: false
+        KubeHpaMaxedOut:
+          create: false
+        KubeMemoryOvercommit:
+          create: false
+      groups:
+        etcd:
+          create: false
+        vmcluster:
+          create: false
     vmsingle:
       spec:
         retentionPeriod: "7d"
