@@ -217,7 +217,7 @@ spec:
       version: "6.6.5"
   values:
     gateway:
-      affinity: ~
+      affinity: null
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
