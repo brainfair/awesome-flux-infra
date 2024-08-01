@@ -50,6 +50,8 @@ spec:
         type: s3
       ingester:
         chunk_encoding: snappy
+      pattern_ingester:
+        enabled: true
       server:
         http_server_write_timeout: 5m
         http_server_read_timeout: 5m
@@ -58,6 +60,7 @@ spec:
       limits_config:
         max_global_streams_per_user: 10000
         max_line_size_truncate: true
+        volume_enabled: true
       querier:
         max_concurrent: 4
       frontend:

@@ -96,6 +96,8 @@ spec:
         #   requests:
         #     cpu: 10m
         #     memory: 150Mi
+      plugins:
+        - https://storage.googleapis.com/integration-artifacts/grafana-lokiexplore-app/grafana-lokiexplore-app-latest.zip;grafana-lokiexplore-app
       grafana.ini:
         server:
           root_url: https://grafana.${cluster_subdomain}
