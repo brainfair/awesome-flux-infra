@@ -23,5 +23,6 @@ resources:
   - ../../base/loki
   - ../../base/eck-operator
   - ../../base/oomkill-exporter
+  - ../../base/x509-certificate-exporter
 patches:
   - path: docker-stable.yaml

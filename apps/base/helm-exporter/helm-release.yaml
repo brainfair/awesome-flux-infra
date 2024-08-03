@@ -149,3 +149,7 @@ spec:
             charts:
               - eck-operator-crds
               - eck-operator
+          - registry:
+              url: https://charts.enix.io
+            charts:
+              - x509-certificate-exporter
