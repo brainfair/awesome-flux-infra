@@ -1,0 +1,45 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: x509-certificate-exporter
+  namespace: x509-certificate-exporter
+spec:
+  releaseName: x509-certificate-exporter
+  chart:
+    spec:
+      chart: x509-certificate-exporter
+      sourceRef:
+        kind: HelmRepository
+        name: enix
+        namespace: x509-certificate-exporter
+  interval: 15m
+  timeout: 15m
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  # Defaults: https://github.com/enix/x509-certificate-exporter/blob/main/deploy/charts/x509-certificate-exporter/values.yaml
+  values:
+    grafana:
+      createDashboard: true
+    hostPathsExporter:
+      daemonSets:
+        nodes:
+          watchFiles:
+            - /var/lib/kubelet/pki/kubelet-client-current.pem
+            - /etc/kubernetes/pki/apiserver.crt
+            - /etc/kubernetes/pki/apiserver-etcd-client.crt
+            - /etc/kubernetes/pki/apiserver-kubelet-client.crt
+            - /etc/kubernetes/pki/ca.crt
+            - /etc/kubernetes/pki/front-proxy-ca.crt
+            - /etc/kubernetes/pki/front-proxy-client.crt
+            - /etc/kubernetes/pki/etcd/ca.crt
+            - /etc/kubernetes/pki/etcd/healthcheck-client.crt
+            - /etc/kubernetes/pki/etcd/peer.crt
+            - /etc/kubernetes/pki/etcd/server.crt
+          watchKubeconfFiles:
+            - /etc/kubernetes/admin.conf
+            - /etc/kubernetes/controller-manager.conf
+            - /etc/kubernetes/scheduler.conf

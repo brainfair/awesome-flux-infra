@@ -1,0 +1,8 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: enix
+  namespace: x509-certificate-exporter
+spec:
+  interval: 120m
+  url: https://charts.enix.io
