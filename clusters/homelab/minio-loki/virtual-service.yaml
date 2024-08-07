@@ -9,13 +9,20 @@ spec:
     - istio-ingress/wildcard-gateway
   hosts:
     - minio-loki.${cluster_subdomain}
-  tls:
-    - match:
-        - port: 443
-          sniHosts:
-            - minio-loki.${cluster_subdomain}
-      route:
+  http:
+    - route:
         - destination:
             host: minio-loki-console.minio-loki.svc.cluster.local
             port:
               number: 9443
+---
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: minio-loki-console
+  namespace: minio-loki
+spec:
+  host: minio-loki-console
+  trafficPolicy:
+    tls:
+      mode: SIMPLE
