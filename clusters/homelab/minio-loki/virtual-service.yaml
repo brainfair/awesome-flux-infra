@@ -2,16 +2,16 @@
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
-  name: minio-operator-virtualservice
-  namespace: minio-operator
+  name: minio-loki-virtualservice
+  namespace: minio-loki
 spec:
   gateways:
     - istio-ingress/wildcard-gateway
   hosts:
-    - minio-operator.${cluster_subdomain}
+    - minio-loki.${cluster_subdomain}
   http:
     - route:
         - destination:
-            host: console.minio-operator.svc.cluster.local
+            host: minio-loki-console.minio-loki.svc.cluster.local
             port:
-              number: 9090
+              number: 9443
