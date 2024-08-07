@@ -214,7 +214,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "6.7.3"
+      version: "6.9.0"
   values:
     gateway:
       affinity:
