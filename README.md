@@ -4,6 +4,7 @@ This repository contains Infrastructure applications and addons installed inside
 
 # Table of Contents
 
+- [Support Project](#support-project)
 - [Prerequisites](#prerequisites)
 - [List of applications](#list-of-applications)
 - [Import current repository](#import-current-repository)
@@ -12,6 +13,9 @@ This repository contains Infrastructure applications and addons installed inside
 - [Structure idea](#structure-idea)
 - [Flex/Stable Bundles and promotion](#flexstable-bundles-and-promotion)
 - [Slack Notifications](#slack-notifications)
+
+## Support Project
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N011QV6F)
 
 ## Prerequisites
 
