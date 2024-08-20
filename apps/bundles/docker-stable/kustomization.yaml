@@ -24,5 +24,6 @@ resources:
   - ../../base/eck-operator
   - ../../base/oomkill-exporter
   - ../../base/x509-certificate-exporter
+  - ../../base/reloader
 patches:
   - path: docker-stable.yaml
