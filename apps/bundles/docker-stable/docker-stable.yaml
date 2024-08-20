@@ -254,3 +254,13 @@ spec:
   chart:
     spec:
       version: "3.14.0"
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: reloader
+  namespace: reloader
+spec:
+  chart:
+    spec:
+      version: "1.0.121"

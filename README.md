@@ -54,6 +54,7 @@ This repository contains Infrastructure applications and addons installed inside
 - [elastic operator (ECK)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/eck-operator)
 - [oomkill-exporter](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/oomkill-exporter)
 - [x509-certificate-exporter](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/x509-certificate-exporter)
+- [stakater/Reloader](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/reloader)
 
 ## Import current repository
 

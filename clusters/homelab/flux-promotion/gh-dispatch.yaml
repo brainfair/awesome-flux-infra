@@ -91,5 +91,8 @@ spec:
     - kind: HelmRelease
       name: "*"
       namespace: x509-certificate-exporter
+    - kind: HelmRelease
+      name: "*"
+      namespace: reloader
   inclusionList:
     - ".*.upgrade.*succeeded.*"
