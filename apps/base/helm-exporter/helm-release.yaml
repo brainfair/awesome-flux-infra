@@ -153,3 +153,7 @@ spec:
               url: https://charts.enix.io
             charts:
               - x509-certificate-exporter
+          - registry:
+              url: https://stakater.github.io/stakater-charts
+            charts:
+              - reloader
