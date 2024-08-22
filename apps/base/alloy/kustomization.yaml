@@ -10,5 +10,5 @@ configMapGenerator:
       - config.alloy
     options:
       disableNameSuffixHash: true
-      labels:
-        kustomize.toolkit.fluxcd.io/substitute: disabled
+      # labels:
+      #   kustomize.toolkit.fluxcd.io/substitute: disabled
