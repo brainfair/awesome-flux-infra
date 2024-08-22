@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.25.0"
+      version: "0.25.2"
   values:
     prometheus-node-exporter:
       hostRootFsMount:
@@ -114,7 +114,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.21.6"
+      version: "0.22.0"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
