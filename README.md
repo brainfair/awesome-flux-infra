@@ -47,6 +47,7 @@ This repository contains Infrastructure applications and addons installed inside
 - [Strimzi Kafka Operator](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/strimzi)
 - [Victoria Metrics (victoria-metrics-k8s-stack)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/victoria-metrics-k8s-stack)
 - [Loki](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/loki)
+- [Grafana Alloy](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/alloy)
 - [capacitor (Flux UI)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/capacitor)
 - [ollama & open-webui](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/ollama)
 - [minio-operator](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/minio-operator)
