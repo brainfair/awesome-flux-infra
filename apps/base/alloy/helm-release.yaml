@@ -1,0 +1,38 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: alloy
+  namespace: alloy
+spec:
+  releaseName: alloy
+  chart:
+    spec:
+      chart: alloy
+      sourceRef:
+        kind: HelmRepository
+        name: grafana
+        namespace: loki
+  interval: 15m
+  timeout: 15m
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  # Default values: https://github.com/grafana/alloy/blob/main/operations/helm/charts/alloy/values.yaml
+  values:
+    alloy:
+      # resources:
+      #   limits:
+      #     memory: 128Mi
+      #   requests:
+      #     cpu: 20m
+      #     memory: 128Mi
+      # mounts:
+      #   varlog: true
+      #   dockercontainers: true
+      configMap:
+        create: false
+        name: alloy-config
+        key: config.alloy
