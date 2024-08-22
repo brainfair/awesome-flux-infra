@@ -94,5 +94,8 @@ spec:
     - kind: HelmRelease
       name: "*"
       namespace: reloader
+    - kind: HelmRelease
+      name: "*"
+      namespace: alloy
   inclusionList:
     - ".*.upgrade.*succeeded.*"

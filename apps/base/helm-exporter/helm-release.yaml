@@ -144,6 +144,7 @@ spec:
             charts:
               - loki
               - promtail
+              - alloy
           - registry:
               url: https://helm.elastic.co
             charts:
