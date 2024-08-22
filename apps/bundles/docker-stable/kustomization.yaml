@@ -25,5 +25,6 @@ resources:
   - ../../base/oomkill-exporter
   - ../../base/x509-certificate-exporter
   - ../../base/reloader
+  - ../../base/alloy
 patches:
   - path: docker-stable.yaml
