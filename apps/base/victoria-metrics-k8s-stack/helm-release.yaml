@@ -33,7 +33,10 @@ spec:
     crds:
       enabled: false
     victoria-metrics-operator:
-      cleanupCRD: false
+      crd:
+        create: false
+        cleanup:
+          enabled: true
       operator:
         disable_prometheus_converter: false
         enable_converter_ownership: true
