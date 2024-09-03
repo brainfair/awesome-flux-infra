@@ -141,12 +141,15 @@ spec:
       enabled: true
     kubeProxy:
       enabled: true
-      spec:
-        jobLabel: jobLabel
-        endpoints:
-          - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
-            port: http-metrics
-            scheme: http
+      vmScrape:
+        spec:
+          jobLabel: jobLabel
+          namespaceSelector:
+            matchNames: [kube-system]
+          endpoints:
+            - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+              port: http-metrics
+              scheme: http
     kubeScheduler:
       enabled: false
     kubeEtcd:
