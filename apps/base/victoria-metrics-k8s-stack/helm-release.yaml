@@ -33,6 +33,8 @@ spec:
     crds:
       enabled: false
     victoria-metrics-operator:
+      admissionWebhooks:
+        enable: false
       crd:
         create: false
         cleanup:
