@@ -97,7 +97,7 @@ spec:
     - kind: HelmRelease
       name: "*"
       namespace: alloy
-    - kind: HelmRelease
+    - kind: OCIRepository
       name: "*"
       namespace: dragonfly-operator-system
   inclusionList:
