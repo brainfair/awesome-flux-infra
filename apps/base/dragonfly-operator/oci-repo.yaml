@@ -6,3 +6,5 @@ metadata:
 spec:
   interval: 120m
   url: oci://ghcr.io/dragonflydb/dragonfly-operator/helm/dragonfly-operator
+  ref:
+    semver: ">=1.0.0"
