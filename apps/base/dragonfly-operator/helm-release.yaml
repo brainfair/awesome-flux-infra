@@ -1,0 +1,28 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: dragonfly-operator
+  namespace: dragonfly-operator-system
+spec:
+  releaseName: dragonfly-operator
+  chart:
+    spec:
+      chart: dragonfly-operator
+      sourceRef:
+        kind: OCIRepository
+        name: dragonfly-operator
+        namespace: dragonfly-operator-system
+  interval: 15m
+  timeout: 5m
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  # Defaults: https://github.com/dragonflydb/dragonfly-operator/blob/main/charts/dragonfly-operator/values.yaml
+  values:
+    serviceMonitor:
+      enabled: true
+    grafanaDashboard:
+      enabled: true

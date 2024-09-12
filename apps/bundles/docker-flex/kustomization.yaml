@@ -27,5 +27,6 @@ resources:
   - ../../base/x509-certificate-exporter
   - ../../base/reloader
   - ../../base/alloy
+  - ../../base/dragonfly-operator
 patches:
   - path: docker-flex.yaml
