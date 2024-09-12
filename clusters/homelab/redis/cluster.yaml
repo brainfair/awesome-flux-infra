@@ -1,0 +1,25 @@
+---
+apiVersion: dragonflydb.io/v1alpha1
+kind: Dragonfly
+metadata:
+  name: dragonfly
+  namespace: redis
+spec:
+  args:
+    - "--default_lua_flags=allow-undeclared-keys,disable-atomicity"
+  replicas: 1
+  # resources:
+  #   requests:
+  #     cpu: 500m
+  #     memory: 500Mi
+  #   limits:
+  #     cpu: 600m
+  #     memory: 750Mi
+  snapshot:
+    cron: "0 2 * * *"
+    persistentVolumeClaimSpec:
+      accessModes:
+        - ReadWriteOnce
+      resources:
+        requests:
+          storage: 2Gi
