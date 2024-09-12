@@ -5,13 +5,10 @@ metadata:
   namespace: dragonfly-operator-system
 spec:
   releaseName: dragonfly-operator
-  chart:
-    spec:
-      chart: dragonfly-operator
-      sourceRef:
-        kind: OCIRepository
-        name: dragonfly-operator
-        namespace: dragonfly-operator-system
+  chartRef:
+    kind: OCIRepository
+    name: dragonfly-operator
+    namespace: dragonfly-operator-system
   interval: 15m
   timeout: 5m
   install:
