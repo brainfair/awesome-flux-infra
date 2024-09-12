@@ -32,6 +32,8 @@ This repository contains Infrastructure applications and addons installed inside
 - [cloudnative-pg (PostgreSQL operator)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/cloudnative-pg)
 - [cnpg tenant example](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/pg-airflow)
 - [pgadmin](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/pgadmin)
+- [Dragonfly Operator (redis replacement)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/dragonfly-operator)
+- [Dragonfly Instance (redis replacement)](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/redis)
 - [cluster-autoscaler](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/cluster-autoscaler)
 - [external-dns](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/external-dns)
 - [external-secrets](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/external-secrets)

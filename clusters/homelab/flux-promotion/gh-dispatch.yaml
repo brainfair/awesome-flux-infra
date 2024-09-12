@@ -97,5 +97,8 @@ spec:
     - kind: HelmRelease
       name: "*"
       namespace: alloy
+    - kind: HelmRelease
+      name: "*"
+      namespace: dragonfly-operator-system
   inclusionList:
     - ".*.upgrade.*succeeded.*"
