@@ -102,3 +102,5 @@ spec:
       namespace: dragonfly-operator-system
   inclusionList:
     - ".*.upgrade.*succeeded.*"
+  exclusionList:
+    - "^Helm upgrade succeeded for release .*victoria-metrics-crds.*"
