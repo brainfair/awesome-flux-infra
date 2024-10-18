@@ -54,6 +54,7 @@ This repository contains Infrastructure applications and addons installed inside
 - [ollama & open-webui](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/ollama)
 - [minio-operator](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/minio-operator)
 - [minio-tenant example](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/minio-loki)
+- [SeaweedFS (S3 alternative)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/seaweedfs)
 - [elastic operator (ECK)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/eck-operator)
 - [oomkill-exporter](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/oomkill-exporter)
 - [x509-certificate-exporter](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/x509-certificate-exporter)
