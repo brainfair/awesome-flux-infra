@@ -26,5 +26,6 @@ resources:
   - ../../base/x509-certificate-exporter
   - ../../base/reloader
   - ../../base/alloy
+  - ../../base/seaweedfs
 patches:
   - path: docker-stable.yaml

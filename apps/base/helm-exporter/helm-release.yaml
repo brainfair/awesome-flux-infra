@@ -158,3 +158,7 @@ spec:
               url: https://stakater.github.io/stakater-charts
             charts:
               - reloader
+          - registry:
+              url: https://seaweedfs.github.io/seaweedfs/helm
+            charts:
+              - seaweedfs
