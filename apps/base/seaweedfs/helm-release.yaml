@@ -1,0 +1,25 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: seaweedfs
+  namespace: seaweedfs
+spec:
+  releaseName: seaweedfs
+  chart:
+    spec:
+      chart: seaweedfs
+      sourceRef:
+        kind: HelmRepository
+        name: seaweedfs
+        namespace: seaweedfs
+  interval: 5m
+  install:
+    remediation:
+      retries: 3
+  # Defaults: https://github.com/seaweedfs/seaweedfs/blob/master/k8s/charts/seaweedfs/values.yaml
+  values:
+    filer:
+      s3:
+        enabled: true
+        enableAuth: true
+        existingConfigSecret: s3-secret

@@ -28,5 +28,6 @@ resources:
   - ../../base/reloader
   - ../../base/alloy
   - ../../base/dragonfly-operator
+  - ../../base/seaweedfs
 patches:
   - path: docker-flex.yaml
