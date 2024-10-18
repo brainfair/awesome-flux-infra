@@ -4,4 +4,4 @@ resources:
   - namespace.yaml
   - s3-secret.yaml
   - helm-repo.yaml
-  #- helm-release.yaml
+  - helm-release.yaml
