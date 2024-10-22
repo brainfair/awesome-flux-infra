@@ -116,32 +116,32 @@ spec:
       ingress:
         hosts:
           - grafana.${cluster_subdomain}
-      dashboards:
-        default:
-          istio-mesh-dashboard:
-            gnetId: 7639
-            revision: 194
-            datasource: VictoriaMetrics
-          istio-service-dashboard:
-            gnetId: 7636
-            revision: 194
-            datasource: VictoriaMetrics
-          istio-workload-dashboard:
-            gnetId: 7630
-            revision: 194
-            datasource: VictoriaMetrics
-          istio-performance-dashboard:
-            gnetId: 11829
-            revision: 194
-            datasource: VictoriaMetrics
-          istio-control-plane-dashboard:
-            gnetId: 7645
-            revision: 194
-            datasource: VictoriaMetrics
-          istio-wasm-dashboard:
-            gnetId: 13277
-            revision: 151
-            datasource: VictoriaMetrics
+      # dashboards:
+      #   default:
+      #     istio-mesh-dashboard:
+      #       gnetId: 7639
+      #       revision: 194
+      #       datasource: VictoriaMetrics
+      #     istio-service-dashboard:
+      #       gnetId: 7636
+      #       revision: 194
+      #       datasource: VictoriaMetrics
+      #     istio-workload-dashboard:
+      #       gnetId: 7630
+      #       revision: 194
+      #       datasource: VictoriaMetrics
+      #     istio-performance-dashboard:
+      #       gnetId: 11829
+      #       revision: 194
+      #       datasource: VictoriaMetrics
+      #     istio-control-plane-dashboard:
+      #       gnetId: 7645
+      #       revision: 194
+      #       datasource: VictoriaMetrics
+      #     istio-wasm-dashboard:
+      #       gnetId: 13277
+      #       revision: 151
+      #       datasource: VictoriaMetrics
     prometheus-node-exporter:
       enabled: true
     kubeProxy:
