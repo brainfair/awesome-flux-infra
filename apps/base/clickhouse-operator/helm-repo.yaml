@@ -1,0 +1,8 @@
+naapiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: clickhouse-operator
+  namespace: clickhouse-operator
+spec:
+  interval: 120m
+  url: https://docs.altinity.com/clickhouse-operator/

@@ -1,0 +1,50 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: clickhouse-operator
+  namespace: clickhouse-operator
+spec:
+  interval: 15m
+  timeout: 15m
+  chart:
+    spec:
+      chart: altinity-clickhouse-operator
+      sourceRef:
+        kind: HelmRepository
+        name: clickhouse-operator
+      interval: 5m
+  releaseName: clickhouse-operator
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  # Default values: https://github.com/Altinity/clickhouse-operator/blob/master/deploy/helm/clickhouse-operator/values.yaml
+  values:
+    configs:
+      files:
+        config.yaml:
+          watch:
+            namespaces: [".*"]
+    operator:
+      resources:
+        limits:
+          memory: 256Mi
+        requests:
+          cpu: 100m
+          memory: 256Mi
+    metrics:
+      enabled: true
+      resources:
+        limits:
+          memory: 128Mi
+        requests:
+          cpu: 100m
+          memory: 128Mi
+    serviceMonitor:
+      enabled: true
+    dashboards:
+      enabled: false
+      additionalLabels:
+        grafana_dashboard: "1"

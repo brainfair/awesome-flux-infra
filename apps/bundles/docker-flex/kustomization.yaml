@@ -29,5 +29,6 @@ resources:
   - ../../base/alloy
   - ../../base/dragonfly-operator
   - ../../base/seaweedfs
+  - ../../base/clickhouse-operator
 patches:
   - path: docker-flex.yaml
