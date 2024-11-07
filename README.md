@@ -34,6 +34,7 @@ This repository contains Infrastructure applications and addons installed inside
 - [pgadmin](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/pgadmin)
 - [Dragonfly Operator (redis replacement)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/dragonfly-operator)
 - [Dragonfly Instance (redis replacement)](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/redis)
+- [Clickhouse Operator (Altinity)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/clickhouse-operator)
 - [cluster-autoscaler](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/cluster-autoscaler)
 - [external-dns](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/external-dns)
 - [external-secrets](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/external-secrets)
