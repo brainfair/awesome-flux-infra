@@ -162,3 +162,7 @@ spec:
               url: https://seaweedfs.github.io/seaweedfs/helm
             charts:
               - seaweedfs
+          - registry:
+              url: https://docs.altinity.com/clickhouse-operator/
+            charts:
+              - altinity-clickhouse-operator

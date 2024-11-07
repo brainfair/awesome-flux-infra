@@ -27,5 +27,6 @@ resources:
   - ../../base/reloader
   - ../../base/alloy
   - ../../base/seaweedfs
+  - ../../base/clickhouse-operator
 patches:
   - path: docker-stable.yaml

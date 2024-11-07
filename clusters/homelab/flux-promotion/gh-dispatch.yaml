@@ -103,6 +103,9 @@ spec:
     - kind: HelmRelease
       name: "*"
       namespace: seaweedfs
+    - kind: HelmRelease
+      name: "*"
+      namespace: clickhouse-operator
   inclusionList:
     - ".*.upgrade.*succeeded.*"
   exclusionList:
