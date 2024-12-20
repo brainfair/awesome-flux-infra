@@ -1,0 +1,26 @@
+apiVersion: networking.istio.io/v1
+kind: Gateway
+metadata:
+  name: httpbin-gateway
+  namespace: httpbin
+spec:
+  selector:
+    istio: ingress-private
+  servers:
+    - hosts:
+        - httpbin.${cluster_subdomain}
+      port:
+        name: http
+        number: 80
+        protocol: HTTP
+      tls:
+        httpsRedirect: true
+    - hosts:
+        - httpbin.${cluster_subdomain}
+      port:
+        name: https
+        number: 443
+        protocol: HTTPS
+      tls:
+        credentialName: localhost-direct
+        mode: SIMPLE

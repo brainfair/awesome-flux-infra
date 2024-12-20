@@ -28,5 +28,6 @@ resources:
   - ../../base/alloy
   - ../../base/seaweedfs
   - ../../base/clickhouse-operator
+  - ../../base/httpbin
 patches:
   - path: docker-stable.yaml

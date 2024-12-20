@@ -1,0 +1,17 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: httpbin-virtualservice
+  namespace: httpbin
+spec:
+  gateways:
+    - httpbin-gateway
+  hosts:
+    - httpbin.${cluster_subdomain}
+  http:
+    - route:
+        - destination:
+            host: httpbin.httpbin.svc.cluster.local
+            port:
+              number: 8000
