@@ -6,7 +6,7 @@ metadata:
   namespace: httpbin
 spec:
   gateways:
-    - httpbin-gateway
+    - istio-ingress/wildcard-gateway
   hosts:
     - httpbin.${cluster_subdomain}
   http:
