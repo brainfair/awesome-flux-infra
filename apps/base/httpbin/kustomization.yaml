@@ -4,4 +4,4 @@ resources:
   - namespace.yaml
   - httpbin.yaml
   - virtual-service.yaml
-  - gateway.yaml
+  #- gateway.yaml
