@@ -12,7 +12,7 @@ spec:
         kind: HelmRepository
         name: jenkins
         namespace: jenkins
-  interval: 6m
+  interval: 5m
   timeout: 30m0s
   install:
     remediation:
