@@ -46,4 +46,4 @@ spec:
                 ttyEnabled: true
                 privileged: true
     serviceAccountAgent:
-      create: false
+      create: true
