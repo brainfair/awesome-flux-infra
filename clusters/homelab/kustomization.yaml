@@ -12,3 +12,5 @@ resources:
   - clickhouse
 patches:
   - path: victoria-metrics-k8s-stack/helm-release.yaml
+  # Example of removing a resource (reflector)
+  #- path: ../../apps/base/reflector/rm-reflector.yaml

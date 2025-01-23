@@ -1,0 +1,19 @@
+$patch: delete
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: reflector
+  namespace: reflector
+---
+$patch: delete
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: emberstack
+  namespace: reflector
+---
+$patch: delete
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: reflector
