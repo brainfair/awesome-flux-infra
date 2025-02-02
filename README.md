@@ -62,6 +62,7 @@ This repository contains Infrastructure applications and addons installed inside
 - [x509-certificate-exporter](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/x509-certificate-exporter)
 - [stakater/Reloader](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/reloader)
 - [httpbin](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/httpbin)
+- [kro (Kube Resource Orchestrator)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/kro)
 
 ## Import current repository
 
