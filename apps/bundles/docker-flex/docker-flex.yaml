@@ -284,13 +284,3 @@ spec:
   chart:
     spec:
       version: ">=0.0.0 <1.0.0"
----
-apiVersion: helm.toolkit.fluxcd.io/v2
-kind: HelmRelease
-metadata:
-  name: kro
-  namespace: kro
-spec:
-  chart:
-    spec:
-      version: ">=0.0.0 <1.0.0"
