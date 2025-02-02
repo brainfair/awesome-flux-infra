@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: OCIRepository
+metadata:
+  name: kro-run
+  namespace: kro
+spec:
+  interval: 120m
+  url: oci://ghcr.io/kro-run/kro/kro
+  ref:
+    semver: ">=0.2.0"

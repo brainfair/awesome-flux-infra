@@ -1,0 +1,24 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: kro
+  namespace: kro
+spec:
+  releaseName: kro
+  chartRef:
+    kind: OCIRepository
+    name: kro-run
+    namespace: kro
+  interval: 15m
+  timeout: 5m
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  # Defaults: https://github.com/kro-run/kro/blob/main/helm/values.yaml
+  values:
+    metrics:
+      service:
+        create: true

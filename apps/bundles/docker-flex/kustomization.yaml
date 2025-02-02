@@ -31,5 +31,6 @@ resources:
   - ../../base/seaweedfs
   - ../../base/clickhouse-operator
   - ../../base/httpbin
+  - ../../base/kro
 patches:
   - path: docker-flex.yaml
