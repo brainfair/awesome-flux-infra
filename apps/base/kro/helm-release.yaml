@@ -7,7 +7,7 @@ spec:
   releaseName: kro
   chartRef:
     kind: OCIRepository
-    name: kro-run
+    name: kro
     namespace: kro
   interval: 15m
   timeout: 5m
