@@ -122,9 +122,6 @@ spec:
         limits:
           memory: 256Mi
     gateway:
-      service:
-        labels:
-          prometheus.io/service-monitor: "false"
       resources:
         requests:
           cpu: 100m
