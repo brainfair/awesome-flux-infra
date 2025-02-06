@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.35.6"
+      version: "0.35.7"
   values:
     prometheus-node-exporter:
       hostRootFsMount:
