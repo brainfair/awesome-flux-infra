@@ -143,7 +143,6 @@ spec:
               url: https://grafana.github.io/helm-charts
             charts:
               - loki
-              - promtail
               - alloy
           - registry:
               url: https://helm.elastic.co

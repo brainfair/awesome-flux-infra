@@ -214,16 +214,6 @@ spec:
                 matchLabels:
                   app.kubernetes.io/component: placeholder-flux-bug-label
               topologyKey: kubernetes.io/hostname
-# ---
-# apiVersion: helm.toolkit.fluxcd.io/v2beta2
-# kind: HelmRelease
-# metadata:
-#   name: promtail
-#   namespace: loki
-# spec:
-#   chart:
-#     spec:
-#       version: "6.16.4"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
