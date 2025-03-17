@@ -1,6 +1,6 @@
 # Flux2 Infra repository
 
-This repository contains infrastructure applications and addons that can be installed inside Kubernetes with a FluxCD.
+This repository contains infrastructure applications and addons that can be installed inside Kubernetes with FluxCD.
 
 # Table of Contents
 
