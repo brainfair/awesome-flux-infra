@@ -1,6 +1,6 @@
 # Flux2 Infra repository
 
-This repository contains Infrastructure applications and addons installed inside Kubernetes.
+This repository contains infrastructure applications and addons installed inside Kubernetes.
 
 # Table of Contents
 
@@ -69,10 +69,9 @@ This repository contains Infrastructure applications and addons installed inside
 - [elastic operator (ECK)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/eck-operator)
 - [httpbin](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/httpbin)
 
-
 ## Import current repository
 
-Create GitRepository and Flux Kustomization in your main repository (change path and substitute variable for related):
+Create GitRepository and Flux Kustomization in your main repository (change path and substitute variables as needed):
 
 ```yaml
 ---
