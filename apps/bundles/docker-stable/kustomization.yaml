@@ -29,5 +29,6 @@ resources:
   - ../../base/seaweedfs
   - ../../base/clickhouse-operator
   - ../../base/httpbin
+  - ../../base/victoria-logs
 patches:
   - path: docker-stable.yaml

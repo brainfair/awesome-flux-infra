@@ -274,3 +274,13 @@ spec:
   chart:
     spec:
       version: "0.24.5"
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: vls
+  namespace: victoria-logs
+spec:
+  chart:
+    spec:
+      version: "0.9.3"

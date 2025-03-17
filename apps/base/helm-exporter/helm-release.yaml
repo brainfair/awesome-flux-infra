@@ -69,6 +69,7 @@ spec:
               url: "https://victoriametrics.github.io/helm-charts/"
             charts:
               - victoria-metrics-k8s-stack
+              - victoria-logs-single
           - registry:
               url: "https://kubernetes-sigs.github.io/metrics-server/"
             charts:
