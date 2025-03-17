@@ -32,5 +32,6 @@ resources:
   - ../../base/clickhouse-operator
   - ../../base/httpbin
   - ../../base/kro
+  - ../../base/victoria-logs
 patches:
   - path: docker-flex.yaml
