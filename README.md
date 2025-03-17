@@ -32,8 +32,9 @@ This repository contains Infrastructure applications and addons installed inside
 - [external-secrets](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/external-secrets)
 - [Istio ServiceMesh](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/istio)
 ### Observability Components
-- [Victoria Metrics (victoria-metrics-k8s-stack)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/victoria-metrics-k8s-stack)
-- [flux-monitoring (alerts and dashboards for FluxCD)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/flux-monitoring)
+- [Victoria Metrics (victoria-metrics-k8s-stack)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/victoria-metrics-k8s-stack) - Metrics Database
+- [Victoria Logs Single](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/victoria-logs) - Logs Database
+- [flux-monitoring](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/flux-monitoring) - alerts and dashboards for the FluxCD
 - [Loki](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/loki)
 - [Grafana Alloy](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/alloy)
 - [blackbox-exporter](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/blackbox-exporter)
