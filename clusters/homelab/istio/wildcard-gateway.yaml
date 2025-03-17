@@ -21,6 +21,7 @@ spec:
         - capacitor.${cluster_subdomain}
         - minio-loki.${cluster_subdomain}
         - httpbin.${cluster_subdomain}
+        - vls.${cluster_subdomain}
       port:
         name: http
         number: 80
@@ -41,6 +42,7 @@ spec:
         - capacitor.${cluster_subdomain}
         - minio-loki.${cluster_subdomain}
         - httpbin.${cluster_subdomain}
+        - vls.${cluster_subdomain}
       port:
         name: https
         number: 443

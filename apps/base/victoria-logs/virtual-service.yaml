@@ -1,0 +1,17 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: vls-virtualservice
+  namespace: victoria-logs
+spec:
+  gateways:
+    - istio-ingress/wildcard-gateway
+  hosts:
+    - vls.${cluster_subdomain}
+  http:
+    - route:
+        - destination:
+            host: vls-victoria-logs-single-server.victoria-logs.svc.cluster.local
+            port:
+              number: 9428
