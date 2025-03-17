@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vls-datasource
+  namespace: victoria-logs
+  labels:
+    grafana_datasource: "1"
+data:
+  vls-datasource.yaml: |-
+    apiVersion: 1
+    datasources:
+      - name: VictoriaLogs
+        type: victoriametrics-logs-datasource
+        access: proxy
+        url: http://vls-victoria-logs-single-server.victoria-logs:9428
+        isDefault: false
+        editable: false
+        orgId: 1
+        uid: vls
