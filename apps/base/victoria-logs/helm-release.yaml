@@ -1,0 +1,36 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: vls
+  namespace: victoria-logs
+spec:
+  releaseName: vls
+  chart:
+    spec:
+      chart: victoria-logs-single
+      sourceRef:
+        kind: HelmRepository
+        name: vm
+        namespace: victoria-logs
+  interval: 15m
+  timeout: 15m
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  # Defaults: https://github.com/VictoriaMetrics/helm-charts/blob/master/charts/victoria-logs-single/values.yaml
+  values:
+    server:
+      persistentVolume:
+        enabled: true
+        size: 10Gi
+      vmServiceScrape:
+        enabled: true
+    vector:
+      enabled: true
+    dashboards:
+      enabled: true
+      labels:
+        grafana_dashboard: "1"
