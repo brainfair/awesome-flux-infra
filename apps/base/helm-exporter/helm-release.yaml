@@ -166,3 +166,7 @@ spec:
               url: https://docs.altinity.com/clickhouse-operator/
             charts:
               - altinity-clickhouse-operator
+          - registry:
+              url: https://kyverno.github.io/kyverno/
+            charts:
+              - kyverno

@@ -30,5 +30,6 @@ resources:
   - ../../base/clickhouse-operator
   - ../../base/httpbin
   - ../../base/victoria-logs
+  - ../../base/kyverno
 patches:
   - path: docker-stable.yaml

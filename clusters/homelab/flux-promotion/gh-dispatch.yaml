@@ -109,6 +109,9 @@ spec:
     - kind: HelmRelease
       name: "*"
       namespace: victoria-logs
+    - kind: HelmRelease
+      name: "*"
+      namespace: kyverno
   inclusionList:
     - ".*.upgrade.*succeeded.*"
   exclusionList:

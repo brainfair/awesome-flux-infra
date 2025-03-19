@@ -284,3 +284,13 @@ spec:
   chart:
     spec:
       version: "0.9.3"
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: kyverno
+  namespace: kyverno
+spec:
+  chart:
+    spec:
+      version: "3.3.7"
