@@ -44,6 +44,8 @@ This repository contains infrastructure applications and addons that can be inst
 - [metrics-server](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/metrics-server)
 - [oomkill-exporter](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/oomkill-exporter)
 - [x509-certificate-exporter](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/x509-certificate-exporter)
+### Security
+- [Kyverno](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/kyverno) - a cloud native policy engine
 ### Nice to have
 - [reflector](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/reflector)
 - [KEDA](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/keda)
