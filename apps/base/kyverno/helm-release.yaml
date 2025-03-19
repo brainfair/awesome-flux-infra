@@ -1,0 +1,24 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: kyverno
+  namespace: kyverno
+spec:
+  releaseName: kyverno
+  chart:
+    spec:
+      chart: kyverno
+      sourceRef:
+        kind: HelmRepository
+        name: kyverno
+        namespace: kyverno
+  interval: 15m
+  timeout: 15m
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  # Default values: https://github.com/kyverno/kyverno/blob/main/charts/kyverno/values.yaml
+  #values:

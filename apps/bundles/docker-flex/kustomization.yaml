@@ -33,5 +33,6 @@ resources:
   - ../../base/httpbin
   - ../../base/kro
   - ../../base/victoria-logs
+  - ../../base/kyverno
 patches:
   - path: docker-flex.yaml
