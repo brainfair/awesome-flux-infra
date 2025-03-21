@@ -39,7 +39,7 @@ spec:
     spec:
       serviceAccountName: httpbin
       containers:
-        - image: docker.io/mccutchen/go-httpbin:2.17.1
+        - image: docker.io/mccutchen/go-httpbin:2.18.0
           imagePullPolicy: IfNotPresent
           name: httpbin
           ports:
