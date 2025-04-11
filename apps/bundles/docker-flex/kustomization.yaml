@@ -34,5 +34,6 @@ resources:
   - ../../base/kro
   - ../../base/victoria-logs
   - ../../base/kyverno
+  - ../../base/valkey-operator
 patches:
   - path: docker-flex.yaml

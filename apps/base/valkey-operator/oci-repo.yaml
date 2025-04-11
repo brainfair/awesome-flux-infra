@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: OCIRepository
+metadata:
+  name: valkey-operator
+  namespace: valkey-operator-system
+spec:
+  interval: 120m
+  url: oci://ghcr.io/hyperspike/valkey-operator
+  ref:
+    semver: ">=0.0.1"
