@@ -58,6 +58,8 @@ This repository contains infrastructure applications and addons that can be inst
 - [pgadmin](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/pgadmin)
 - [Dragonfly Operator (redis replacement)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/dragonfly-operator)
 - [Dragonfly Instance (redis replacement)](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/redis)
+- [Valkey Operator](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/valkey-operator) - open-source for of redis by AWS
+- [Valkey Instance](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/valkey-sample) - example of Valkey instance
 - [Clickhouse Operator (Altinity)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/clickhouse-operator)
 - [Clickhouse simple example (Altinity)](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/clickhouse)
 - [Jenkins](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/jenkins-server)
