@@ -1,0 +1,10 @@
+apiVersion: hyperspike.io/v1
+kind: Valkey
+metadata:
+  labels:
+    app.kubernetes.io/name: valkey-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: valkey-sample
+  namespace: valkey-sample
+spec:
+  volumePermissions: true
