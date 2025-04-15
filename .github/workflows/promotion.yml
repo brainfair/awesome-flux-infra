@@ -50,6 +50,8 @@ jobs:
           if [ -n "$curv" ] && [ "$CHART_VERSION" != "$curv" ]; then
             yq -i '(. | select(.metadata.name == env(HELM_RELEASE) and .metadata.namespace==env(NAMESPACE)) | .spec.chart.spec.version ) = env(CHART_VERSION) ' apps/bundles/$TYPE-stable/$TYPE-stable.yaml
             echo CHANGES=true >> $GITHUB_OUTPUT
+            echo CURV=${curv} >> $GITHUB_OUTPUT
+            echo "Changes detected, chart version updated to ${CHART_VERSION}"
           else
             echo "No candidates found"
           fi
@@ -66,5 +68,5 @@ jobs:
           title: "feat: Promote ${{ steps.staging.outputs.namespace }}/${{ steps.staging.outputs.helmrelease }} release to ${{ steps.staging.outputs.version }} in ${{ steps.staging.outputs.type }}-stable"
           body: |
             **Automated PR**
-            HelmRelease ${{ steps.staging.outputs.namespace }}/${{ steps.staging.outputs.helmrelease }} was upgraded to version ${{ steps.staging.outputs.version }} in ${{ steps.staging.outputs.type }}-flex.
+            HelmRelease ${{ steps.staging.outputs.namespace }}/${{ steps.staging.outputs.helmrelease }} was upgraded from $({ steps.production.outputs.curv }) to version ${{ steps.staging.outputs.version }} in ${{ steps.staging.outputs.type }}-flex.
             Promote to stable.
