@@ -7,3 +7,8 @@ spec:
   chart:
     spec:
       version: "5.8.33"
+      chart: jenkins
+      sourceRef:
+        kind: HelmRepository
+        name: jenkins
+        namespace: jenkins
