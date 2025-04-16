@@ -10,7 +10,8 @@
   },
   "flux": {
     "fileMatch": [
-      "\\.yaml$"
+      "apps/base/.+\\.yaml$",
+      "apps/bundles/.+-flex/.+\\.yaml$"
     ]
   }
 }
