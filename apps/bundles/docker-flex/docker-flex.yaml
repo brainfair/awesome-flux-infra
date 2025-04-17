@@ -7,7 +7,11 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=0.18.0 <1.0.0"
+      version: "0.43.0"
+      chart: victoria-metrics-k8s-stack
+      sourceRef:
+        kind: HelmRepository
+        name: vm
   values:
     prometheus-node-exporter:
       hostRootFsMount:
@@ -21,7 +25,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=0.0.1 <1.0.0"
+      version: "0.4.10"
+      chart: kubelinks
+      sourceRef:
+        kind: HelmRepository
+        name: kkirara
+        namespace: kubelinks
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -31,7 +40,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=1.0.0 <2.0.0"
+      version: "1.1.8"
+      chart: k8s-event-logger
+      sourceRef:
+        kind: HelmRepository
+        name: deliveryhero
+        namespace: flux-system
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -41,7 +55,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=3.8.0 <4.0.0"
+      version: "3.12.2"
+      chart: metrics-server
+      sourceRef:
+        kind: HelmRepository
+        name: metrics-server
+        namespace: metrics-server
   values:
     args:
       - --kubelet-insecure-tls
@@ -54,7 +73,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=9.0.0 <10.0.0"
+      version: "9.4.0"
+      chart: prometheus-blackbox-exporter
+      sourceRef:
+        kind: HelmRepository
+        name: prometheus-community
+        namespace: flux-system
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -64,7 +88,11 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=2.0.0 <3.0.0"
+      version: "2.17.0"
+      chart: keda
+      sourceRef:
+        kind: HelmRepository
+        name: kedacore
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -74,7 +102,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=1.14.0 <2.0.0"
+      version: "1.25.2"
+      chart: istiod
+      sourceRef:
+        kind: HelmRepository
+        name: istio
+        namespace: istio-system
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -84,7 +117,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=1.14.0 <2.0.0"
+      version: "1.25.2"
+      chart: gateway
+      sourceRef:
+        kind: HelmRepository
+        name: istio
+        namespace: istio-system
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -94,7 +132,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=1.2.0 <2.0.0"
+      version: "1.2.16+77ad21d"
+      chart: helm-exporter
+      sourceRef:
+        kind: HelmRepository
+        name: sstarcher
+        namespace: helm-exporter
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -104,7 +147,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=0.17.0 <1.0.0"
+      version: "0.23.2"
+      chart: cloudnative-pg
+      sourceRef:
+        kind: HelmRepository
+        name: cnpg
+        namespace: cnpg-system
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -114,7 +162,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=v1.0.0 <v2.0.0"
+      version: "v1.17.1"
+      chart: cert-manager
+      sourceRef:
+        kind: HelmRepository
+        name: jetstack
+        namespace: cert-manager
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -124,7 +177,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=9.0.0 <10.0.0"
+      version: "9.0.322"
+      chart: reflector
+      sourceRef:
+        kind: HelmRepository
+        name: emberstack
+        namespace: reflector
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -134,7 +192,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=0.0.1 <1.0.0"
+      version: "0.16.1"
+      chart: external-secrets
+      sourceRef:
+        kind: HelmRepository
+        name: external-secrets
+        namespace: external-secrets
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -159,7 +222,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=7.0.0 <8.0.0"
+      version: "7.8.26"
+      chart: argo-cd
+      sourceRef:
+        kind: HelmRepository
+        name: argo
+        namespace: argocd
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -169,7 +237,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=0.34.0 <1.0.0"
+      version: "0.45.0"
+      chart: strimzi-kafka-operator
+      sourceRef:
+        kind: HelmRepository
+        name: strimzi
+        namespace: strimzi
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -179,7 +252,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=1.0.0 <2.0.0"
+      version: "1.37.0"
+      chart: pgadmin4
+      sourceRef:
+        kind: HelmRepository
+        name: runix
+        namespace: pgadmin
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -189,7 +267,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=1.0.0 <2.0.0"
+      version: "1.16.0"
+      chart: airflow
+      sourceRef:
+        kind: HelmRepository
+        name: apache-airflow
+        namespace: airflow
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -199,7 +282,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=7.0.0 <8.0.0"
+      version: "7.0.1"
+      chart: operator
+      sourceRef:
+        kind: HelmRepository
+        name: minio-operator
+        namespace: minio-operator
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -209,7 +297,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=6.0.0 <7.0.0"
+      version: "6.29.0"
+      chart: loki
+      sourceRef:
+        kind: HelmRepository
+        name: grafana
+        namespace: loki
   values:
     gateway:
       affinity:
@@ -228,7 +321,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">0.5.0 <1.0.0"
+      version: "0.12.6"
+      chart: alloy
+      sourceRef:
+        kind: HelmRepository
+        name: grafana
+        namespace: loki
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -238,7 +336,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=2.0.0 <3.0.0"
+      version: "2.16.1"
+      chart: eck-operator
+      sourceRef:
+        kind: HelmRepository
+        name: elastic
+        namespace: elastic-system
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -248,7 +351,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=3.0.0 <4.0.0"
+      version: "3.18.1"
+      chart: x509-certificate-exporter
+      sourceRef:
+        kind: HelmRepository
+        name: enix
+        namespace: x509-certificate-exporter
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -258,7 +366,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=2.0.0 <3.0.0"
+      version: "2.0.0"
+      chart: reloader
+      sourceRef:
+        kind: HelmRepository
+        name: stakater
+        namespace: reloader
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -268,7 +381,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=4.0.0 <5.0.0"
+      version: "4.0.386"
+      chart: seaweedfs
+      sourceRef:
+        kind: HelmRepository
+        name: seaweedfs
+        namespace: seaweedfs
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -278,7 +396,11 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=0.0.0 <1.0.0"
+      version: "0.24.5"
+      chart: altinity-clickhouse-operator
+      sourceRef:
+        kind: HelmRepository
+        name: clickhouse-operator
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -288,7 +410,12 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=0.0.0 <1.0.0"
+      version: "0.9.5"
+      chart: victoria-logs-single
+      sourceRef:
+        kind: HelmRepository
+        name: vm
+        namespace: victoria-logs
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -298,4 +425,9 @@ metadata:
 spec:
   chart:
     spec:
-      version: ">=3.0.0 <4.0.0"
+      version: "3.3.7"
+      chart: kyverno
+      sourceRef:
+        kind: HelmRepository
+        name: kyverno
+        namespace: kyverno
