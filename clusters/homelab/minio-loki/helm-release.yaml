@@ -25,8 +25,9 @@ spec:
     secrets: ~
     tenant:
       name: minio-loki
-      configuration:
+      configSecret:
         name: minio-loki-env-configuration
+        existingSecret: true
       pools:
         - servers: 1
           name: pool-0
