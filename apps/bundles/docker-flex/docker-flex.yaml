@@ -207,7 +207,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "5.8.33"
+      version: "5.8.36"
       chart: jenkins
       sourceRef:
         kind: HelmRepository
@@ -222,7 +222,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "7.8.26"
+      version: "7.8.27"
       chart: argo-cd
       sourceRef:
         kind: HelmRepository
@@ -282,7 +282,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "7.0.1"
+      version: "7.1.0"
       chart: operator
       sourceRef:
         kind: HelmRepository
@@ -321,7 +321,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.12.6"
+      version: "1.0.1"
       chart: alloy
       sourceRef:
         kind: HelmRepository
@@ -336,7 +336,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "2.16.1"
+      version: "3.0.0"
       chart: eck-operator
       sourceRef:
         kind: HelmRepository
@@ -366,7 +366,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "2.0.0"
+      version: "2.1.0"
       chart: reloader
       sourceRef:
         kind: HelmRepository
@@ -410,7 +410,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.9.5"
+      version: "0.9.6"
       chart: victoria-logs-single
       sourceRef:
         kind: HelmRepository
