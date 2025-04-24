@@ -282,7 +282,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "7.1.0"
+      version: "7.1.1"
       chart: operator
       sourceRef:
         kind: HelmRepository
