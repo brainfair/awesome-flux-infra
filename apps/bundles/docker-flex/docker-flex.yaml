@@ -162,7 +162,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "v1.17.1"
+      version: "v1.17.2"
       chart: cert-manager
       sourceRef:
         kind: HelmRepository
