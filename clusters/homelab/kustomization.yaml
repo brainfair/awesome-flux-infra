@@ -9,7 +9,7 @@ resources:
   - pg-airflow
   - minio-loki
   #- redis
-  - clickhouse
+  #- clickhouse
   - valkey-sample
 patches:
   - path: victoria-metrics-k8s-stack/helm-release.yaml
