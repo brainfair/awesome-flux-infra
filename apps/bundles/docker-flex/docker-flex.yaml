@@ -162,7 +162,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "v1.17.1"
+      version: "v1.17.2"
       chart: cert-manager
       sourceRef:
         kind: HelmRepository
@@ -177,7 +177,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "9.0.342"
+      version: "9.0.344"
       chart: reflector
       sourceRef:
         kind: HelmRepository
@@ -207,7 +207,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "5.8.36"
+      version: "5.8.37"
       chart: jenkins
       sourceRef:
         kind: HelmRepository
@@ -252,7 +252,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.38.0"
+      version: "1.39.1"
       chart: pgadmin4
       sourceRef:
         kind: HelmRepository
@@ -282,7 +282,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "7.1.0"
+      version: "7.1.1"
       chart: operator
       sourceRef:
         kind: HelmRepository
@@ -410,7 +410,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.9.6"
+      version: "0.9.7"
       chart: victoria-logs-single
       sourceRef:
         kind: HelmRepository
@@ -425,7 +425,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "3.3.7"
+      version: "3.4.0"
       chart: kyverno
       sourceRef:
         kind: HelmRepository
