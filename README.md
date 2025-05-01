@@ -168,7 +168,7 @@ The basic idea to define 3 levels of application kustomization:
 ## Flex/Stable Bundles and promotion
 
 To keep infrastructure up-to-date we defined two bundles for the Docker Desktop environment.
-* docker-flex - where we define the version range for every application (block major updates) for automatic updates
+* docker-flex - ~~where we define the version range for every application (blocking major updates) to allow automatic updates while maintaining stability.~~ Switched to renovatebot to improve visibility and control of updates.
 * docker-stable - where we define a pinned version for each application.
 
 Non-production environment should include a flex bundle where we can play/test/evaluate new applications and new versions.
