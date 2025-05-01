@@ -410,7 +410,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.9.7"
+      version: "0.9.8"
       chart: victoria-logs-single
       sourceRef:
         kind: HelmRepository
