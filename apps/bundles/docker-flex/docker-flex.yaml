@@ -192,7 +192,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.16.1"
+      version: "0.16.2"
       chart: external-secrets
       sourceRef:
         kind: HelmRepository
