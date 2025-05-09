@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.45.0"
+      version: "0.46.0"
       chart: victoria-metrics-k8s-stack
       sourceRef:
         kind: HelmRepository
@@ -222,7 +222,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "7.9.1"
+      version: "8.0.0"
       chart: argo-cd
       sourceRef:
         kind: HelmRepository
