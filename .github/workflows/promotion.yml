@@ -63,7 +63,7 @@ jobs:
         with:
           branch: staging-promotion-${{ github.run_number }}
           delete-branch: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PROMO_PAT }}
           commit-message: Update ${{ steps.staging.outputs.helmrelease }} to v${{ steps.staging.outputs.version }}
           title: "feat: Promote ${{ steps.staging.outputs.namespace }}/${{ steps.staging.outputs.helmrelease }} release to ${{ steps.staging.outputs.version }} in ${{ steps.staging.outputs.type }}-stable"
           body: |
