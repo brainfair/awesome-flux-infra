@@ -28,7 +28,7 @@ for cluster_path in "$CLUSTERS_DIR"/*/; do
   cd - > /dev/null
 done
 
-git checkout main
+git checkout -f main &> /dev/null
 
 for cluster_path in "$CLUSTERS_DIR"/*/; do
   # Remove trailing slash and get the cluster name
@@ -46,7 +46,7 @@ for cluster_path in "$CLUSTERS_DIR"/*/; do
   cd - > /dev/null
 done
 
-git checkout "$current_branch" &> /dev/null
+git checkout -f "$current_branch" &> /dev/null
 
 diff /tmp/${cluster_name}-new.yaml /tmp/${cluster_name}-main.yaml
 diff --side-by-side --suppress-common-lines /tmp/${cluster_name}-new.yaml /tmp/${cluster_name}-main.yaml
