@@ -11,6 +11,15 @@ if [ ! -d "$CLUSTERS_DIR" ]; then
   exit 1
 fi
 
+if [ -n "$GITHUB_SHA" ] && [ -n "$GITHUB_REF" ] && [[ "$GITHUB_REF" == "refs/pull/"* ]]; then
+  PR_NUMBER=$(echo "$GITHUB_REF" | sed 's/refs\/pull\/\([0-9]*\)\/merge/\1/')
+  echo "Running in a GitHub PR Action. PR Number: $PR_NUMBER"
+  IS_GITHUB_PR=true
+else
+  echo "Not running in a GitHub PR Action."
+  IS_GITHUB_PR=false
+fi
+
 # Loop through each subdirectory inside clusters
 for cluster_path in "$CLUSTERS_DIR"/*/; do
   # Remove trailing slash and get the cluster name
@@ -54,6 +63,12 @@ for cluster_path in "$CLUSTERS_DIR"/*/; do
   diff -u --suppress-common-lines /tmp/${cluster_name}-new.yaml /tmp/${cluster_name}-main.yaml > /dev/null
   if ! [ $? -eq 0 ]; then
     echo "diff found in ${cluster_name}"
+    if [ "$IS_GITHUB_PR" = true ]; then
+      DIFF=$(diff -u --suppress-common-lines /tmp/${cluster_name}-new.yaml /tmp/${cluster_name}-main.yaml)
+      curl -X POST -H "Authorization: token $GITHUB_TOKEN" \
+          -d "{\"body\": \"### Diff between cluster '${cluster_name}' '$current_branch' and main:\n\n\`\`\`diff\n$DIFF\n\`\`\`\"}" \
+          "https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$PR_NUMBER/comments"
+    fi
   fi
 
 done
