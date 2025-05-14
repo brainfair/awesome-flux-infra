@@ -3,6 +3,10 @@ name: diff
 on:
   pull_request:
 
+permissions:
+  contents: read
+  issues: write
+
 jobs:
   manifests:
     runs-on: ubuntu-latest
