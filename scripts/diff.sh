@@ -22,7 +22,7 @@ for cluster_path in "$CLUSTERS_DIR"/*/; do
   cd "$cluster_path" || continue
 
   # Build and output to /tmp
-  kustomize build . --load-restrictor LoadRestrictionsNone -o "/tmp/${cluster_name}-new.yaml"
+  kustomize build . --load-restrictor LoadRestrictionsNone > "/tmp/${cluster_name}-new.yaml"
 
   # Return to original directory
   cd - > /dev/null
@@ -40,10 +40,15 @@ for cluster_path in "$CLUSTERS_DIR"/*/; do
   cd "$cluster_path" || continue
 
   # Build and output to /tmp
-  kustomize build . --load-restrictor LoadRestrictionsNone -o "/tmp/${cluster_name}-main.yaml"
+  kustomize build . --load-restrictor LoadRestrictionsNone > "/tmp/${cluster_name}-main.yaml"
 
   # Return to original directory
   cd - > /dev/null
 done
 
 git checkout "$current_branch" &> /dev/null
+
+diff /tmp/${cluster_name}-new.yaml /tmp/${cluster_name}-main.yaml
+diff --side-by-side --suppress-common-lines /tmp/${cluster_name}-new.yaml /tmp/${cluster_name}-main.yaml
+# rm -f /tmp/*-new.yaml
+# rm -f /tmp/*-main.yaml
