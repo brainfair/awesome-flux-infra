@@ -66,12 +66,17 @@ for cluster_path in "$CLUSTERS_DIR"/*/; do
     echo "diff found in ${cluster_name}"
     if [ "$IS_GITHUB_PR" = true ]; then
       DIFF=$(diff -u --suppress-common-lines /tmp/${cluster_name}-new.yaml /tmp/${cluster_name}-main.yaml)
-      echo $GITHUB_TOKEN
-      echo $GITHUB_REPOSITORY
-      echo $PR_NUMBER
+      COMMENT_BODY=$(jq -n \
+        --arg cluster "$cluster_name" \
+        --arg branch "$current_branch" \
+        --arg diff "$DIFF" \
+        '{
+          body: "### Diff between cluster \($cluster) '\'$branch\'' and main:\n\n```diff\n\($diff)\n```"
+        }')
       curl -X POST -H "Authorization: Bearer $GITHUB_TOKEN" \
-          -d "{\"body\": \"### Diff between cluster '${cluster_name}' '$current_branch' and main:\n\n\`\`\`diff\n$DIFF\n\`\`\`\"}" \
-          "https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$PR_NUMBER/comments"
+        -H "Content-Type: application/json" \
+        -d "$COMMENT_BODY" \
+        "https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$PR_NUMBER/comments"
     fi
   fi
 done
