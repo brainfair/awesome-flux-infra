@@ -37,6 +37,7 @@ for cluster_path in "$CLUSTERS_DIR"/*/; do
   cd - > /dev/null
 done
 
+git fetch --all
 git checkout -f main #&> /dev/null
 
 for cluster_path in "$CLUSTERS_DIR"/*/; do
