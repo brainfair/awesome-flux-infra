@@ -4,15 +4,15 @@
     "config:recommended"
   ],
   "kubernetes": {
-    "fileMatch": [
-      "\\.yaml$"
+    "managerFilePatterns": [
+      "/\\.yaml$/"
     ]
   },
   "flux": {
-    "fileMatch": [
-      "apps/base/.+\\.yaml$",
-      "apps/bundles/.+-flex/.+\\.yaml$",
-      "clusters/.+\\.yaml$"
+    "managerFilePatterns": [
+      "/apps/base/.+\\.yaml$/",
+      "/apps/bundles/.+-flex/.+\\.yaml$/",
+      "/clusters/.+\\.yaml$/"
     ]
   }
 }
