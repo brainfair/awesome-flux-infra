@@ -38,7 +38,7 @@ for cluster_path in "$CLUSTERS_DIR"/*/; do
 done
 
 git fetch --all
-git checkout -f main #&> /dev/null
+git checkout -f originmain #&> /dev/null
 
 for cluster_path in "$CLUSTERS_DIR"/*/; do
   # Remove trailing slash and get the cluster name
