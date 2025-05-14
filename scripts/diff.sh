@@ -70,7 +70,6 @@ for cluster_path in "$CLUSTERS_DIR"/*/; do
           "https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$PR_NUMBER/comments"
     fi
   fi
-
 done
 
 # rm -f /tmp/*-new.yaml

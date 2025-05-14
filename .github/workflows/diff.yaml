@@ -1,0 +1,17 @@
+name: test
+
+on:
+  pull_request:
+
+jobs:
+  manifests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup yq
+        uses: fluxcd/pkg/actions/yq@main
+      - name: Setup kustomize
+        uses: fluxcd/pkg/actions/kustomize@main
+      - name: Validate manifests
+        run: ./scripts/diff.sh
