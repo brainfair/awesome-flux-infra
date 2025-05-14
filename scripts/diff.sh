@@ -71,7 +71,7 @@ for cluster_path in "$CLUSTERS_DIR"/*/; do
         --arg branch "$current_branch" \
         --arg diff "$DIFF" \
         '{
-          body: "### Diff between cluster \($cluster) '\'$branch\'' and main:\n\n```diff\n\($diff)\n```"
+          body: "### Diff detected forcluster \($cluster):\n\n```diff\n\($diff)\n```"
         }')
       curl -X POST -H "Authorization: Bearer $GITHUB_TOKEN" \
         -H "Content-Type: application/json" \
