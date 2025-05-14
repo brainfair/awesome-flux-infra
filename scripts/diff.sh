@@ -48,6 +48,6 @@ done
 
 git checkout -f "$current_branch" &> /dev/null
 
-diff --side-by-side --width=200 /tmp/${cluster_name}-new.yaml /tmp/${cluster_name}-main.yaml | awk '/---/ {show=1} show'
+diff -u -U20  --suppress-common-lines /tmp/${cluster_name}-new.yaml /tmp/${cluster_name}-main.yaml
 # rm -f /tmp/*-new.yaml
 # rm -f /tmp/*-main.yaml
