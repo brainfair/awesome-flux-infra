@@ -48,6 +48,15 @@ done
 
 git checkout -f "$current_branch" &> /dev/null
 
-diff -u --suppress-common-lines /tmp/${cluster_name}-new.yaml /tmp/${cluster_name}-main.yaml
+for cluster_path in "$CLUSTERS_DIR"/*/; do
+  cluster_name=$(basename "$cluster_path")
+
+  diff -u --suppress-common-lines /tmp/${cluster_name}-new.yaml /tmp/${cluster_name}-main.yaml > /dev/null
+  if ! [ $? -eq 0 ]; then
+    echo "diff found in ${cluster_name}"
+  fi
+
+done
+
 # rm -f /tmp/*-new.yaml
 # rm -f /tmp/*-main.yaml
