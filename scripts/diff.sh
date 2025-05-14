@@ -28,7 +28,7 @@ for cluster_path in "$CLUSTERS_DIR"/*/; do
   cd - > /dev/null
 done
 
-git checkout main &> /dev/null
+git checkout main
 
 for cluster_path in "$CLUSTERS_DIR"/*/; do
   # Remove trailing slash and get the cluster name
