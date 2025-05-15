@@ -192,7 +192,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.16.2"
+      version: "0.17.0"
       chart: external-secrets
       sourceRef:
         kind: HelmRepository
@@ -207,7 +207,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "5.8.44"
+      version: "5.8.45"
       chart: jenkins
       sourceRef:
         kind: HelmRepository
@@ -222,7 +222,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "8.0.2"
+      version: "8.0.3"
       chart: argo-cd
       sourceRef:
         kind: HelmRepository
