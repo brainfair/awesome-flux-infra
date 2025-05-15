@@ -65,7 +65,7 @@ for cluster_path in "$CLUSTERS_DIR"/*/; do
   if ! [ $? -eq 0 ]; then
     echo "diff found in ${cluster_name}"
     if [ "$IS_GITHUB_PR" = true ]; then
-      DIFF=$(diff -u --suppress-common-lines /tmp/${cluster_name}-new.yaml /tmp/${cluster_name}-main.yaml)
+      DIFF=$(diff -u --suppress-common-lines /tmp/${cluster_name}-main.yaml /tmp/${cluster_name}-new.yaml)
       COMMENT_BODY=$(jq -n \
         --arg cluster "$cluster_name" \
         --arg branch "$current_branch" \
