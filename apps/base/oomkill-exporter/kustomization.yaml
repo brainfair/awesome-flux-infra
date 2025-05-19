@@ -5,3 +5,5 @@ resources:
   - daemonset.yaml
   - podscrape.yaml
   - vm-rule.yaml
+configurations:
+- kustomizeconfig.yaml

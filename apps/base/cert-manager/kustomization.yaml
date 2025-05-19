@@ -18,3 +18,5 @@ configMapGenerator:
         app.kubernetes.io/part-of: cert-manager
         app.kubernetes.io/component: monitoring
         kustomize.toolkit.fluxcd.io/substitute: disabled
+configurations:
+- kustomizeconfig.yaml

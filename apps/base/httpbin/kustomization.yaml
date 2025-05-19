@@ -5,3 +5,5 @@ resources:
   - httpbin.yaml
   - virtual-service.yaml
   #- gateway.yaml
+configurations:
+- kustomizeconfig.yaml

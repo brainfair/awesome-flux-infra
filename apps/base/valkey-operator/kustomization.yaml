@@ -3,3 +3,5 @@ kind: Kustomization
 resources:
   - https://github.com/hyperspike/valkey-operator/releases/download/v0.0.59/install.yaml
 namespace: valkey-operator-system
+configurations:
+- kustomizeconfig.yaml

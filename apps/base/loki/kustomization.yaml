@@ -5,3 +5,5 @@ resources:
   - helm-repo.yaml
   - helm-release-loki.yaml
   - datasource.yaml
+configurations:
+- kustomizeconfig.yaml

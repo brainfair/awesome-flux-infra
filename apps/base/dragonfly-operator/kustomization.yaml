@@ -4,3 +4,5 @@ resources:
   - namespace.yaml
   - oci-repo.yaml
   - helm-release.yaml
+configurations:
+- kustomizeconfig.yaml

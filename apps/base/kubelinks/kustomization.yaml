@@ -6,3 +6,5 @@ resources:
   - namespace.yaml
   #- gateway.yaml
   - virtual-service.yaml
+configurations:
+- kustomizeconfig.yaml

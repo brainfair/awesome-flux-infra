@@ -16,3 +16,5 @@ configMapGenerator:
         app.kubernetes.io/part-of: cluster-autoscaler
         app.kubernetes.io/component: monitoring
         kustomize.toolkit.fluxcd.io/substitute: disabled
+configurations:
+- kustomizeconfig.yaml

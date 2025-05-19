@@ -14,3 +14,5 @@ configMapGenerator:
         grafana_dashboard: "1"
         app.kubernetes.io/part-of: helm-exporter
         app.kubernetes.io/component: monitoring
+configurations:
+- kustomizeconfig.yaml

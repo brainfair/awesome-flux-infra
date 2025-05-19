@@ -16,3 +16,5 @@ configMapGenerator:
         app.kubernetes.io/part-of: blackbox-exporter
         app.kubernetes.io/component: blackbox-exporter
         kustomize.toolkit.fluxcd.io/substitute: disabled
+configurations:
+- kustomizeconfig.yaml

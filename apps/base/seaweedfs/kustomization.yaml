@@ -5,3 +5,5 @@ resources:
   - s3-secret.yaml
   - helm-repo.yaml
   - helm-release.yaml
+configurations:
+- kustomizeconfig.yaml

@@ -17,3 +17,5 @@ configMapGenerator:
         app.kubernetes.io/part-of: external-secrets
         app.kubernetes.io/component: external-secrets
         kustomize.toolkit.fluxcd.io/substitute: disabled
+configurations:
+- kustomizeconfig.yaml

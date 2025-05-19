@@ -6,3 +6,5 @@ resources:
   - helm-release.yaml
   - virtual-service.yaml
   - datasource.yaml
+configurations:
+- kustomizeconfig.yaml

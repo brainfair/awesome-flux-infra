@@ -28,4 +28,4 @@ configMapGenerator:
         app.kubernetes.io/component: monitoring
         kustomize.toolkit.fluxcd.io/substitute: disabled
 configurations:
-  - kustomizeconfig.yaml
+- kustomizeconfig.yaml

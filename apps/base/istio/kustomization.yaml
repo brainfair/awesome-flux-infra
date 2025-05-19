@@ -9,3 +9,5 @@ resources:
   - telemetry.yaml
   #- monitors.yaml
   #- prometheusrule.yaml
+configurations:
+- kustomizeconfig.yaml

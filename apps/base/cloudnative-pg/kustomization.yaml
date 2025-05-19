@@ -5,3 +5,5 @@ resources:
   - helm-repo.yaml
   - helm-release.yaml
   - prometheus-rule.yaml
+configurations:
+- kustomizeconfig.yaml

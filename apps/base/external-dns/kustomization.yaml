@@ -18,3 +18,5 @@ configMapGenerator:
         app.kubernetes.io/part-of: external-dns
         app.kubernetes.io/component: external-dns
         kustomize.toolkit.fluxcd.io/substitute: disabled
+configurations:
+- kustomizeconfig.yaml
