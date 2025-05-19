@@ -30,7 +30,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: kkirara
-        namespace: kubelinks
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -45,7 +44,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: deliveryhero
-        namespace: flux-system
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -60,7 +58,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: metrics-server
-        namespace: metrics-server
   values:
     args:
       - --kubelet-insecure-tls
@@ -78,7 +75,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: prometheus-community
-        namespace: flux-system
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -107,7 +103,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: istio
-        namespace: istio-system
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -137,7 +132,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: sstarcher
-        namespace: helm-exporter
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -152,7 +146,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: cnpg
-        namespace: cnpg-system
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -167,7 +160,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: jetstack
-        namespace: cert-manager
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -182,7 +174,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: emberstack
-        namespace: reflector
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -197,7 +188,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: external-secrets
-        namespace: external-secrets
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -212,7 +202,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: jenkins
-        namespace: jenkins
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -227,7 +216,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: argo
-        namespace: argocd
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -242,7 +230,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: strimzi
-        namespace: strimzi
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -257,7 +244,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: runix
-        namespace: pgadmin
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -272,7 +258,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: apache-airflow
-        namespace: airflow
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -287,7 +272,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: minio-operator
-        namespace: minio-operator
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -302,7 +286,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: grafana
-        namespace: loki
   values:
     gateway:
       affinity:
@@ -356,7 +339,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: enix
-        namespace: x509-certificate-exporter
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -371,7 +353,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: stakater
-        namespace: reloader
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -386,7 +367,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: seaweedfs
-        namespace: seaweedfs
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -415,7 +395,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: vm
-        namespace: victoria-logs
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -430,4 +409,4 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: kyverno
-        namespace: kyverno
+
