@@ -17,8 +17,6 @@ spec:
     remediation:
       retries: 3
   # Defaults: https://github.com/dragonflydb/dragonfly-operator/blob/main/charts/dragonfly-operator/values.yaml
-  values:
-    serviceMonitor:
-      enabled: true
-    grafanaDashboard:
-      enabled: true
+  valuesFrom:
+  - kind: ConfigMap
+    name: values-public

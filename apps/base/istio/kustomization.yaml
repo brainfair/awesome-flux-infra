@@ -9,5 +9,10 @@ resources:
   - telemetry.yaml
   #- monitors.yaml
   #- prometheusrule.yaml
+configMapGenerator:
+- name: values-public
+  namespace: istio-system
+  files:
+  - values.yaml=values-public.yaml
 configurations:
 - kustomizeconfig.yaml

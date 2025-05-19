@@ -1,0 +1,5 @@
+filer:
+  s3:
+    enabled: true
+    enableAuth: true
+    existingConfigSecret: s3-secret

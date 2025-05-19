@@ -3,8 +3,12 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - helm-repo.yaml
-  - helm-release-loki.yaml
+  - helm-release.yaml
   - datasource.yaml
 configurations:
 - kustomizeconfig.yaml
+configMapGenerator:
+- name: values-public
+  files:
+  - values.yaml=values-public.yaml
 namespace: loki

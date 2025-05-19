@@ -17,32 +17,6 @@ spec:
     remediation:
       retries: 3
   # Defaults: https://github.com/jenkinsci/helm-charts/blob/main/charts/jenkins/values.yaml
-  values:
-    controller:
-      jenkinsUrl: jenkins.${cluster_subdomain}
-      jenkinsUrlProtocol: "https"
-      additionalPlugins:
-        - azure-ad
-        - ssh-agent
-        - credentials-binding
-        - timestamper
-        - ws-cleanup
-        - aws-credentials
-        - pipeline-aws
-        - jobConfigHistory
-        - envinject
-    agent:
-      podTemplates:
-        multitool: |
-          - name: multitool
-            label: multitool
-            serviceAccount: jenkins-agent
-            containers:
-              - name: docker-awscli-kubectl
-                image: guitarrapc/docker-awscli-kubectl
-                command: "/bin/sh -c"
-                args: "cat"
-                ttyEnabled: true
-                privileged: true
-    serviceAccountAgent:
-      create: true
+  valuesFrom:
+  - kind: ConfigMap
+    name: values-public

@@ -20,5 +20,6 @@ spec:
   upgrade:
     crds: Skip
   # Defaults: https://github.com/strimzi/strimzi-kafka-operator/blob/main/helm-charts/helm3/strimzi-kafka-operator/values.yaml
-  values:
-    watchAnyNamespace: true
+  valuesFrom:
+  - kind: ConfigMap
+    name: values-public

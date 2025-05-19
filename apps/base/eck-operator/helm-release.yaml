@@ -16,9 +16,6 @@ spec:
     remediation:
       retries: 3
   # Default values: https://github.com/elastic/cloud-on-k8s/blob/main/deploy/eck-operator/values.yaml
-  values:
-    installCRDs: false
-    webhook:
-      enabled: false
-    config:
-      validateStorageClass: false
+  valuesFrom:
+  - kind: ConfigMap
+    name: values-public

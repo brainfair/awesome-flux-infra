@@ -1,0 +1,12 @@
+server:
+  persistentVolume:
+    enabled: true
+    size: 10Gi
+  vmServiceScrape:
+    enabled: true
+vector:
+  enabled: true
+dashboards:
+  enabled: true
+  labels:
+    grafana_dashboard: "1"

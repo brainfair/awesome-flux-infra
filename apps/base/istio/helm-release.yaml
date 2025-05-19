@@ -20,10 +20,6 @@ spec:
   upgrade:
     crds: Skip
   # Default values
-  values:
-    pilot:
-      autoscaleMin: 1
-    meshConfig:
-      ingressClass: istio
-      ingressService: istio-ingress-public
-      ingressSelector: ingress-public
+  valuesFrom:
+  - kind: ConfigMap
+    name: values-public

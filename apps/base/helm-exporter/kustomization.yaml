@@ -5,14 +5,17 @@ resources:
   - helm-repo.yaml
   - helm-release.yaml
 configMapGenerator:
-  - name: grafana-helm-exporter
-    files:
-      - dashboards/grafana-helm-exporter.json
-    options:
-      labels:
-        grafana_dashboard: "1"
-        app.kubernetes.io/part-of: helm-exporter
-        app.kubernetes.io/component: monitoring
+- name: grafana-helm-exporter
+  files:
+    - dashboards/grafana-helm-exporter.json
+  options:
+    labels:
+      grafana_dashboard: "1"
+      app.kubernetes.io/part-of: helm-exporter
+      app.kubernetes.io/component: monitoring
+- name: values-public
+  files:
+  - values.yaml=values-public.yaml
 configurations:
 - kustomizeconfig.yaml
 namespace: helm-exporter

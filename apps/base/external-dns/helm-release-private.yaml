@@ -19,16 +19,7 @@ spec:
   upgrade:
     crds: CreateReplace
   # Defaults: https://github.com/kubernetes-sigs/external-dns/blob/master/charts/external-dns/values.yaml
-  values:
-    sources:
-      - istio-gateway
-    txtPrefix: txt.
-    domainFilters:
-      - ${cluster_subdomain}
-    securityContext:
-      runAsNonRoot: true
-      runAsUser: 65534
-      readOnlyRootFilesystem: true
-      capabilities:
-        drop: ["ALL"]
-      allowPrivilegeEscalation: false
+  valuesFrom:
+  - kind: ConfigMap
+    name: values-public
+

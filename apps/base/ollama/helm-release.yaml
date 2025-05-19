@@ -21,14 +21,6 @@ spec:
       retries: 3
   # Default webui values: https://github.com/open-webui/helm-charts/blob/main/charts/open-webui/values.yaml
   # ollama sub-values: https://github.com/otwld/ollama-helm/blob/main/values.yaml
-  values:
-    ollama:
-      ollama:
-        gpu:
-          enabled: true
-          type: "nvidia"
-          number: 1
-        models:
-          - llama3
-        persistentVolume:
-          enabled: true
+  valuesFrom:
+  - kind: ConfigMap
+    name: values-public

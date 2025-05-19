@@ -1,0 +1,12 @@
+sources:
+  - istio-gateway
+txtPrefix: txt.
+domainFilters:
+  - ${cluster_subdomain}
+securityContext:
+  runAsNonRoot: true
+  runAsUser: 65534
+  readOnlyRootFilesystem: true
+  capabilities:
+    drop: ["ALL"]
+  allowPrivilegeEscalation: false

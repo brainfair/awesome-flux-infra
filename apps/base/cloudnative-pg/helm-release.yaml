@@ -19,10 +19,6 @@ spec:
   upgrade:
     crds: Skip
   # Default values: https://github.com/cloudnative-pg/charts/blob/main/charts/cloudnative-pg/values.yaml
-  values:
-    crds:
-      create: false
-    monitoring:
-      podMonitorEnabled: true
-      grafanaDashboard:
-        create: true
+  valuesFrom:
+  - kind: ConfigMap
+    name: values-public

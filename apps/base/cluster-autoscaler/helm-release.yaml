@@ -20,15 +20,6 @@ spec:
     remediation:
       retries: 3
   # Default values: https://github.com/kubernetes/autoscaler/blob/master/charts/cluster-autoscaler/values.yaml
-  values:
-    replicaCount: 2
-    awsRegion: ${aws_default_region}
-    rbac:
-      serviceAccount:
-        name: "cluster-autoscaler-aws"
-        annotations:
-          eks.amazonaws.com/role-arn: arn:aws:iam::${aws_account_id}:role/${cluster_name}-irsa-cluster-autoscaler
-    autoDiscovery:
-      clusterName: ${cluster_name}
-    serviceMonitor:
-      enabled: true
+  valuesFrom:
+  - kind: ConfigMap
+    name: values-public

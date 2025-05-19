@@ -8,16 +8,19 @@ resources:
   - vm-rule.yaml
 namespace: cert-manager
 configMapGenerator:
-  - name: cert-manager-grafana-dashboards
-    files:
-      - dashboards/cert-manager.json
-    options:
-      disableNameSuffixHash: true
-      labels:
-        grafana_dashboard: "1"
-        app.kubernetes.io/part-of: cert-manager
-        app.kubernetes.io/component: monitoring
-        kustomize.toolkit.fluxcd.io/substitute: disabled
+- name: cert-manager-grafana-dashboards
+  files:
+    - dashboards/cert-manager.json
+  options:
+    disableNameSuffixHash: true
+    labels:
+      grafana_dashboard: "1"
+      app.kubernetes.io/part-of: cert-manager
+      app.kubernetes.io/component: monitoring
+      kustomize.toolkit.fluxcd.io/substitute: disabled
+- name: values-public
+  files:
+  - values.yaml=values-public.yaml
 configurations:
 - kustomizeconfig.yaml
 

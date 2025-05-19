@@ -20,18 +20,6 @@ spec:
     remediation:
       retries: 3
   # Default values: https://github.com/kyverno/kyverno/blob/main/charts/kyverno/values.yaml
-  values:
-    grafana:
-      enabled: true
-    admissionController:
-      serviceMonitor:
-        enabled: true
-    backgroundController:
-      serviceMonitor:
-        enabled: true
-    cleanupController:
-      serviceMonitor:
-        enabled: true
-    reportsController:
-      serviceMonitor:
-        enabled: true
+  valuesFrom:
+  - kind: ConfigMap
+    name: values-public

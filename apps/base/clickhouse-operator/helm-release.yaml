@@ -20,30 +20,6 @@ spec:
     remediation:
       retries: 3
   # Default values: https://github.com/Altinity/clickhouse-operator/blob/master/deploy/helm/clickhouse-operator/values.yaml
-  values:
-    configs:
-      files:
-        config.yaml:
-          watch:
-            namespaces: [".*"]
-    operator:
-      resources:
-        limits:
-          memory: 256Mi
-        requests:
-          cpu: 100m
-          memory: 256Mi
-    metrics:
-      enabled: true
-      resources:
-        limits:
-          memory: 128Mi
-        requests:
-          cpu: 100m
-          memory: 128Mi
-    serviceMonitor:
-      enabled: true
-    dashboards:
-      enabled: false
-      additionalLabels:
-        grafana_dashboard: "1"
+  valuesFrom:
+  - kind: ConfigMap
+    name: values-public

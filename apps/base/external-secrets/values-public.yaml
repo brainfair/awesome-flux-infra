@@ -1,0 +1,3 @@
+installCRDs: false
+serviceMonitor:
+  enabled: true

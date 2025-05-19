@@ -20,16 +20,6 @@ spec:
     remediation:
       retries: 3
   # Defaults: https://github.com/VictoriaMetrics/helm-charts/blob/master/charts/victoria-logs-single/values.yaml
-  values:
-    server:
-      persistentVolume:
-        enabled: true
-        size: 10Gi
-      vmServiceScrape:
-        enabled: true
-    vector:
-      enabled: true
-    dashboards:
-      enabled: true
-      labels:
-        grafana_dashboard: "1"
+  valuesFrom:
+  - kind: ConfigMap
+    name: values-public

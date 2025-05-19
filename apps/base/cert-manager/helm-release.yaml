@@ -22,11 +22,6 @@ spec:
     remediation:
       retries: 3
   # Default values: https://github.com/cert-manager/cert-manager/blob/master/deploy/charts/cert-manager/values.yaml
-  values:
-    installCRDs: false
-    prometheus:
-      servicemonitor:
-        enabled: true
-    # serviceAccount:
-    #   annotations:
-    #     eks.amazonaws.com/role-arn: arn:aws:iam::${aws_account_id}:role/${cluster_name}-irsa-cert-manager
+  valuesFrom:
+  - kind: ConfigMap
+    name: values-public

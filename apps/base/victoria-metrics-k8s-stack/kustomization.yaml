@@ -18,14 +18,17 @@ resources:
   - grafana-dashboardDefinitions.yaml
 # generate configmap with additional KSM values
 configMapGenerator:
-  - name: kube-state-metrics-config
-    files:
-      - kube-state-metrics-config.yaml
-    options:
-      labels:
-        app.kubernetes.io/part-of: flux
-        app.kubernetes.io/component: monitoring
-        kustomize.toolkit.fluxcd.io/substitute: disabled
+- name: kube-state-metrics-config
+  files:
+    - kube-state-metrics-config.yaml
+  options:
+    labels:
+      app.kubernetes.io/part-of: flux
+      app.kubernetes.io/component: monitoring
+      kustomize.toolkit.fluxcd.io/substitute: disabled
+- name: values-public
+  files:
+  - values.yaml=values-public.yaml
 configurations:
 - kustomizeconfig.yaml
 namespace: monitoring

@@ -17,7 +17,7 @@ spec:
     remediation:
       retries: 3
   # Defaults: https://github.com/kro-run/kro/blob/main/helm/values.yaml
-  values:
-    metrics:
-      service:
-        create: true
+  valuesFrom:
+  - kind: ConfigMap
+    name: values-public
+

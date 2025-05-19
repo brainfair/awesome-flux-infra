@@ -5,15 +5,18 @@ resources:
   - helm-release.yaml
   - namespace.yaml
 configMapGenerator:
-  - name: clickhouse-grafana-dashboards
-    files:
-      - dashboards/Altinity_ClickHouse_Operator_dashboard.json
-      - dashboards/ClickHouse_Queries_dashboard.json
-    options:
-      disableNameSuffixHash: true
-      labels:
-        grafana_dashboard: "1"
-        kustomize.toolkit.fluxcd.io/substitute: disabled
+- name: clickhouse-grafana-dashboards
+  files:
+    - dashboards/Altinity_ClickHouse_Operator_dashboard.json
+    - dashboards/ClickHouse_Queries_dashboard.json
+  options:
+    disableNameSuffixHash: true
+    labels:
+      grafana_dashboard: "1"
+      kustomize.toolkit.fluxcd.io/substitute: disabled
+- name: values-public
+  files:
+  - values.yaml=values-public.yaml
 configurations:
 - kustomizeconfig.yaml
 namespace: clickhouse-operator

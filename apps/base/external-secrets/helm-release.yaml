@@ -22,7 +22,6 @@ spec:
     remediation:
       retries: 3
   # Defaults: https://github.com/external-secrets/external-secrets/blob/main/deploy/charts/external-secrets/values.yaml
-  values:
-    installCRDs: false
-    serviceMonitor:
-      enabled: true
+  valuesFrom:
+  - kind: ConfigMap
+    name: values-public
