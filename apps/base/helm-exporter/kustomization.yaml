@@ -6,7 +6,6 @@ resources:
   - helm-release.yaml
 configMapGenerator:
   - name: grafana-helm-exporter
-    namespace: helm-exporter
     files:
       - dashboards/grafana-helm-exporter.json
     options:
@@ -16,3 +15,4 @@ configMapGenerator:
         app.kubernetes.io/component: monitoring
 configurations:
 - kustomizeconfig.yaml
+namespace: helm-exporter

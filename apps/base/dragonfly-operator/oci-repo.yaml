@@ -2,7 +2,6 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: OCIRepository
 metadata:
   name: dragonfly-operator
-  namespace: dragonfly-operator-system
 spec:
   interval: 120m
   url: oci://ghcr.io/dragonflydb/dragonfly-operator/helm/dragonfly-operator

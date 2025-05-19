@@ -8,3 +8,8 @@ resources:
   - virtual-service.yaml
 configurations:
 - kustomizeconfig.yaml
+configMapGenerator:
+- name: values-public
+  files:
+  - values.yaml=values-public.yaml
+namespace: airflow

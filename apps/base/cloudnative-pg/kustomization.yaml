@@ -7,3 +7,4 @@ resources:
   - prometheus-rule.yaml
 configurations:
 - kustomizeconfig.yaml
+namespace: cnpg-system

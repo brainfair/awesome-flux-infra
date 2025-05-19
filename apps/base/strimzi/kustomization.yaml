@@ -8,7 +8,6 @@ resources:
   - strimzi-pod-monitor.yaml
 configMapGenerator:
   - name: strimzi-dashboards
-    namespace: strimzi
     files:
       - https://raw.githubusercontent.com/strimzi/strimzi-kafka-operator/main/examples/metrics/grafana-dashboards/strimzi-cruise-control.json
       - https://raw.githubusercontent.com/strimzi/strimzi-kafka-operator/main/examples/metrics/grafana-dashboards/strimzi-kafka-bridge.json
@@ -25,3 +24,4 @@ configMapGenerator:
         kustomize.toolkit.fluxcd.io/substitute: disabled
 configurations:
 - kustomizeconfig.yaml
+namespace: strimzi

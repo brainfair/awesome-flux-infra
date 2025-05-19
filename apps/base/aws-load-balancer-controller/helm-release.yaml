@@ -2,7 +2,6 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: aws-load-balancer-controller
-  namespace: kube-system
 spec:
   releaseName: aws-load-balancer-controller
   chart:
@@ -21,10 +20,6 @@ spec:
     remediation:
       retries: 3
   # Default values: https://github.com/kubernetes-sigs/aws-load-balancer-controller/blob/main/helm/aws-load-balancer-controller/values.yaml
-  values:
-    clusterName: ${cluster_name}
-    serviceAccount:
-      annotations:
-        eks.amazonaws.com/role-arn: arn:aws:iam::${aws_account_id}:role/${cluster_name}-irsa-load-balancer-controller
-    serviceMonitor:
-      enabled: true
+  valuesFrom:
+  - kind: ConfigMap
+    name: values-public

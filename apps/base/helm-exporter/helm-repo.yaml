@@ -2,7 +2,6 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
   name: sstarcher
-  namespace: helm-exporter
 spec:
   interval: 120m
   url: https://shanestarcher.com/helm-charts/

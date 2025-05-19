@@ -2,7 +2,6 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
   name: jenkins
-  namespace: jenkins
 spec:
   interval: 120m
   url: https://charts.jenkins.io

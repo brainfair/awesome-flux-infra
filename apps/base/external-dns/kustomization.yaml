@@ -8,7 +8,6 @@ resources:
   - vm-rule.yaml
 configMapGenerator:
   - name: external-dns-dashboards
-    namespace: external-dns
     files:
       - edns-dashboard.json
     options:
@@ -20,3 +19,4 @@ configMapGenerator:
         kustomize.toolkit.fluxcd.io/substitute: disabled
 configurations:
 - kustomizeconfig.yaml
+namespace: external-dns

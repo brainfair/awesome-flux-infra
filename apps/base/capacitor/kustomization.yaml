@@ -6,3 +6,4 @@ resources:
   - virtual-service.yaml
 configurations:
 - kustomizeconfig.yaml
+namespace: flux-system

@@ -2,7 +2,6 @@ apiVersion: operator.victoriametrics.com/v1beta1
 kind: VMRule
 metadata:
   name: victoria-metrics-k8s-stack-vm-health-extra
-  namespace: monitoring
 spec:
   groups:
     - name: vm-health-extra

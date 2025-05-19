@@ -7,3 +7,4 @@ resources:
   - vm-rule.yaml
 configurations:
 - kustomizeconfig.yaml
+namespace: oomkill-exporter

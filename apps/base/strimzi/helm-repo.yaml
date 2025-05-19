@@ -2,7 +2,6 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
   name: strimzi
-  namespace: strimzi
 spec:
   interval: 120m
   url: https://strimzi.io/charts/

@@ -2,7 +2,6 @@ apiVersion: operator.victoriametrics.com/v1beta1
 kind: VMPodScrape
 metadata:
   name: oomkill-exporter
-  namespace: oomkill-exporter
 spec:
   podMetricsEndpoints:
     - port: metrics

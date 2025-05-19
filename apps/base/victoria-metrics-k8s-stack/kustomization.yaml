@@ -19,7 +19,6 @@ resources:
 # generate configmap with additional KSM values
 configMapGenerator:
   - name: kube-state-metrics-config
-    namespace: monitoring
     files:
       - kube-state-metrics-config.yaml
     options:
@@ -29,3 +28,4 @@ configMapGenerator:
         kustomize.toolkit.fluxcd.io/substitute: disabled
 configurations:
 - kustomizeconfig.yaml
+namespace: monitoring

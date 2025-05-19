@@ -4,13 +4,16 @@ resources:
   - namespace.yaml
   - helm-release.yaml
 configMapGenerator:
-  - name: alloy-config
-    namespace: alloy
-    files:
-      - config.alloy
-    options:
-      disableNameSuffixHash: true
-      # labels:
-      #   kustomize.toolkit.fluxcd.io/substitute: disabled
+- name: alloy-config
+  files:
+    - config.alloy
+  options:
+    disableNameSuffixHash: true
+    # labels:
+    #   kustomize.toolkit.fluxcd.io/substitute: disabled
+- name: values-public
+  files:
+  - values.yaml=values-public.yaml
 configurations:
 - kustomizeconfig.yaml
+namespace: alloy

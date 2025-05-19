@@ -6,3 +6,8 @@ resources:
   - vm-rule.yaml
 configurations:
 - kustomizeconfig.yaml
+configMapGenerator:
+- name: values-public
+  files:
+  - values.yaml=values-public.yaml
+namespace: kube-system

@@ -2,7 +2,6 @@ apiVersion: operator.victoriametrics.com/v1beta1
 kind: VMRule
 metadata:
   name: vmrule-fluxcd
-  namespace: monitoring
 spec:
   groups:
     - name: flux-resources-alerts

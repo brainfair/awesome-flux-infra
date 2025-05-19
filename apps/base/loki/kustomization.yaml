@@ -7,3 +7,4 @@ resources:
   - datasource.yaml
 configurations:
 - kustomizeconfig.yaml
+namespace: loki

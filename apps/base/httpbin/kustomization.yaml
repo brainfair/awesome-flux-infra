@@ -7,3 +7,4 @@ resources:
   #- gateway.yaml
 configurations:
 - kustomizeconfig.yaml
+namespace: httpbin

@@ -3,7 +3,6 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: capacitor-virtualservice
-  namespace: flux-system
 spec:
   gateways:
     - istio-ingress/wildcard-gateway

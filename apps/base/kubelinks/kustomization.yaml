@@ -8,3 +8,4 @@ resources:
   - virtual-service.yaml
 configurations:
 - kustomizeconfig.yaml
+namespace: kubelinks

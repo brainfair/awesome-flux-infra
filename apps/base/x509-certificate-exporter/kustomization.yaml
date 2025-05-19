@@ -6,3 +6,4 @@ resources:
   - helm-release.yaml
 configurations:
 - kustomizeconfig.yaml
+namespace: x509-certificate-exporter

@@ -6,3 +6,4 @@ resources:
   - namespace.yaml
 configurations:
 - kustomizeconfig.yaml
+namespace: keda

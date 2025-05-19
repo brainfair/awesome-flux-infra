@@ -6,7 +6,6 @@ resources:
   - namespace.yaml
 configMapGenerator:
   - name: clickhouse-grafana-dashboards
-    namespace: clickhouse-operator
     files:
       - dashboards/Altinity_ClickHouse_Operator_dashboard.json
       - dashboards/ClickHouse_Queries_dashboard.json
@@ -17,3 +16,4 @@ configMapGenerator:
         kustomize.toolkit.fluxcd.io/substitute: disabled
 configurations:
 - kustomizeconfig.yaml
+namespace: clickhouse-operator

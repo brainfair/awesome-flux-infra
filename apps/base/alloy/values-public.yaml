@@ -1,0 +1,14 @@
+alloy:
+  # resources:
+  #   limits:
+  #     memory: 128Mi
+  #   requests:
+  #     cpu: 20m
+  #     memory: 128Mi
+  # mounts:
+  #   varlog: true
+  #   dockercontainers: true
+  configMap:
+    create: false
+    name: alloy-config
+    key: config.alloy

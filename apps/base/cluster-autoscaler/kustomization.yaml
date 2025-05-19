@@ -4,7 +4,6 @@ resources:
   - helm-repo.yaml
   - helm-release.yaml
   - vm-rule.yaml
-namespace: kube-system
 configMapGenerator:
   - name: cluster-autoscaler-grafana-dashboards
     files:
@@ -18,3 +17,4 @@ configMapGenerator:
         kustomize.toolkit.fluxcd.io/substitute: disabled
 configurations:
 - kustomizeconfig.yaml
+namespace: kube-system

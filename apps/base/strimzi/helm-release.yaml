@@ -2,7 +2,6 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: strimzi-kafka-operator
-  namespace: strimzi
 spec:
   releaseName: strimzi-kafka-operator
   chart:

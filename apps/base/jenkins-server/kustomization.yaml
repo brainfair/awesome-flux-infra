@@ -8,3 +8,4 @@ resources:
   #- gateway.yaml
 configurations:
 - kustomizeconfig.yaml
+namespace: jenkins
