@@ -1,3 +1,5 @@
+# https://github.com/cozystack/cozystack/blob/main/packages/system/monitoring-agents/alerts/flux.yaml
+---
 apiVersion: operator.victoriametrics.com/v1beta1
 kind: VMRule
 metadata:
