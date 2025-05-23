@@ -2,7 +2,6 @@ apiVersion: operator.victoriametrics.com/v1beta1
 kind: VMRule
 metadata:
   name: vmrule-cluster-autoscaler
-  namespace: kube-system
 spec:
   groups:
   - name: cluster-autoscaler

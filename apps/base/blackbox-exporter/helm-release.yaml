@@ -2,7 +2,6 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: blackbox-exporter
-  namespace: blackbox-exporter
 spec:
   interval: 15m
   timeout: 15m
@@ -22,18 +21,6 @@ spec:
     remediation:
       retries: 3
   # Default values: https://github.com/prometheus-community/helm-charts/blob/main/charts/prometheus-blackbox-exporter/values.yaml
-  values:
-    serviceMonitor:
-      selfMonitor:
-        enabled: true
-    config:
-      modules:
-        http_2xx:
-          prober: http
-          timeout: 5s
-          http:
-            valid_http_versions: ["HTTP/1.1", "HTTP/2.0"]
-            follow_redirects: true
-            preferred_ip_protocol: "ip4"
-            tls_config:
-              insecure_skip_verify: true
+  valuesFrom:
+  - kind: ConfigMap
+    name: values-public

@@ -3,7 +3,6 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: vmagent-virtualservice
-  namespace: monitoring
 spec:
   gateways:
     - istio-ingress/wildcard-gateway
@@ -20,7 +19,6 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: vmalert-virtualservice
-  namespace: monitoring
 spec:
   gateways:
     - istio-ingress/wildcard-gateway
@@ -37,7 +35,6 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: vmalertmanager-virtualservice
-  namespace: monitoring
 spec:
   gateways:
     - istio-ingress/wildcard-gateway
@@ -54,7 +51,6 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: vmsingle-virtualservice
-  namespace: monitoring
 spec:
   gateways:
     - istio-ingress/wildcard-gateway

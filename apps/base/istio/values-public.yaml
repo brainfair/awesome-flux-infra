@@ -1,0 +1,6 @@
+pilot:
+  autoscaleMin: 1
+meshConfig:
+  ingressClass: istio
+  ingressService: istio-ingress-public
+  ingressSelector: ingress-public

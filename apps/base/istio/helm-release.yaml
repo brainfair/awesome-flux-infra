@@ -11,7 +11,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: istio
-        namespace: istio-system
   interval: 5m
   install:
     crds: Skip
@@ -20,10 +19,6 @@ spec:
   upgrade:
     crds: Skip
   # Default values
-  values:
-    pilot:
-      autoscaleMin: 1
-    meshConfig:
-      ingressClass: istio
-      ingressService: istio-ingress-public
-      ingressSelector: ingress-public
+  valuesFrom:
+  - kind: ConfigMap
+    name: values-public

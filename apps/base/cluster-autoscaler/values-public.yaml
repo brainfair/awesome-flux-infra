@@ -1,0 +1,11 @@
+replicaCount: 2
+awsRegion: ${aws_default_region}
+rbac:
+  serviceAccount:
+    name: "cluster-autoscaler-aws"
+    annotations:
+      eks.amazonaws.com/role-arn: arn:aws:iam::${aws_account_id}:role/${cluster_name}-irsa-cluster-autoscaler
+autoDiscovery:
+  clusterName: ${cluster_name}
+serviceMonitor:
+  enabled: true

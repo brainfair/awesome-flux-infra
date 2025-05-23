@@ -1,0 +1,48 @@
+clusterName: ${cluster_name}
+# resources:
+#   # -- Manage [resource request & limits] of KEDA operator pod
+#   operator:
+#     limits:
+#       cpu: null
+#       memory: 200Mi
+#     requests:
+#       cpu: 10m
+#       memory: 200Mi
+#   # -- Manage [resource request & limits] of KEDA metrics apiserver pod
+#   metricServer:
+#     limits:
+#       cpu: null
+#       memory: 100Mi
+#     requests:
+#       cpu: 10m
+#       memory: 100Mi
+#   # -- Manage [resource request & limits] of KEDA admission webhooks pod
+#   webhooks:
+#     limits:
+#       cpu: null
+#       memory: 100Mi
+#     requests:
+#       cpu: 10m
+#       memory: 100Mi
+prometheus:
+  metricServer:
+    enabled: true
+    serviceMonitor:
+      enabled: true
+  operator:
+    enabled: true
+    serviceMonitor:
+      enabled: true
+    prometheusRules:
+      enabled: true
+      alerts:
+        - alert: KedaScalerErrors
+          annotations:
+            description: Keda scaledObject {{ $labels.scaledObject }} is experiencing errors with {{ $labels.scaler }} scaler
+            summary: Keda Scaler {{ $labels.scaler }} Errors
+          expr: sum by ( scaledObject , scaler) (rate(keda_metrics_adapter_scaler_errors[2m]))  > 0
+          for: 2m
+  webhooks:
+    enabled: true
+    serviceMonitor:
+      enabled: true

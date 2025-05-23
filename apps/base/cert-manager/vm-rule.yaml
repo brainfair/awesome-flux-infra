@@ -2,7 +2,6 @@ apiVersion: operator.victoriametrics.com/v1beta1
 kind: VMRule
 metadata:
   name: vmrule-cert-manager
-  namespace: cert-manager
 spec:
   groups:
     - name: cert-manager

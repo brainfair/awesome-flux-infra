@@ -2,7 +2,6 @@ apiVersion: operator.victoriametrics.com/v1beta1
 kind: VMRule
 metadata:
   name: vmrule-blackbox-exporter
-  namespace: blackbox-exporter
 spec:
   groups:
     - name: BlackboxExporter

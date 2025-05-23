@@ -2,7 +2,6 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
   name: deliveryhero
-  namespace: flux-system
 spec:
   interval: 120m
   url: https://charts.deliveryhero.io

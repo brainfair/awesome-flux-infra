@@ -4,3 +4,10 @@ resources:
   - helm-repo.yaml
   - helm-release.yaml
   - namespace.yaml
+configurations:
+- kustomizeconfig.yaml
+configMapGenerator:
+- name: values-public
+  files:
+  - values.yaml=values-public.yaml
+namespace: keda

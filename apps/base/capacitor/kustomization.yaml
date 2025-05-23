@@ -4,3 +4,6 @@ resources:
   - oci-repo.yaml
   - release.yaml
   - virtual-service.yaml
+configurations:
+- kustomizeconfig.yaml
+namespace: flux-system

@@ -1,0 +1,6 @@
+crds:
+  create: false
+monitoring:
+  podMonitorEnabled: true
+  grafanaDashboard:
+    create: true

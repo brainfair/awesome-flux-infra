@@ -1,0 +1,11 @@
+postgresql:
+  enabled: false
+createUserJob:
+  useHelmHooks: false
+  applyCustomEnv: false
+migrateDatabaseJob:
+  useHelmHooks: false
+  applyCustomEnv: false
+data:
+  metadataSecretName: pg-airflow-user-secret
+webserverSecretKeySecretName: webserver-secret-key

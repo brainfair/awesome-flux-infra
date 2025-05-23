@@ -1,0 +1,14 @@
+grafana:
+  enabled: true
+admissionController:
+  serviceMonitor:
+    enabled: true
+backgroundController:
+  serviceMonitor:
+    enabled: true
+cleanupController:
+  serviceMonitor:
+    enabled: true
+reportsController:
+  serviceMonitor:
+    enabled: true

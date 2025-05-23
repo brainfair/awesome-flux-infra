@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: oomkill-exporter
-  namespace: oomkill-exporter
   labels:
     app: oomkill-exporter
 spec:

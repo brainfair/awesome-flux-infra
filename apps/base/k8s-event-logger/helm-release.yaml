@@ -2,7 +2,6 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: k8s-event-logger
-  namespace: k8s-event-logger
 spec:
   interval: 15m
   timeout: 15m
@@ -12,7 +11,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: deliveryhero
-        namespace: flux-system
       interval: 5m
   releaseName: k8s-event-logger
   install:

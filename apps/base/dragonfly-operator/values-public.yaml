@@ -1,0 +1,4 @@
+serviceMonitor:
+  enabled: true
+grafanaDashboard:
+  enabled: true

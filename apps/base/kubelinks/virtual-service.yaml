@@ -3,7 +3,6 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: kubelinks-virtualservice
-  namespace: kubelinks
 spec:
   gateways:
     - istio-ingress/wildcard-gateway

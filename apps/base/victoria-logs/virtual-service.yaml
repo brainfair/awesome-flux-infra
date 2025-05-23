@@ -3,7 +3,6 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: vls-virtualservice
-  namespace: victoria-logs
 spec:
   gateways:
     - istio-ingress/wildcard-gateway

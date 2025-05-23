@@ -1,0 +1,6 @@
+clusterName: ${cluster_name}
+serviceAccount:
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::${aws_account_id}:role/${cluster_name}-irsa-load-balancer-controller
+serviceMonitor:
+  enabled: true

@@ -3,7 +3,6 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: pgadmin-virtualservice
-  namespace: pgadmin
 spec:
   gateways:
     - istio-ingress/wildcard-gateway

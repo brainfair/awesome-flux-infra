@@ -2,7 +2,6 @@ apiVersion: networking.istio.io/v1beta1
 kind: Gateway
 metadata:
   name: istio-gateway-jenkins
-  namespace: jenkins
   annotations:
     istio: ingress-private
 spec:

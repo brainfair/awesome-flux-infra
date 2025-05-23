@@ -4,3 +4,6 @@ resources:
   - helm-repo.yaml
   - helm-release.yaml
   - namespace.yaml
+configurations:
+- kustomizeconfig.yaml
+namespace: k8s-event-logger

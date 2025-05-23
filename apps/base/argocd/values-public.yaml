@@ -1,0 +1,9 @@
+global:
+  domain: argocd.${cluster_subdomain}
+  networkPolicy:
+    create: true
+configs:
+  params:
+    server.insecure: true
+dex:
+  enabled: false

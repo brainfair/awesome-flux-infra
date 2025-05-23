@@ -2,7 +2,6 @@ apiVersion: operator.victoriametrics.com/v1beta1
 kind: VMRule
 metadata:
   name: vmrule-external-dns
-  namespace: external-dns
 spec:
   groups:
     - name: external-dns

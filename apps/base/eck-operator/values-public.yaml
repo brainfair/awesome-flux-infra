@@ -1,0 +1,5 @@
+installCRDs: false
+webhook:
+  enabled: false
+config:
+  validateStorageClass: false

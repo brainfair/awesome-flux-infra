@@ -6,3 +6,10 @@ resources:
   - helm-release.yaml
   - virtual-service.yaml
   - datasource.yaml
+configurations:
+- kustomizeconfig.yaml
+configMapGenerator:
+- name: values-public
+  files:
+  - values.yaml=values-public.yaml
+namespace: victoria-logs
