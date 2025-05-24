@@ -247,7 +247,7 @@ spec:
         #                 - vmsingle
         #         topologyKey: failure-domain.beta.kubernetes.io/zone
         extraArgs:
-          external.url: "https://vmalert.${cluster_subdomain}"
+          external.url: "https://grafana.${cluster_subdomain}"
         # resources:
         #   limits:
         #     memory: "250Mi"
