@@ -104,7 +104,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.23.2"
+      version: "0.24.0"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -144,7 +144,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "5.8.48"
+      version: "5.8.49"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -154,7 +154,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "8.0.6"
+      version: "8.0.9"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -204,7 +204,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "6.29.0"
+      version: "6.30.0"
   values:
     gateway:
       affinity:
