@@ -252,7 +252,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.44.0"
+      version: "1.45.1"
       chart: pgadmin4
       sourceRef:
         kind: HelmRepository
