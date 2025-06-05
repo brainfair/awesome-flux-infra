@@ -4,7 +4,7 @@ This repository provides a collection of infrastructure applications and add-ons
 
 **Note**: This repository serves as a boilerplate and reference implementation. All configurations should be reviewed, adapted, and validated based on your specific requirements and environment. **Do not** deploy this setup directly into production without proper customization and testing.
 
-[![Super-Linter](https://github.com/brainfair/awesome-flux-infra/actions/workflows/lint/badge.svg)](https://github.com/marketplace/actions/super-linter)
+[![Lint](https://github.com/brainfair/awesome-flux-infra/actions/workflows/lint.yaml/badge.svg)](https://github.com/brainfair/awesome-flux-infra/actions/workflows/lint.yaml) [![test](https://github.com/brainfair/awesome-flux-infra/actions/workflows/test.yaml/badge.svg)](https://github.com/brainfair/awesome-flux-infra/actions/workflows/test.yaml)
 
 # Table of Contents
 
