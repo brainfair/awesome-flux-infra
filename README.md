@@ -181,3 +181,7 @@ Production environments should be a pointer to a stable bundle.
 For 3rd party applications when a new version is successfully updated in the flex bundle we run the [promotion workflow](https://github.com/brainfair/awesome-flux-infra/blob/main/.github/workflows/promotion.yml) triggered by [dispatch notification](https://github.com/brainfair/awesome-flux-infra/blob/main/clusters/homelab/flux-promotion/gh-dispatch.yaml) defined in the staging docker cluster.
 
 ![Promotion Diagram](fluxcd-promote.drawio.svg)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=brainfair/awesome-flux-infra&type=Date)](https://www.star-history.com/#brainfair/awesome-flux-infra&Date)
