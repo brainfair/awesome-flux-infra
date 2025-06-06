@@ -17,6 +17,7 @@ This repository provides a collection of infrastructure applications and add-ons
 - [Structure idea](#structure-idea)
 - [Flex/Stable Bundles and promotion](#flexstable-bundles-and-promotion)
 - [Slack Notifications](#slack-notifications)
+- [Star History](#star-history)
 
 ## Support Project
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N011QV6F)
