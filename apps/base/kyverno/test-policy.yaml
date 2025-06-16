@@ -27,6 +27,7 @@ spec:
                 - gg1
                 - gg2
                 - gg3
+                - gg4
       generate:
         apiVersion: v1
         kind: Secret
