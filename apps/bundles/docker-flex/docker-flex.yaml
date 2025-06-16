@@ -207,7 +207,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "5.8.56"
+      version: "5.8.58"
       chart: jenkins
       sourceRef:
         kind: HelmRepository
@@ -222,7 +222,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "8.0.17"
+      version: "8.1.0"
       chart: argo-cd
       sourceRef:
         kind: HelmRepository
@@ -381,7 +381,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "4.0.390"
+      version: "4.0.391"
       chart: seaweedfs
       sourceRef:
         kind: HelmRepository
