@@ -25,9 +25,32 @@ spec:
     grafana:
       enabled: true
     admissionController:
+      rbac:
+        clusterRole:
+          extraResources:
+            - apiGroups:
+                - ""
+              resources:
+                - secrets
+              verbs:
+                - get
+                - list
+                - watch
       serviceMonitor:
         enabled: true
     backgroundController:
+      rbac:
+        clusterRole:
+          extraResources:
+            - apiGroups:
+                - ""
+              resources:
+                - secrets
+              verbs:
+                - get
+                - create
+                - update
+                - delete
       serviceMonitor:
         enabled: true
     cleanupController:
