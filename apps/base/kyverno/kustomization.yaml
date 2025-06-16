@@ -4,4 +4,3 @@ resources:
   - helm-repo.yaml
   - helm-release.yaml
   - namespace.yaml
-  - test-policy.yaml
