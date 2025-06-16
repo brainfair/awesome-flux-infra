@@ -3,6 +3,7 @@ kind: ClusterPolicy
 metadata:
   name: sync-secrets
   annotations:
+    kustomize.toolkit.fluxcd.io/force: enabled
     policies.kyverno.io/title: Sync Secrets
     policies.kyverno.io/category: Sample
     policies.kyverno.io/subject: Secret
