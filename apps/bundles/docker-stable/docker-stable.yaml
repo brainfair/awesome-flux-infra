@@ -134,7 +134,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.17.0"
+      version: "0.18.0"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
