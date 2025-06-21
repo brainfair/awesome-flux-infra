@@ -21,7 +21,7 @@ spec:
     bootstrapScript: |
       #!/bin/bash
       # Update system packages and install dependencies
-      apt update && apt install -y gcc libpq-dev python3-dev pkg-config libmysqlclient-dev && \
+      apt update && apt install -y gcc libpq-dev python3-dev pkg-config default-libmysqlclient-dev && \
 
       # Install Python dependencies
       pip install psycopg2==2.9.10 \
