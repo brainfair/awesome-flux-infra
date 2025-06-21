@@ -18,5 +18,21 @@ spec:
       retries: 3
   # Defaults: https://github.com/apache/superset/tree/master/helm/superset
   values:
+    bootstrapScript: |
+      #!/bin/bash
+      # Update system packages and install dependencies
+      apt update && apt install -y gcc libpq-dev python3-dev pkg-config libmysqlclient-dev && \
+
+      # Install Python dependencies
+      pip install psycopg2==2.9.10 \
+        sqlalchemy-bigquery==1.14.1 \
+        elasticsearch-dbapi==0.2.11 \
+        mysqlclient && \
+        mysql-connector
+
+      # Create a bootstrap log file if not already created
+      if [ ! -f ~/bootstrap ]; then
+        echo "Running Superset with uid {{ .Values.runAsUser }}" > ~/bootstrap
+      fi
     envFromSecrets:
       - secret-key
