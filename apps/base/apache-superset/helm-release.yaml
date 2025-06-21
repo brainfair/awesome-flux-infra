@@ -19,4 +19,4 @@ spec:
   # Defaults: https://github.com/apache/superset/tree/master/helm/superset
   values:
     envFromSecrets:
-      - name: secret-key
+      - secret-key
