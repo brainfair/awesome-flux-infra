@@ -22,6 +22,7 @@ spec:
         - minio-loki.${cluster_subdomain}
         - httpbin.${cluster_subdomain}
         - vls.${cluster_subdomain}
+        - apache-superset.${cluster_subdomain}
       port:
         name: http
         number: 80
@@ -43,6 +44,7 @@ spec:
         - minio-loki.${cluster_subdomain}
         - httpbin.${cluster_subdomain}
         - vls.${cluster_subdomain}
+        - apache-superset.${cluster_subdomain}
       port:
         name: https
         number: 443
