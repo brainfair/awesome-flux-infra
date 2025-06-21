@@ -17,4 +17,6 @@ spec:
     remediation:
       retries: 3
   # Defaults: https://github.com/apache/superset/tree/master/helm/superset
-  # values:
+  values:
+    envFromSecrets:
+      - name: secret-key
