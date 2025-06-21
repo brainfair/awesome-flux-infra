@@ -14,4 +14,4 @@ spec:
         - destination:
             host: apache-superset.apache-superset.svc.cluster.local
             port:
-              number: 80
+              number: 8088
