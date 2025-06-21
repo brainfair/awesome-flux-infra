@@ -1,0 +1,17 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: apache-superset-virtualservice
+  namespace: apache-superset
+spec:
+  gateways:
+    - istio-ingress/wildcard-gateway
+  hosts:
+    - apache-superset.${cluster_subdomain}
+  http:
+    - route:
+        - destination:
+            host: apache-superset.apache-superset.svc.cluster.local
+            port:
+              number: 80

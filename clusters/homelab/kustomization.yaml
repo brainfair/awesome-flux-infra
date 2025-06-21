@@ -11,6 +11,7 @@ resources:
   #- redis
   #- clickhouse
   - valkey-sample
+  - ../../apps/base/apache-superset
 patches:
   - path: victoria-metrics-k8s-stack/helm-release.yaml
   # Example of removing a resource (reflector). PS: separate files because kinda bug https://github.com/kubernetes-sigs/kustomize/issues/5471
