@@ -294,3 +294,14 @@ spec:
   chart:
     spec:
       version: "3.4.3"
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: apache-superset
+  namespace: apache-superset
+spec:
+  releaseName: apache-superset
+  chart:
+    spec:
+      version: "0.14.2"

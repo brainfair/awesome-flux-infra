@@ -35,5 +35,6 @@ resources:
   - ../../base/victoria-logs
   - ../../base/kyverno
   - ../../base/valkey-operator
+  - ../../base/apache-superset
 patches:
   - path: docker-flex.yaml

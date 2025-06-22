@@ -31,5 +31,6 @@ resources:
   - ../../base/httpbin
   - ../../base/victoria-logs
   - ../../base/kyverno
+  - ../../base/apache-superset
 patches:
   - path: docker-stable.yaml

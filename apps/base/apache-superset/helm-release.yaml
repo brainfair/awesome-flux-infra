@@ -16,7 +16,7 @@ spec:
   install:
     remediation:
       retries: 3
-  # Defaults: https://github.com/apache/superset/tree/master/helm/superset
+  # Defaults: https://github.com/apache/superset/blob/master/helm/superset/values.yaml
   values:
     bootstrapScript: |
       #!/bin/bash

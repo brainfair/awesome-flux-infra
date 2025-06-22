@@ -112,6 +112,9 @@ spec:
     - kind: HelmRelease
       name: "*"
       namespace: kyverno
+    - kind: HelmRelease
+      name: "*"
+      namespace: apache-superset
   inclusionList:
     - ".*.upgrade.*succeeded.*"
   exclusionList:

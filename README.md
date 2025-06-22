@@ -57,6 +57,7 @@ This repository provides a collection of infrastructure applications and add-ons
 - [stakater/Reloader](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/reloader)
 ### Extra Components
 - [Apache Airflow](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/airflow)
+- [Apache Superset](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/apache-superset) - is an open-source modern data exploration and visualization platform.
 - [ArgoCD](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/argocd)
 - [cloudnative-pg (PostgreSQL operator)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/cloudnative-pg)
 - [cloudnative-pg tenant example](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/pg-airflow)
