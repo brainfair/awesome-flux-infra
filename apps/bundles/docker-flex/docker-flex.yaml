@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.52.0"
+      version: "0.54.0"
       chart: victoria-metrics-k8s-stack
       sourceRef:
         kind: HelmRepository
@@ -177,7 +177,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "9.1.11"
+      version: "9.1.13"
       chart: reflector
       sourceRef:
         kind: HelmRepository
@@ -207,7 +207,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "5.8.59"
+      version: "5.8.60"
       chart: jenkins
       sourceRef:
         kind: HelmRepository
@@ -267,7 +267,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.16.0"
+      version: "1.17.0"
       chart: airflow
       sourceRef:
         kind: HelmRepository
@@ -410,7 +410,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.11.2"
+      version: "0.11.3"
       chart: victoria-logs-single
       sourceRef:
         kind: HelmRepository
