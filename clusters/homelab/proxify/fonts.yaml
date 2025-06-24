@@ -1,0 +1,81 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: passthrough-gateway
+spec:
+  selector:
+    istio: ingress-private
+  servers:
+    - port:
+        number: 443
+        name: https
+        protocol: TLS
+      tls:
+        mode: PASSTHROUGH
+      hosts:
+        - "fonts.gstatic.com"
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: passthrough-vs
+spec:
+  hosts:
+    - "fonts.gstatic.com"
+  gateways:
+    - passthrough-gateway
+  tls:
+    - match:
+        - port: 443
+          sniHosts:
+            - "fonts.gstatic.com"
+      route:
+        - destination:
+            host: istio-egressgateway.istio-egressgateway.svc.cluster.local
+            port:
+              number: 443
+---
+apiVersion: networking.istio.io/v1beta1
+kind: ServiceEntry
+metadata:
+  name: fonts-gstatic
+spec:
+  hosts:
+    - fonts.gstatic.com
+  location: MESH_EXTERNAL
+  ports:
+    - number: 443
+      name: https
+      protocol: TLS
+  resolution: DNS
+---
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: tls-origination-dr
+spec:
+  host: fonts.gstatic.com
+  trafficPolicy:
+    tls:
+      mode: SIMPLE
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: egress-to-fonts
+spec:
+  hosts:
+    - fonts.gstatic.com
+  gateways:
+    - istio-egressgateway
+  tls:
+    - match:
+        - port: 443
+          sniHosts:
+            - fonts.gstatic.com
+      route:
+        - destination:
+            host: fonts.gstatic.com
+            port:
+              number: 443
