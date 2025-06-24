@@ -2,10 +2,10 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: istio-egress
-  namespace: istio-egress
+  name: istio-egressgateway
+  namespace: istio-egressgateway
 spec:
-  releaseName: istio-egress
+  releaseName: istio-egressgateway
   chart:
     spec:
       chart: gateway
