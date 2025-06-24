@@ -79,3 +79,13 @@ spec:
             host: fonts.gstatic.com
             port:
               number: 443
+---
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: egress-gateway-dr
+spec:
+  host: istio-egressgateway.istio-egressgateway.svc.cluster.local
+  trafficPolicy:
+    tls:
+      mode: DISABLE
