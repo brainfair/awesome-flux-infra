@@ -177,7 +177,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "9.1.14"
+      version: "9.1.15"
       chart: reflector
       sourceRef:
         kind: HelmRepository
