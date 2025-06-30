@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.54.0"
+      version: "0.55.2"
       chart: victoria-metrics-k8s-stack
       sourceRef:
         kind: HelmRepository
@@ -177,7 +177,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "9.1.13"
+      version: "9.1.15"
       chart: reflector
       sourceRef:
         kind: HelmRepository
@@ -192,7 +192,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.18.0"
+      version: "0.18.1"
       chart: external-secrets
       sourceRef:
         kind: HelmRepository
@@ -207,7 +207,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "5.8.60"
+      version: "5.8.62"
       chart: jenkins
       sourceRef:
         kind: HelmRepository
@@ -222,7 +222,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "8.1.1"
+      version: "8.1.2"
       chart: argo-cd
       sourceRef:
         kind: HelmRepository
@@ -237,7 +237,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.46.0"
+      version: "0.46.1"
       chart: strimzi-kafka-operator
       sourceRef:
         kind: HelmRepository
@@ -321,7 +321,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.1.1"
+      version: "1.1.2"
       chart: alloy
       sourceRef:
         kind: HelmRepository
@@ -425,7 +425,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "3.4.3"
+      version: "3.4.4"
       chart: kyverno
       sourceRef:
         kind: HelmRepository
