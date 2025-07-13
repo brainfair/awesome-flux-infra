@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.55.2"
+      version: "0.56.0"
       chart: victoria-metrics-k8s-stack
       sourceRef:
         kind: HelmRepository
@@ -73,7 +73,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "9.4.0"
+      version: "11.0.0"
       chart: prometheus-blackbox-exporter
       sourceRef:
         kind: HelmRepository
@@ -162,7 +162,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "v1.18.1"
+      version: "v1.18.2"
       chart: cert-manager
       sourceRef:
         kind: HelmRepository
@@ -177,7 +177,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "9.1.15"
+      version: "9.1.21"
       chart: reflector
       sourceRef:
         kind: HelmRepository
@@ -192,7 +192,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.18.1"
+      version: "0.18.2"
       chart: external-secrets
       sourceRef:
         kind: HelmRepository
@@ -207,7 +207,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "5.8.62"
+      version: "5.8.68"
       chart: jenkins
       sourceRef:
         kind: HelmRepository
@@ -222,7 +222,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "8.1.2"
+      version: "8.1.3"
       chart: argo-cd
       sourceRef:
         kind: HelmRepository
@@ -267,7 +267,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.17.0"
+      version: "1.18.0"
       chart: airflow
       sourceRef:
         kind: HelmRepository
@@ -297,7 +297,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "6.30.1"
+      version: "6.31.0"
       chart: loki
       sourceRef:
         kind: HelmRepository
@@ -366,7 +366,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "2.1.4"
+      version: "2.1.5"
       chart: reloader
       sourceRef:
         kind: HelmRepository
@@ -381,7 +381,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "4.0.392"
+      version: "4.0.393"
       chart: seaweedfs
       sourceRef:
         kind: HelmRepository
@@ -396,7 +396,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.25.0"
+      version: "0.25.2"
       chart: altinity-clickhouse-operator
       sourceRef:
         kind: HelmRepository
@@ -410,7 +410,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.11.3"
+      version: "0.11.4"
       chart: victoria-logs-single
       sourceRef:
         kind: HelmRepository
