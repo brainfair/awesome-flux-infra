@@ -237,7 +237,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.46.1"
+      version: "0.47.0"
       chart: strimzi-kafka-operator
       sourceRef:
         kind: HelmRepository
