@@ -1111,7 +1111,7 @@
         },
         "tooltip": {
           "mode": "multi",
-          "sort": "none"
+          "sort": "desc"
         }
       },
       "pluginVersion": "10.0.3",
@@ -1243,7 +1243,7 @@
         },
         "tooltip": {
           "mode": "multi",
-          "sort": "none"
+          "sort": "desc"
         }
       },
       "pluginVersion": "10.0.3",
@@ -1284,14 +1284,14 @@
           "type": "prometheus",
           "uid": "$DS_PROMETHEUS"
         },
-        "definition": "label_values(gotk_reconcile_condition, namespace)",
+        "definition": "label_values(gotk_resource_info, exported_namespace)",
         "hide": 0,
         "includeAll": true,
         "multi": true,
         "name": "operator_namespace",
         "options": [],
         "query": {
-          "query": "label_values(gotk_reconcile_condition, namespace)",
+          "query": "label_values(gotk_reconcile_duration_seconds_sum, namespace)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 2,
