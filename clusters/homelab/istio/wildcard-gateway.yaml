@@ -23,6 +23,7 @@ spec:
         - httpbin.${cluster_subdomain}
         - vls.${cluster_subdomain}
         - apache-superset.${cluster_subdomain}
+        - n8n.${cluster_subdomain}
       port:
         name: http
         number: 80
@@ -45,6 +46,7 @@ spec:
         - httpbin.${cluster_subdomain}
         - vls.${cluster_subdomain}
         - apache-superset.${cluster_subdomain}
+        - n8n.${cluster_subdomain}
       port:
         name: https
         number: 443

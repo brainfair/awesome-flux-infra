@@ -2,16 +2,16 @@
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
-  name: airflow-virtualservice
-  namespace: airflow
+  name: n8n-virtualservice
+  namespace: n8n
 spec:
   gateways:
     - istio-ingress/wildcard-gateway
   hosts:
-    - airflow.${cluster_subdomain}
+    - n8n.${cluster_subdomain}
   http:
     - route:
         - destination:
-            host: airflow-api-server.airflow.svc.cluster.local
+            host: n8n.n8n.svc.cluster.local
             port:
-              number: 8080
+              number: 80

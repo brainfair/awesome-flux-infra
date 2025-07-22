@@ -5,4 +5,4 @@ resources:
   - encryption-secret-key.yaml
   - oci-repo.yaml
   - helm-release.yaml
-  #- virtual-service.yaml
+  - virtual-service.yaml
