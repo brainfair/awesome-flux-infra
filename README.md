@@ -59,25 +59,26 @@ This repository provides a collection of infrastructure applications and add-ons
 - [Apache Airflow](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/airflow)
 - [Apache Superset](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/apache-superset) - is an open-source modern data exploration and visualization platform.
 - [ArgoCD](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/argocd)
-- [cloudnative-pg (PostgreSQL operator)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/cloudnative-pg)
-- [cloudnative-pg tenant example](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/pg-airflow)
-- [pgadmin](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/pgadmin)
-- [Dragonfly Operator (redis replacement)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/dragonfly-operator)
-- [Dragonfly Instance (redis replacement)](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/redis)
-- [Valkey Operator](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/valkey-operator) - open-source for of redis by AWS
-- [Valkey Instance](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/valkey-sample) - example of Valkey instance
+- [capacitor (Flux UI)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/capacitor)
 - [Clickhouse Operator (Altinity)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/clickhouse-operator)
 - [Clickhouse simple example (Altinity)](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/clickhouse)
-- [Jenkins](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/jenkins-server)
-- [kro (Kube Resource Orchestrator)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/kro)
-- [Strimzi Kafka Operator](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/strimzi)
-- [capacitor (Flux UI)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/capacitor)
-- [ollama & open-webui](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/ollama)
-- [minio-operator](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/minio-operator)
-- [minio-tenant example](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/minio-loki)
-- [SeaweedFS (S3 alternative)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/seaweedfs)
+- [cloudnative-pg (PostgreSQL operator)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/cloudnative-pg)
+- [cloudnative-pg tenant example](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/pg-airflow)
+- [Dragonfly Instance (redis replacement)](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/redis)
+- [Dragonfly Operator (redis replacement)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/dragonfly-operator)
 - [elastic operator (ECK)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/eck-operator)
 - [httpbin](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/httpbin)
+- [Jenkins](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/jenkins-server)
+- [kro (Kube Resource Orchestrator)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/kro)
+- [minio-operator](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/minio-operator)
+- [minio-tenant example](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/minio-loki)
+- [n8n](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/n8n) - AI workflow automation
+- [ollama & open-webui](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/ollama)
+- [pgadmin](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/pgadmin)
+- [SeaweedFS (S3 alternative)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/seaweedfs)
+- [Strimzi Kafka Operator](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/strimzi)
+- [Valkey Instance](https://github.com/brainfair/awesome-flux-infra/tree/main/clusters/homelab/valkey-sample) - example of Valkey instance
+- [Valkey Operator](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/valkey-operator) - open-source for of redis by AWS
 
 ## Import current repository
 
