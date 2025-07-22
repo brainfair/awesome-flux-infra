@@ -7,7 +7,7 @@ resources:
   - flux-promotion
   - istio
   - pg-airflow
-  #- pg-n8n
+  - pg-n8n
   - minio-loki
   #- redis
   #- clickhouse

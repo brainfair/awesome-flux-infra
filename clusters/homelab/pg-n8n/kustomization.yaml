@@ -4,4 +4,4 @@ namespace: pg-n8n
 resources:
   - namespace.yaml
   - pg-n8n-user-secret.yaml
-  - cluster.yaml
+  #- cluster.yaml
