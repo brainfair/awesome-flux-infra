@@ -23,3 +23,17 @@ spec:
       valuesKey: helm-release-values-secret
   # Defaults: https://github.com/8gears/n8n-helm-chart/blob/main/charts/n8n/values.yaml
   values:
+    main:
+      config:
+        config:
+          db:
+            type: postgresdb
+            postgresdb:
+              host: pg-n8n-rw.pg-n8n
+              user: n8n
+        extraEnv:
+          DB_POSTGRESDB_PASSWORD:
+            valueFrom:
+              secretKeyRef:
+                name: pg-n8n-user-secret
+                key: password
