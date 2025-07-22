@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.58.0"
+      version: "0.58.1"
   values:
     prometheus-node-exporter:
       hostRootFsMount:
@@ -41,7 +41,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "3.12.2"
+      version: "3.13.0"
   values:
     args:
       - --kubelet-insecure-tls
