@@ -36,5 +36,6 @@ resources:
   - ../../base/kyverno
   - ../../base/valkey-operator
   - ../../base/apache-superset
+  - ../../base/n8n
 patches:
   - path: docker-flex.yaml

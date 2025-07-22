@@ -1,0 +1,28 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: n8n
+  namespace: n8n
+spec:
+  releaseName: n8n
+  chartRef:
+    kind: OCIRepository
+    name: 8gears
+    namespace: n8n
+  interval: 15m
+  timeout: 5m
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  valuesFrom:
+    - kind: Secret
+      name: encryption-secret-key
+      valuesKey: helm-release-values-secret
+    - kind: Secret
+      name: pg-n8n-user-secret
+      valuesKey: helm-release-values
+  # Defaults: https://github.com/8gears/n8n-helm-chart/blob/main/charts/n8n/values.yaml
+  #values:

@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: OCIRepository
+metadata:
+  name: 8gears
+  namespace: n8n
+spec:
+  interval: 120m
+  url: oci://8gears.container-registry.com/library/n8n
+  ref:
+    semver: ">=1.0.0"
