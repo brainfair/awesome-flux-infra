@@ -20,7 +20,7 @@ spec:
       retries: 3
   upgrade:
     remediation:
-      retries: 34
+      retries: 42 # the answer to the ultimate question of life, the universe, and everything
   # Default values: https://github.com/argoproj/argo-helm/blob/main/charts/argo-cd/values.yaml
   values:
     global:
