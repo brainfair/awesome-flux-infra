@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.58.1"
+      version: "0.58.2"
       chart: victoria-metrics-k8s-stack
       sourceRef:
         kind: HelmRepository
@@ -147,7 +147,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.24.0"
+      version: "0.25.0"
       chart: cloudnative-pg
       sourceRef:
         kind: HelmRepository
@@ -207,7 +207,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "5.8.68"
+      version: "5.8.73"
       chart: jenkins
       sourceRef:
         kind: HelmRepository
@@ -222,7 +222,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "8.1.4"
+      version: "8.2.3"
       chart: argo-cd
       sourceRef:
         kind: HelmRepository
@@ -297,7 +297,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "6.32.0"
+      version: "6.33.0"
       chart: loki
       sourceRef:
         kind: HelmRepository
