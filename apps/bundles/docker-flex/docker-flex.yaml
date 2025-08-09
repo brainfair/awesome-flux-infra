@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.58.2"
+      version: "0.58.3"
       chart: victoria-metrics-k8s-stack
       sourceRef:
         kind: HelmRepository
@@ -73,7 +73,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "11.1.1"
+      version: "11.2.1"
       chart: prometheus-blackbox-exporter
       sourceRef:
         kind: HelmRepository
@@ -102,7 +102,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.26.2"
+      version: "1.26.3"
       chart: istiod
       sourceRef:
         kind: HelmRepository
@@ -117,7 +117,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.26.2"
+      version: "1.26.3"
       chart: gateway
       sourceRef:
         kind: HelmRepository
@@ -177,7 +177,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "9.1.22"
+      version: "9.1.25"
       chart: reflector
       sourceRef:
         kind: HelmRepository
@@ -192,7 +192,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.18.2"
+      version: "0.19.1"
       chart: external-secrets
       sourceRef:
         kind: HelmRepository
@@ -207,7 +207,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "5.8.73"
+      version: "5.8.74"
       chart: jenkins
       sourceRef:
         kind: HelmRepository
@@ -222,7 +222,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "8.2.3"
+      version: "8.2.7"
       chart: argo-cd
       sourceRef:
         kind: HelmRepository
@@ -297,7 +297,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "6.33.0"
+      version: "6.35.1"
       chart: loki
       sourceRef:
         kind: HelmRepository
@@ -321,7 +321,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.2.0"
+      version: "1.2.1"
       chart: alloy
       sourceRef:
         kind: HelmRepository
@@ -336,7 +336,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "3.0.0"
+      version: "3.1.0"
       chart: eck-operator
       sourceRef:
         kind: HelmRepository
@@ -366,7 +366,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "2.1.5"
+      version: "2.2.0"
       chart: reloader
       sourceRef:
         kind: HelmRepository
@@ -396,7 +396,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.25.2"
+      version: "0.25.3"
       chart: altinity-clickhouse-operator
       sourceRef:
         kind: HelmRepository
@@ -425,7 +425,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "3.4.4"
+      version: "3.5.0"
       chart: kyverno
       sourceRef:
         kind: HelmRepository
@@ -441,7 +441,7 @@ spec:
   releaseName: apache-superset
   chart:
     spec:
-      version: "0.14.2"
+      version: "0.15.0"
       chart: superset
       sourceRef:
         kind: HelmRepository

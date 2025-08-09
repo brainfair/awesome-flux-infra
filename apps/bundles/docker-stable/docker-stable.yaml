@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.58.2"
+      version: "0.58.3"
   values:
     prometheus-node-exporter:
       hostRootFsMount:
@@ -54,7 +54,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "11.1.1"
+      version: "11.2.0"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -74,7 +74,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.26.2"
+      version: "1.26.3"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -84,7 +84,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.26.2"
+      version: "1.26.3"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -124,7 +124,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "9.1.22"
+      version: "9.1.23"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -134,7 +134,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.18.2"
+      version: "0.19.0"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -144,7 +144,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "5.8.72"
+      version: "5.8.74"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -154,7 +154,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "8.2.1"
+      version: "8.2.5"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -204,7 +204,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "6.33.0"
+      version: "6.35.1"
   values:
     gateway:
       affinity:
@@ -233,7 +233,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "3.0.0"
+      version: "3.1.0"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -253,7 +253,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "2.1.5"
+      version: "2.2.0"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -293,7 +293,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "3.4.4"
+      version: "3.5.0"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -304,4 +304,4 @@ spec:
   releaseName: apache-superset
   chart:
     spec:
-      version: "0.14.2"
+      version: "0.14.3"
