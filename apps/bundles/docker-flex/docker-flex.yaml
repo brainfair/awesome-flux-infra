@@ -73,7 +73,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "11.2.1"
+      version: "11.2.2"
       chart: prometheus-blackbox-exporter
       sourceRef:
         kind: HelmRepository
@@ -207,7 +207,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "5.8.74"
+      version: "5.8.75"
       chart: jenkins
       sourceRef:
         kind: HelmRepository
@@ -252,7 +252,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.47.0"
+      version: "1.48.0"
       chart: pgadmin4
       sourceRef:
         kind: HelmRepository
