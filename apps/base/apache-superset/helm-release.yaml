@@ -24,7 +24,7 @@ spec:
       apt update && apt install -y gcc libpq-dev python3-dev pkg-config default-libmysqlclient-dev && \
 
       # Install Python dependencies
-      pip install psycopg2-binary==2.9.10 \
+      uv pip install psycopg2-binary==2.9.10 \
         sqlalchemy-bigquery==1.14.1 \
         elasticsearch-dbapi==0.2.11 \
         mysqlclient \
