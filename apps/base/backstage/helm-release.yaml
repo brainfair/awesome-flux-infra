@@ -25,3 +25,7 @@ spec:
   values:
     postgresql:
       enabled: true
+    backstage:
+      appConfig:
+        app:
+          baseUrl: https://backstage.${cluster_subdomain}
