@@ -25,7 +25,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.4.10"
+      version: "0.4.12"
       chart: kubelinks
       sourceRef:
         kind: HelmRepository
@@ -102,7 +102,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.26.3"
+      version: "1.27.0"
       chart: istiod
       sourceRef:
         kind: HelmRepository
@@ -117,7 +117,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.26.3"
+      version: "1.27.0"
       chart: gateway
       sourceRef:
         kind: HelmRepository
@@ -147,7 +147,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.25.0"
+      version: "0.26.0"
       chart: cloudnative-pg
       sourceRef:
         kind: HelmRepository
@@ -192,7 +192,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.19.1"
+      version: "0.19.2"
       chart: external-secrets
       sourceRef:
         kind: HelmRepository
@@ -207,7 +207,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "5.8.75"
+      version: "5.8.79"
       chart: jenkins
       sourceRef:
         kind: HelmRepository
@@ -410,7 +410,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.11.5"
+      version: "0.11.6"
       chart: victoria-logs-single
       sourceRef:
         kind: HelmRepository
