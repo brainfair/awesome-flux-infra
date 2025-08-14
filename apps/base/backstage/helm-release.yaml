@@ -25,7 +25,7 @@ spec:
   values:
     postgresql:
       enabled: true
-    # backstage:
-    #   extraEnvVars:
-    #     - name: APP_CONFIG_app_baseUrl
-    #       value: https://backstage.${cluster_subdomain}
+    backstage:
+      extraEnvVars:
+        - name: APP_CONFIG_app_baseUrl
+          value: https://backstage.${cluster_subdomain}
