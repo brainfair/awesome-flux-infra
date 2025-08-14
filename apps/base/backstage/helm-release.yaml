@@ -1,0 +1,27 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: backstage
+  namespace: backstage
+spec:
+  interval: 15m
+  timeout: 15m
+  chart:
+    spec:
+      chart: backstage
+      sourceRef:
+        kind: HelmRepository
+        name: backstage
+        namespace: backstage
+      interval: 5m
+  releaseName: backstage
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  # Default values: https://github.com/backstage/charts/blob/main/charts/backstage/values.yaml
+  values:
+    postgresql:
+      enabled: true
