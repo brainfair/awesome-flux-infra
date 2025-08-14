@@ -54,7 +54,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "11.2.1"
+      version: "11.2.2"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -124,7 +124,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "9.1.23"
+      version: "9.1.25"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -134,7 +134,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.19.0"
+      version: "0.19.1"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -144,7 +144,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "5.8.74"
+      version: "5.8.75"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -174,7 +174,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.47.0"
+      version: "1.48.0"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -273,7 +273,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.25.2"
+      version: "0.25.3"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -304,4 +304,4 @@ spec:
   releaseName: apache-superset
   chart:
     spec:
-      version: "0.14.3"
+      version: "0.15.0"
