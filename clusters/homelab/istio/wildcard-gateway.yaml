@@ -24,6 +24,7 @@ spec:
         - vls.${cluster_subdomain}
         - apache-superset.${cluster_subdomain}
         - n8n.${cluster_subdomain}
+        - backstage.${cluster_subdomain}
       port:
         name: http
         number: 80
@@ -47,6 +48,7 @@ spec:
         - vls.${cluster_subdomain}
         - apache-superset.${cluster_subdomain}
         - n8n.${cluster_subdomain}
+        - backstage.${cluster_subdomain}
       port:
         name: https
         number: 443

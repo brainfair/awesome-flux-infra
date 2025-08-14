@@ -12,6 +12,6 @@ spec:
   http:
     - route:
         - destination:
-            host: backstage-server.backstage.svc.cluster.local
+            host: backstage.backstage.svc.cluster.local
             port:
-              number: 80
+              number: 7007
