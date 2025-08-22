@@ -25,15 +25,14 @@ spec:
   values:
     main:
       config:
-        config:
-          db:
-            type: postgresdb
-            postgresdb:
-              host: pg-n8n-rw.pg-n8n
-              user: n8n
-        extraEnv:
-          DB_POSTGRESDB_PASSWORD:
-            valueFrom:
-              secretKeyRef:
-                name: pg-n8n-user-secret
-                key: password
+        db:
+          type: postgresdb
+          postgresdb:
+            host: pg-n8n-rw.pg-n8n
+            user: n8n
+      extraEnv:
+        DB_POSTGRESDB_PASSWORD:
+          valueFrom:
+            secretKeyRef:
+              name: pg-n8n-user-secret
+              key: password
