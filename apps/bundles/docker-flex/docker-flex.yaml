@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.59.2"
+      version: "0.59.3"
       chart: victoria-metrics-k8s-stack
       sourceRef:
         kind: HelmRepository
@@ -73,7 +73,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "11.2.2"
+      version: "11.3.0"
       chart: prometheus-blackbox-exporter
       sourceRef:
         kind: HelmRepository
@@ -177,7 +177,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "9.1.26"
+      version: "9.1.27"
       chart: reflector
       sourceRef:
         kind: HelmRepository
@@ -207,7 +207,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "5.8.80"
+      version: "5.8.83"
       chart: jenkins
       sourceRef:
         kind: HelmRepository
@@ -252,7 +252,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.48.0"
+      version: "1.49.0"
       chart: pgadmin4
       sourceRef:
         kind: HelmRepository
@@ -297,7 +297,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "6.36.1"
+      version: "6.37.0"
       chart: loki
       sourceRef:
         kind: HelmRepository
