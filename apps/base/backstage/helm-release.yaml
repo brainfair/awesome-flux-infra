@@ -4,8 +4,8 @@ metadata:
   name: backstage
   namespace: backstage
 spec:
-  interval: 15m
-  timeout: 15m
+  interval: 5m
+  timeout: 5m
   chart:
     spec:
       chart: backstage
