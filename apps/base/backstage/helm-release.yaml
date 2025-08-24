@@ -27,6 +27,8 @@ spec:
       enabled: true
     backstage:
       appConfig:
+        auth:
+          providers: {}
         app:
           title: HomeLab
           baseUrl: https://backstage.${cluster_subdomain}
