@@ -24,8 +24,10 @@ spec:
   # Default values: https://github.com/backstage/charts/blob/main/charts/backstage/values.yaml
   values:
     postgresql:
-      enabled: true
+      enabled: false
     backstage:
+      extraEnvVarsSecrets:
+        - pg-backstage-superuser
       appConfig:
         auth:
           providers: {}
@@ -40,6 +42,13 @@ spec:
             port: 7007
           cors:
             origin: https://backstage.${cluster_subdomain}
+          database:
+            client: pg
+            connection:
+              host: pg-backstage-rw.pg-backstage.svc.cluster.local
+              user: backstage
+              password: ${password}
+              port: "5432"
         techdocs:
           builder: "local"
           generator:
