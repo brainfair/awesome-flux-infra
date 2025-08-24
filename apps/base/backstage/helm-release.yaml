@@ -25,10 +25,15 @@ spec:
   values:
     postgresql:
       enabled: true
-    # backstage:
-    #   appConfig:
-    #     app:
-    #       title: Homelab
-    #       baseUrl: https://backstage.${cluster_subdomain}
-    #     backend:
-    #       baseUrl: https://backstage.${cluster_subdomain}
+    backstage:
+      appConfig:
+        app:
+          baseUrl: https://backstage.${cluster_subdomain}
+        organization:
+          name: Spotify
+        backend:
+          baseUrl: https://backstage.${cluster_subdomain}
+          listen:
+            port: 7007
+          cors:
+            origin: https://backstage.${cluster_subdomain}
