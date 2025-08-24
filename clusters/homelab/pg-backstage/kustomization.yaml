@@ -4,4 +4,4 @@ namespace: pg-backstage
 resources:
   - namespace.yaml
   - pg-backstage-superuser.yaml
-  #- cluster.yaml
+  - cluster.yaml
