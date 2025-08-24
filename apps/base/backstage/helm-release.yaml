@@ -37,3 +37,9 @@ spec:
             port: 7007
           cors:
             origin: https://backstage.${cluster_subdomain}
+        techdocs:
+          builder: "local"
+          generator:
+            runIn: "local"
+          publisher:
+            type: "local"
