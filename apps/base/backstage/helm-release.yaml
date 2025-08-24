@@ -28,6 +28,7 @@ spec:
     backstage:
       appConfig:
         app:
+          title: HomeLab
           baseUrl: https://backstage.${cluster_subdomain}
         organization:
           name: Spotify
