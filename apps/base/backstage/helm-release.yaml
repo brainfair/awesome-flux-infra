@@ -26,6 +26,9 @@ spec:
     postgresql:
       enabled: true
     backstage:
-      extraEnvVars:
-        - name: APP_CONFIG_app_baseUrl
-          value: https://backstage.${cluster_subdomain}
+      appConfig:
+        app:
+          title: Homelab
+          baseUrl: https://backstage.${cluster_subdomain}
+        backend:
+          baseUrl: https://backstage.${cluster_subdomain}
