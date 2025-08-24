@@ -1,0 +1,36 @@
+apiVersion: generators.external-secrets.io/v1alpha1
+kind: Password
+metadata:
+  name: pg-backstage-superuser
+  namespace: pg-backstage
+spec:
+  length: 24
+  symbols: 0
+---
+apiVersion: external-secrets.io/v1
+kind: ExternalSecret
+metadata:
+  name: pg-backstage-superuser
+  namespace: pg-backstage
+spec:
+  refreshInterval: 0s
+  refreshPolicy: CreatedOnce
+  target:
+    name: pg-backstage-superuser
+    template:
+      engineVersion: v2
+      type: kubernetes.io/basic-auth
+      metadata:
+        annotations:
+          reflector.v1.k8s.emberstack.com/reflection-allowed: "true"
+          reflector.v1.k8s.emberstack.com/reflection-auto-enabled: "true"
+          reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: "backstage"
+      data:
+        username: backstage
+        password: "{{ .password }}"
+  dataFrom:
+    - sourceRef:
+        generatorRef:
+          apiVersion: generators.external-secrets.io/v1alpha1
+          kind: Password
+          name: pg-backstage-superuser

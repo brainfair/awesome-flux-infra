@@ -8,6 +8,7 @@ resources:
   - istio
   - pg-airflow
   - pg-n8n
+  - pg-backstage
   - minio-loki
   #- redis
   #- clickhouse
