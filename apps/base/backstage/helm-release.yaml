@@ -46,7 +46,7 @@ spec:
             client: pg
             connection:
               host: pg-backstage-rw.pg-backstage.svc.cluster.local
-              user: backstage
+              user: $${username}
               password: $${password}
               port: "5432"
         techdocs:
