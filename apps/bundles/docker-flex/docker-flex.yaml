@@ -73,7 +73,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "11.3.0"
+      version: "11.3.1"
       chart: prometheus-blackbox-exporter
       sourceRef:
         kind: HelmRepository
@@ -222,7 +222,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "8.3.0"
+      version: "8.3.1"
       chart: argo-cd
       sourceRef:
         kind: HelmRepository
@@ -297,7 +297,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "6.37.0"
+      version: "6.38.0"
       chart: loki
       sourceRef:
         kind: HelmRepository
@@ -366,7 +366,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "2.2.0"
+      version: "2.2.2"
       chart: reloader
       sourceRef:
         kind: HelmRepository
