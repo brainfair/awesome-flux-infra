@@ -32,9 +32,7 @@ spec:
         auth:
           providers:
             guest:
-              userEntityRef: user:default/john-smith
-              ownershipEntityRefs: [group:default/smith-family]
-              dangerouslyAllowOutsideDevelopment: false
+              dangerouslyAllowOutsideDevelopment: true
         app:
           title: HomeLab
           baseUrl: https://backstage.${cluster_subdomain}
