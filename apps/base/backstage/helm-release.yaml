@@ -30,7 +30,11 @@ spec:
         - pg-backstage-superuser
       appConfig:
         auth:
-          providers: {}
+          providers:
+            guest:
+              userEntityRef: user:default/john-smith
+              ownershipEntityRefs: [group:default/smith-family]
+              dangerouslyAllowOutsideDevelopment: false
         app:
           title: HomeLab
           baseUrl: https://backstage.${cluster_subdomain}
