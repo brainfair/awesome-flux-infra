@@ -207,7 +207,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "5.8.90"
+      version: "5.8.91"
       chart: jenkins
       sourceRef:
         kind: HelmRepository
