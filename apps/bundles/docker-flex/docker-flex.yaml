@@ -396,7 +396,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.25.3"
+      version: "0.25.4"
       chart: altinity-clickhouse-operator
       sourceRef:
         kind: HelmRepository
