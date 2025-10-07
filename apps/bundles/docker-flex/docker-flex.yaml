@@ -73,7 +73,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "11.3.1"
+      version: "11.4.0"
       chart: prometheus-blackbox-exporter
       sourceRef:
         kind: HelmRepository
