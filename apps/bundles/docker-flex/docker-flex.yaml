@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.61.7"
+      version: "0.61.8"
       chart: victoria-metrics-k8s-stack
       sourceRef:
         kind: HelmRepository
