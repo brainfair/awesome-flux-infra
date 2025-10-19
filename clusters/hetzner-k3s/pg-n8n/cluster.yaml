@@ -1,0 +1,19 @@
+---
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: pg-n8n
+  namespace: pg-n8n
+spec:
+  instances: 1
+  imageName: ghcr.io/cloudnative-pg/postgresql:17.5
+  bootstrap:
+    initdb:
+      database: n8n
+      owner: n8n
+      secret:
+        name: pg-n8n-user-secret
+  storage:
+    size: 5Gi
+  monitoring:
+    enablePodMonitor: true

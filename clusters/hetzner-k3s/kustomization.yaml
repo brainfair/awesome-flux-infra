@@ -4,4 +4,4 @@ resources:
   - ../../apps/base/external-secrets
   - ../../apps/base/reflector
   - ../../apps/base/cloudnative-pg
-  #- pg-n8n
+  - pg-n8n
