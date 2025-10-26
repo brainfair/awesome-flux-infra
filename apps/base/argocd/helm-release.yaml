@@ -28,7 +28,8 @@ spec:
       networkPolicy:
         create: true
     configs:
-      params:
-        server.insecure: true
+      cm:
+        params:
+          server.insecure: true
     dex:
       enabled: false
