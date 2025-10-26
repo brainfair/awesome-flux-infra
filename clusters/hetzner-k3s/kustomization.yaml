@@ -1,9 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ../../apps/base/external-secrets
-  - ../../apps/base/reflector
-  - ../../apps/base/cloudnative-pg
-  - ../../apps/base/n8n
-  - ../../apps/base/kubelinks
+  ## Base bundle
+  - ../../apps/bundles/hetznerk3s-flex
+  ## Customs
   - pg-n8n
