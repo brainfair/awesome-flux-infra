@@ -5,4 +5,5 @@ resources:
   - ../../apps/base/reflector
   - ../../apps/base/cloudnative-pg
   - ../../apps/base/n8n
+  - ../../apps/base/kubelinks
   - pg-n8n
