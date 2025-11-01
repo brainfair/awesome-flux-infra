@@ -297,7 +297,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "6.45.1"
+      version: "6.45.2"
       chart: loki
       sourceRef:
         kind: HelmRepository
