@@ -13,6 +13,13 @@ spec:
         kind: HelmRepository
         name: cnpg
         namespace: cnpg-system
+  values:
+    crds:
+      create: false
+    monitoring:
+      podMonitorEnabled: false
+      grafanaDashboard:
+        create: false
 ---
 $patch: delete
 apiVersion: monitoring.coreos.com/v1
