@@ -4,6 +4,7 @@ resources:
   - ../../base/cloudnative-pg
   - ../../base/istio
   - ../../base/kubelinks
+  - ../../base/pgadmin
 patches:
   - path: hetznerk3s.yaml
   - path: cnpg-delete.yaml

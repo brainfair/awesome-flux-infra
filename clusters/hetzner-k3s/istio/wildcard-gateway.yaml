@@ -10,6 +10,7 @@ spec:
     - hosts:
         - links.${cluster_subdomain}
         #- n8n.${cluster_subdomain}
+        - pgadmin.${cluster_subdomain}
       port:
         name: http
         number: 80
@@ -19,6 +20,7 @@ spec:
     - hosts:
         - links.${cluster_subdomain}
         #- n8n.${cluster_subdomain}
+        - pgadmin.${cluster_subdomain}
       port:
         name: https
         number: 443
