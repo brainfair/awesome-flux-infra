@@ -1,0 +1,7 @@
+---
+$patch: delete
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: istio-egressgateway
+  namespace: istio-system
