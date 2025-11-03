@@ -6,4 +6,4 @@ resources:
   ## Customs
   - pg-common
   #- pg-n8n
-  #- istio
+  - istio
