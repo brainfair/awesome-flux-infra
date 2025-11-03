@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - ../../base/cloudnative-pg
   - ../../base/istio
+  - ../../base/kubelinks
 patches:
   - path: hetznerk3s.yaml
   - path: cnpg-delete.yaml
