@@ -11,6 +11,7 @@ spec:
         - links.${cluster_subdomain}
         #- n8n.${cluster_subdomain}
         - pgadmin.${cluster_subdomain}
+        - grafana.${cluster_subdomain}
       port:
         name: http
         number: 80
@@ -21,6 +22,7 @@ spec:
         - links.${cluster_subdomain}
         #- n8n.${cluster_subdomain}
         - pgadmin.${cluster_subdomain}
+        - grafana.${cluster_subdomain}
       port:
         name: https
         number: 443
