@@ -366,7 +366,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "2.2.3"
+      version: "2.2.5"
       chart: reloader
       sourceRef:
         kind: HelmRepository
