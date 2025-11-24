@@ -52,7 +52,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "9.1.39"
+      version: "9.1.40"
       chart: reflector
       sourceRef:
         kind: HelmRepository
