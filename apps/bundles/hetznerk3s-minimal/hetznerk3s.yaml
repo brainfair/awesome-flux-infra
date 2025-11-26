@@ -35,6 +35,11 @@ spec:
         kind: HelmRepository
         name: istio
         namespace: istio-system
+  values:
+    resources:
+      requests:
+        cpu: 10m
+        memory: 128Mi
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -80,3 +85,8 @@ spec:
         kind: HelmRepository
         name: grafana
         namespace: grafana
+  values:
+    initChownData:
+      securityContext:
+        capabilities:
+          drop: []
