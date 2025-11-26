@@ -12,6 +12,7 @@
     "managerFilePatterns": [
       "/apps/base/.+\\.yaml$/",
       "/apps/bundles/.+-flex/.+\\.yaml$/",
+      "/apps/bundles/.+-minimal/.+\\.yaml$/",
       "/clusters/.+\\.yaml$/"
     ]
   }
