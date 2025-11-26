@@ -74,7 +74,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "10.1.4"
+      version: "10.2.0"
       chart: grafana
       sourceRef:
         kind: HelmRepository
