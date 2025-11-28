@@ -42,6 +42,7 @@ This repository provides a collection of infrastructure applications and add-ons
 - [flux-monitoring](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/flux-monitoring) - alerts and dashboards for the FluxCD
 - [Loki](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/loki) - Logs Database
 - [Grafana Alloy](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/alloy) - Telemetry Collector
+- [Grafana](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/grafana) - Grafana visualizations dashboards
 - [blackbox-exporter](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/blackbox-exporter) - allows blackbox probing of endpoints
 - [helm-exporter](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/helm-exporter) - Exports Helm release, chart, and version metrics in Prometheus format.
 - [k8s-event-logger](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/k8s-event-logger) - This tool simply watches Kubernetes Events and logs them to stdout in JSON to be collected and stored by your logging solution
