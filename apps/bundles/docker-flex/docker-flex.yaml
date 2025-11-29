@@ -381,7 +381,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "4.0.400"
+      version: "4.0.401"
       chart: seaweedfs
       sourceRef:
         kind: HelmRepository
