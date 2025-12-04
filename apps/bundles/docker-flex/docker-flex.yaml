@@ -321,7 +321,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.4.0"
+      version: "1.5.0"
       chart: alloy
       sourceRef:
         kind: HelmRepository
