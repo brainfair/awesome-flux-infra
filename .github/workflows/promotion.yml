@@ -58,7 +58,7 @@ jobs:
 
       # Open a Pull Request if an upgraded is needed in production.
       - name: Open promotion PR
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         if: ${{ steps.production.outputs.changes }}
         with:
           branch: staging-promotion-${{ github.run_number }}
