@@ -1,0 +1,23 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: envoy-gateway
+  namespace: envoy-gateway-system
+spec:
+  releaseName: envoy-gateway
+  chartRef:
+    kind: OCIRepository
+    name: envoyproxy-gateway
+    namespace: envoy-gateway-system
+  interval: 15m
+  timeout: 5m
+  install:
+    crds: CreateReplace
+    remediation:
+      retries: 3
+  upgrade:
+    crds: CreateReplace
+    remediation:
+      retries: 3
+  # Defaults: https://github.com/envoyproxy/gateway/blob/main/charts/gateway-helm/values.tmpl.yaml
+  values:

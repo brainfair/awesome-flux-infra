@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: OCIRepository
+metadata:
+  name: envoyproxy-gateway
+  namespace: envoy-gateway-system
+spec:
+  interval: 120m
+  url: oci://docker.io/envoyproxy/gateway-helm
+  ref:
+    semver: ">=1.0.0"
