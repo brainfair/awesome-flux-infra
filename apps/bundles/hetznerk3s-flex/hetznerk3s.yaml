@@ -52,7 +52,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "9.1.44"
+      version: "9.1.45"
       chart: reflector
       sourceRef:
         kind: HelmRepository
@@ -67,7 +67,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.1.1"
+      version: "1.2.0"
       chart: external-secrets
       sourceRef:
         kind: HelmRepository
@@ -82,7 +82,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.26.1"
+      version: "0.27.0"
       chart: cloudnative-pg
       sourceRef:
         kind: HelmRepository
