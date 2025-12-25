@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.65.1"
+      version: "0.66.0"
   values:
     prometheus-node-exporter:
       hostRootFsMount:
@@ -134,7 +134,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.1.1"
+      version: "1.2.0"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -144,7 +144,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "5.8.110"
+      version: "5.8.114"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -154,7 +154,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "9.1.7"
+      version: "9.1.9"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -204,7 +204,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "6.48.0"
+      version: "6.49.0"
   values:
     gateway:
       affinity:
@@ -253,7 +253,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "2.2.5"
+      version: "2.2.7"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -263,7 +263,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "4.0.401"
+      version: "4.0.403"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -273,7 +273,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.25.5"
+      version: "0.25.6"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -283,7 +283,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.11.18"
+      version: "0.11.20"
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
