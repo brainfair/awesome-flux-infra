@@ -88,7 +88,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "2.18.2"
+      version: "2.18.3"
       chart: keda
       sourceRef:
         kind: HelmRepository
