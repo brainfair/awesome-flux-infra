@@ -7,6 +7,7 @@ metadata:
 spec:
   parentRefs:
     - name: shared-gateway
+      namespace: envoy-gateway-system
   hostnames:
     - links.${cluster_subdomain}
   rules:
