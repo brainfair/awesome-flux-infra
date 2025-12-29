@@ -10,9 +10,15 @@ spec:
     - name: http
       port: 8080
       protocol: HTTP
+      allowedRoutes:
+        namespaces:
+          from: All
     - name: https
       port: 8443
       protocol: HTTPS
+      allowedRoutes:
+        namespaces:
+          from: All
       tls:
         certificateRefs:
           - group: ""
