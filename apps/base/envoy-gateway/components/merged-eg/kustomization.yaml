@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - gw-class.yaml
   - gw.yaml
+  - tls-redirect.yaml

@@ -12,7 +12,7 @@ spec:
       protocol: HTTP
       allowedRoutes:
         namespaces:
-          from: All
+          from: Same
     - name: https
       port: 8443
       protocol: HTTPS
