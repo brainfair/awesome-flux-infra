@@ -4,6 +4,7 @@ resources:
   - ../../base/victoria-metrics-k8s-stack
   - ../../base/flux-monitoring
   - ../../base/kubelinks
+  - ../../base/kubelinks/components/gw
   - ../../base/k8s-event-logger
   - ../../base/metrics-server
   - ../../base/blackbox-exporter
