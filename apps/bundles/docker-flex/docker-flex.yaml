@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.66.0"
+      version: "0.66.1"
       chart: victoria-metrics-k8s-stack
       sourceRef:
         kind: HelmRepository
@@ -88,7 +88,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "2.18.2"
+      version: "2.18.3"
       chart: keda
       sourceRef:
         kind: HelmRepository
@@ -102,7 +102,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.28.1"
+      version: "1.28.2"
       chart: istiod
       sourceRef:
         kind: HelmRepository
@@ -117,7 +117,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.28.1"
+      version: "1.28.2"
       chart: gateway
       sourceRef:
         kind: HelmRepository
@@ -207,7 +207,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "5.8.114"
+      version: "5.8.115"
       chart: jenkins
       sourceRef:
         kind: HelmRepository
@@ -222,7 +222,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "9.1.9"
+      version: "9.2.3"
       chart: argo-cd
       sourceRef:
         kind: HelmRepository
@@ -381,7 +381,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "4.0.403"
+      version: "4.0.404"
       chart: seaweedfs
       sourceRef:
         kind: HelmRepository
@@ -410,7 +410,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.11.20"
+      version: "0.11.23"
       chart: victoria-logs-single
       sourceRef:
         kind: HelmRepository
