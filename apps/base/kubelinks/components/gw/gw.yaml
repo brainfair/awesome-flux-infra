@@ -13,3 +13,16 @@ spec:
       name: http
       port: 8080
       protocol: HTTP
+    - allowedRoutes:
+        namespaces:
+          from: Same
+      name: https
+      port: 8443
+      protocol: HTTPS
+      tls:
+        certificateRefs:
+          - group: ""
+            kind: Secret
+            name: localhost-direct
+            namespace: envoy-gateway-system
+        mode: Terminate
