@@ -6,7 +6,7 @@ metadata:
   namespace: kubelinks
 spec:
   parentRefs:
-    - name: kubelinks-gateway
+    - name: shared-gateway
   hostnames:
     - links.${cluster_subdomain}
   rules:

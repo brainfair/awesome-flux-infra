@@ -2,8 +2,8 @@
 apiVersion: gateway.networking.k8s.io/v1
 kind: Gateway
 metadata:
-  name: kubelinks-gateway
-  namespace: kubelinks
+  name: shared-gateway
+  namespace: envoy-gateway-system
 spec:
   gatewayClassName: merged-eg
   listeners:
