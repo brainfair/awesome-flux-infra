@@ -4,4 +4,4 @@ resources:
   - namespace.yaml
   - oci-repo.yaml
   - helm-release.yaml
-  - components/merged-eg/gw.yaml
+  - components/merged-eg
