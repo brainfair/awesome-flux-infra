@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - gw.yaml
   - http-route.yaml
+  - reference-grant.yaml
