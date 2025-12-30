@@ -25,5 +25,5 @@ spec:
       path: /stats/prometheus
   selector:
     matchLabels:
-      app.kubernetes.io/component: proxy                                                                               │
-│     app.kubernetes.io/name: envoy
+      app.kubernetes.io/component: proxy
+      app.kubernetes.io/name: envoy
