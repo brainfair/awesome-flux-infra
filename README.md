@@ -36,6 +36,7 @@ This repository provides a collection of infrastructure applications and add-ons
 - [external-dns](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/external-dns) - synchronizes exposed Kubernetes Services and Ingresses with DNS providers.
 - [external-secrets](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/external-secrets) - External Secrets Operator (ESO) is used to synchronize secrets from external APIs into Kubernetes
 - [Istio ServiceMesh](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/istio) - ServiceMesh based on Envoy
+- [Envoy Gateway](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/envoy-gateway) - an API Gateway implementation based on Envoy proxy
 ### Observability Components
 - [Victoria Metrics (victoria-metrics-k8s-stack)](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/victoria-metrics-k8s-stack) - Metrics Database
 - [Victoria Logs Single](https://github.com/brainfair/awesome-flux-infra/tree/main/apps/base/victoria-logs) - Logs Database
