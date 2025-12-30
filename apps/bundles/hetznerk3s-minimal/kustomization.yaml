@@ -4,6 +4,7 @@ resources:
   - ../../base/cloudnative-pg
   - ../../base/istio
   - ../../base/kubelinks
+  - ../../base/kubelinks/components/gw-istio
   - ../../base/pgadmin
   - ../../base/grafana
 patches:
