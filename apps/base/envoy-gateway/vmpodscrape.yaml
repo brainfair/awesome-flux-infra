@@ -1,0 +1,29 @@
+---
+apiVersion: operator.victoriametrics.com/v1beta1
+kind: VMPodScrape
+metadata:
+  name: envoy-gateway
+  namespace: envoy-gateway-system
+spec:
+  podMetricsEndpoints:
+    - port: metrics
+      scheme: http
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: envoy-gateway
+      app.kubernetes.io/name: gateway-helm
+---
+apiVersion: operator.victoriametrics.com/v1beta1
+kind: VMPodScrape
+metadata:
+  name: envoy-proxy
+  namespace: envoy-gateway-system
+spec:
+  podMetricsEndpoints:
+    - port: metrics
+      scheme: http
+      path: /stats/prometheus
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: proxy                                                                               │
+│     app.kubernetes.io/name: envoy
