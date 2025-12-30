@@ -65,4 +65,4 @@ spec:
         - destination:
             host: vmsingle-victoria-metrics-k8s-stack.monitoring.svc.cluster.local
             port:
-              number: 8429
+              number: 8428
