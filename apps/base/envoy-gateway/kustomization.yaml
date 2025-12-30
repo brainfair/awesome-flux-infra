@@ -6,3 +6,19 @@ resources:
   - helm-release.yaml
   - vmpodscrape.yaml
   - components/merged-eg
+configMapGenerator:
+  - name: envoy-gateway-dashboards
+    namespace: envoy-gateway-system
+    files:
+      - dashboards/envoy-clusters.json
+      - dashboards/envoy-gateway-global.json
+      - dashboards/envoy-proxy-global.json
+      - dashboards/global-ratelimit.json
+      - dashboards/resources-monitor.gen.json
+    options:
+      disableNameSuffixHash: true
+      labels:
+        grafana_dashboard: "1"
+        app.kubernetes.io/part-of: envoy-gateway
+        app.kubernetes.io/component: envoy-gateway
+        kustomize.toolkit.fluxcd.io/substitute: disabled
