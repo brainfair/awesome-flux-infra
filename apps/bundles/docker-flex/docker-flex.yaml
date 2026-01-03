@@ -372,21 +372,21 @@ spec:
         kind: HelmRepository
         name: stakater
         namespace: reloader
----
-apiVersion: helm.toolkit.fluxcd.io/v2
-kind: HelmRelease
-metadata:
-  name: seaweedfs
-  namespace: seaweedfs
-spec:
-  chart:
-    spec:
-      version: "4.0.404"
-      chart: seaweedfs
-      sourceRef:
-        kind: HelmRepository
-        name: seaweedfs
-        namespace: seaweedfs
+# ---
+# apiVersion: helm.toolkit.fluxcd.io/v2
+# kind: HelmRelease
+# metadata:
+#   name: seaweedfs
+#   namespace: seaweedfs
+# spec:
+#   chart:
+#     spec:
+#       version: "4.0.404"
+#       chart: seaweedfs
+#       sourceRef:
+#         kind: HelmRepository
+#         name: seaweedfs
+#         namespace: seaweedfs
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
