@@ -10,10 +10,10 @@ resources:
   - pg-n8n
   - pg-backstage
   - minio-loki
-  #- redis
-  #- clickhouse
-  - valkey-sample
-  #- proxify
+  # - redis
+  # - clickhouse
+  # - valkey-sample
+  # - proxify
   - ../../apps/base/backstage
 patches:
   - path: victoria-metrics-k8s-stack/helm-release.yaml
