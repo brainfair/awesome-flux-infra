@@ -1,0 +1,17 @@
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: httpbin-route
+  namespace: httpbin
+spec:
+  parentRefs:
+    - name: shared-gateway
+      namespace: envoy-gateway-system
+  hostnames:
+    - httpbin.${cluster_subdomain}
+  rules:
+    - backendRefs:
+        - name: httpbin
+          port: 8080
+          weight: 1

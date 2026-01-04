@@ -33,6 +33,7 @@ resources:
   #- ../../base/seaweedfs
   - ../../base/clickhouse-operator
   - ../../base/httpbin
+  - ../../base/httpbin/components/gw-api
   - ../../base/kro
   - ../../base/victoria-logs
   - ../../base/kyverno
