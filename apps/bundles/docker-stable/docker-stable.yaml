@@ -304,4 +304,4 @@ spec:
   releaseName: apache-superset
   chart:
     spec:
-      version: "0.15.0"
+      version: "0.15.2"
