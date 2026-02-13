@@ -64,7 +64,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.57.0"
+      version: "1.59.0"
       chart: pgadmin4
       sourceRef:
         kind: HelmRepository
