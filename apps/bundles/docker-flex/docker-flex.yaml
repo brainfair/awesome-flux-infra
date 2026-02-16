@@ -102,7 +102,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.28.3"
+      version: "1.29.0"
       chart: istiod
       sourceRef:
         kind: HelmRepository
@@ -117,7 +117,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "1.28.3"
+      version: "1.29.0"
       chart: gateway
       sourceRef:
         kind: HelmRepository
