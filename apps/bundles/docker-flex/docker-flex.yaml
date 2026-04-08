@@ -222,7 +222,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "9.4.15"
+      version: "9.5.0"
       chart: argo-cd
       sourceRef:
         kind: HelmRepository
