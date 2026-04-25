@@ -1,6 +1,7 @@
 # Flux2 Infra repository
 
 This repository provides a collection of infrastructure applications and add-ons intended for deployment within Kubernetes clusters using FluxCD.
+- [KubeStellar Console](https://github.com/kubestellar/console) - Multi-cluster Kubernetes dashboard with AI-powered operations, real-time observability, and CNCF project integrations across edge and cloud clusters.
 
 **Note**: This repository serves as a boilerplate and reference implementation. All configurations should be reviewed, adapted, and validated based on your specific requirements and environment. **Do not** deploy this setup directly into production without proper customization and testing.
 
