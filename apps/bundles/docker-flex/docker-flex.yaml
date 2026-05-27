@@ -147,7 +147,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "0.28.0"
+      version: "0.28.2"
       chart: cloudnative-pg
       sourceRef:
         kind: HelmRepository
