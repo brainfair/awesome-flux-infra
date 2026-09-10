@@ -336,7 +336,7 @@ metadata:
 spec:
   chart:
     spec:
-      version: "3.3.2"
+      version: "3.5.0"
       chart: eck-operator
       sourceRef:
         kind: HelmRepository
